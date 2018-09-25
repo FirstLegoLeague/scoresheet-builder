@@ -1,6 +1,24 @@
 # scoresheet-builder
 Code to build scoresheet from xml file
 
+## Usage
+
+Temporary method until this is integrated properly
+
+1. Copy xml file into scoresheet-builder/challenges/xml
+1. Run grunt js. We only use the Javascript file currently and so it's only necessary to build that.
+1. Copy the missions default code from `2018_US.js` into the new javascript file
+    1. This is necessary as the grunt code doesn't currently generate the default code.
+    1. I use BeyondCompare for this
+    1. For each objective add a comma after the `type` value, and the default key and value (usually `no` or `none` or `0`)
+1. Rename file to remove the lowercase language code e.g. `2018_ru_RU.js` is renamed to `2018_RU.js`.
+1. Commit and push the new .xml and .js files.
+1. Copy the two new files into ../scoring/challenges/xml and ../scoring/challenges/js
+1. Stage and commit the two new files to a new branch (e.g. russian-scoresheet).
+1. In `scoring/module.yml` add the new language to `config/fields/name:language/values`. Maintain alphabetical order.
+1. Test
+1. Stage and commit `module.yml`, and create PR
+
 scoresheet-builder
 ==================
 
