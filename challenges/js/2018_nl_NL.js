@@ -6,17 +6,20 @@
             "objectives": [{
                     "id": "M01_1",
                     "title": "Voertuigtransport is voorbij de eerste spoorverbinding gerold",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M01_2",
                     "title": "Voorraadtransport is voorbij de eerste spoorverbinding gerold",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M01_3",
                     "title": "Bemanningstransport is voorbij de eerste spoorverbinding gerold",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 }
             ],
             "score": [function(M01_1, M01_2, M01_3) {
@@ -52,12 +55,14 @@
             "objectives": [{
                     "id": "M02_1",
                     "title": "Beide zonnepanelen staan richting hetzelfde veld",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M02_2",
                     "title": "Jouw zonnepaneel staat gericht naar het veld van het andere team",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 }
             ],
             "score": [function(M02_1, M02_2) {
@@ -81,12 +86,14 @@
             "objectives": [{
                     "id": "M03_1",
                     "title": "2x4 steen is uitgeworpen (door een regoliet kernmonster in de 3D printer te plaatsen)",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M03_2",
                     "title": "2x4 steen is volledig in het noordoostelijke planeten gebied",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 }
             ],
             "score": [function(M03_1, M03_2) {
@@ -110,12 +117,14 @@
             "objectives": [{
                     "id": "M04_1",
                     "title": "Alle gewicht dragende toepassingen van de overstekende uitrusting zijn volledig tussen de torens overgestoken",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M04_2",
                     "title": "Alle overstekende uitrusting stak over van oost naar west en volledig voorbij de afgevlakte poort",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 }
             ],
             "score": [function(M04_1, M04_2) {
@@ -139,22 +148,26 @@
             "objectives": [{
                     "id": "M05_1",
                     "title": "Alle vier de kernmonsters raken de as van het kerngebied model niet meer aan",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M05_2",
                     "title": "Het gas kernmonster raakt de mat en is volledig in landingsdoelcirkel",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M05_3",
                     "title": "-OF- het gas kernmonster is volledig in de basis",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M05_4",
                     "title": "het water kernmonster wordt alleen ondersteund door de voedsel groeikamer",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 }
             ],
             "score": [function(M05_1, M05_2, M05_3, M05_4) {
@@ -214,17 +227,20 @@
             "objectives": [{
                     "id": "M06_1",
                     "title": "kegelmodule is volledig in de basis",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M06_2",
                     "title": "buismodule is in de leefgebied hub poort, westelijke zijde",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M06_3",
                     "title": "dock-module is in de leefgebied hub poort, oostelijk zijde",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 }
             ],
             "score": [function(M06_1, M06_2, M06_3) {
@@ -273,7 +289,8 @@
                         "title": "Volledig"
                     }
                 ],
-                "type": "enum"
+                "type": "enum",
+                "default": "none"
             }],
             "score": [function(M07) {
                 if (M07 === 'none') {
@@ -310,7 +327,8 @@
                         "title": "Oranje"
                     }
                 ],
-                "type": "enum"
+                "type": "enum",
+                "default": "none"
             }],
             "score": [function(M08) {
                 if (M08 === 'none') {
@@ -333,7 +351,8 @@
             "objectives": [{
                 "id": "M09",
                 "title": "Krachtstaaf is opgetild zodat de tandstrip ten minste gedeeltelijk zichtbaar is",
-                "type": "yesno"
+                "type": "yesno",
+                "default": "no"
             }],
             "score": [function(M09) {
                 if (M09 === 'no') {
@@ -350,7 +369,8 @@
             "objectives": [{
                 "id": "M10",
                 "title": "Grijs gewicht is achter groen gevallen, maar voor beige (alleen door de duwstaaf te bewegen.)",
-                "type": "yesno"
+                "type": "yesno",
+                "default": "no"
             }],
             "score": [function(M10) {
                 if (M10 === 'no') {
@@ -367,7 +387,8 @@
             "objectives": [{
                 "id": "M11",
                 "title": "Ruimtevaartuig blijft omhoog (alleen door te drukken/slaan op het stootkussen)",
-                "type": "yesno"
+                "type": "yesno",
+                "default": "no"
             }],
             "score": [function(M11) {
                 if (M11 === 'no') {
@@ -401,7 +422,8 @@
                         "title": "3"
                     }
                 ],
-                "type": "enum"
+                "type": "enum",
+                "default": "0"
             }],
             "score": [function(M12) {
                 if (M12 === '0') {
@@ -441,7 +463,8 @@
                         "title": "Oranje"
                     }
                 ],
-                "type": "enum"
+                "type": "enum",
+                "default": "none"
             }],
             "score": [function(M13) {
                 if (M13 === 'none') {
@@ -477,7 +500,8 @@
                             "title": "2"
                         }
                     ],
-                    "type": "enum"
+                    "type": "enum",
+                    "default": "0"
                 },
                 {
                     "id": "M14_2",
@@ -495,7 +519,8 @@
                             "title": "2"
                         }
                     ],
-                    "type": "enum"
+                    "type": "enum",
+                    "default": "0"
                 }
             ],
             "score": [function(M14_1, M14_2) {
@@ -534,7 +559,8 @@
             "objectives": [{
                     "id": "M15_1",
                     "title": "Landingsmodule is intact en raakt de mat",
-                    "type": "yesno"
+                    "type": "yesno",
+                    "default": "no"
                 },
                 {
                     "id": "M15_2",
@@ -556,7 +582,8 @@
                             "title": "Landingsdoelcirkel"
                         }
                     ],
-                    "type": "enum"
+                    "type": "enum",
+                    "default": "no"
                 }
             ],
             "score": [function(M15_1, M15_2) {
@@ -621,7 +648,8 @@
                         "title": "6"
                     }
                 ],
-                "type": "enum"
+                "type": "enum",
+                "default": "0"
             }],
             "score": [function(penalties) {
                 if (penalties === '0') {
