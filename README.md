@@ -1,4 +1,5 @@
 # scoresheet-builder
+
 Code to build scoresheet from xml file
 
 ## Usage
@@ -11,7 +12,6 @@ Temporary method until this is integrated properly
     1. This is necessary as the grunt code doesn't currently generate the default code.
     1. I use BeyondCompare for this
     1. For each objective add a comma after the `type` value, and the default key and value (usually `no` or `none` or `0`)
-1. Rename file to remove the lowercase language code e.g. `2018_ru_RU.js` is renamed to `2018_RU.js`.
 1. Commit and push the new .xml and .js files.
 1. Copy the two new files into ../scoring/challenges/xml and ../scoring/challenges/js
 1. Stage and commit the two new files to a new branch (e.g. russian-scoresheet).
@@ -19,15 +19,11 @@ Temporary method until this is integrated properly
 1. Test
 1. Stage and commit `module.yml`, and create PR
 
-scoresheet-builder
-==================
-
-Contributing
----------------
+##Contributing
 
 To contribute to this repository, please make a fork, make your changes and submit a pull request.
 
-This way of work allows us to maintain proper code quality, which is important when working with a large amount of people on the same project. Feel free to join the discussion on the [issues page](https://github.com/FirstLegoLeague/fllscoring/issues)
+This way of work allows us to maintain proper code quality, which is important when working with a large amount of people on the same project. Feel free to join the discussion on the [issues page](https://github.com/FirstLegoLeague/scoring/issues)
 
 The best way to work on a feature or a bug is to follow these steps:
 
@@ -45,22 +41,23 @@ In your own fork, you can create any branch structure you like, however, some be
 - keep pull requests small and concise. Try to limit a pr to only one feature / bug fix. We'd rather have many small pull requests than one large one
 - keep your fork up to date with the base repo on a regular basis, by rebasing against it. This makes sure your pull requests will merge nicely
 
-Development
----------------
+## Development
 
-Prerequisites
+This repo uses npm and not yarn
+
+### Prerequisites
 
 - nodejs [nodejs.org](http://nodejs.org). Make sure you have a recent version (>6) to get npm version >3.
 - grunt (`npm install -g grunt-cli`)
 
-Steps
-------
+Note: grunt is installed in this repo but the grunt-cli is required to be installed globally. See [How the CLI works](https://gruntjs.com/getting-started#how-the-cli-works)
+
+### Steps
 
 - Clone the repository
 - `npm install`
 
-Building when XML definition files have changed:
-------------------------------------------------
+### Building when XML definition files have changed:
 
 - run `grunt challenge`
 
@@ -72,8 +69,7 @@ This will rebuild html, pdf and js versions of the challenge. This can also be d
 
 These files are also included in the repo: `challenges/html`, `challenges/pdf`, `challenges/js`
 
-Documentation
--------------
+## Documentation
 
 - [original proposal](docs/proposal/Scoring System project proposal-v2.pdf)
 - [architecture documents](docs/architecture/readme.md)
@@ -81,8 +77,8 @@ Documentation
 - [interface](docs/user_interface/readme.md)
 - [internationalization](docs/i18n/readme.md)
 
-License
---------
+## License
+
 This projected is licensed under the terms of the [GNU GPL v2.0 licenses](https://raw.githubusercontent.com/FirstLegoLeague/fllscoring/master/LICENSE.txt)
 
 Basically, it allows users to legally copy, distribute and modify software. This means you can:
@@ -93,8 +89,7 @@ Charge a fee to distribute the software.
 * If you want to add or remove functionality, go ahead. If you want to use a portion of the code in another project, you can. The only catch is that the other project must also be released under the GPL. Ideally we would want you to share your improvements back with us on this GitHub.
 * We welcome your feedback but please remember that this software comes with no guarantees. We are dedicated volunteer and experienced software developers and will do our best make sure we make a valuable and reliable contribution to the community. However the use of this software is at your own risk.
 
-Authors
---------
+## Authors
 
 - [Rikkert Koppes](mailto:rikkert@rikkertkoppes.com)
 - [Kenny Meesters](mailto:k.meesters@gmail.com)
