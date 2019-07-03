@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             return Q.promise(function(resolve,reject) {
                 var cmd = [
                     'node',
-                    '"tools/    buildchallenge.js"',
+                    '"tools/buildchallenge.js"',
                     '"' + filepath + '"',
                     '>',
                     '"' + dest + '"'
