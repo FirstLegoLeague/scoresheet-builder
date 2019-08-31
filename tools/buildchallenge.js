@@ -42,7 +42,7 @@ function parseResources(xml) {
             [resource.$.name]: {
                 args: objectives.map(obj => jsName(obj.$.id)),
                 code: `if (${objectives.map(parseObjectiveAmount).join(' + ')} > ${resource.$.quota}) ` +
-                  `{ return new Error('${resource.message}') }`
+                  `{ return new Error('${getString(resource.$.message)}') }`
             }
         }
     })
@@ -119,9 +119,10 @@ function parseMission(xml,index, resources) {
         }));
     },[]);
 
-    var missionResources = objectives
+    var missionResources = unique(objectives
       .filter(obj => obj.$.resource)
-      .map(obj => resources[obj.$.resource])
+      .map(obj => obj.$.resource))
+      .map(key => resources[key])
 
     var score = xml.score.map(s => parseScore(s, missionResources));
     var scoreKey = '@@@'+index+'@@@';
