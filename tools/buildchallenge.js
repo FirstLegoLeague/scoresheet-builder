@@ -45,7 +45,8 @@ function parseScore(xml) {
         return 'if ('+conditions+') {return '+line.returnValue+'}';
     }).join('\n');
     var args = unique(deps).join(',');
-    return 'function('+args+') {'+lines+'}';
+    var strArgs = unique(deps).map(arg => arg + ' = String(' + arg + ')').join(';')
+    return 'function('+args+') {'+strArgs+';'+lines+'}';
 }
 
 function parseObjective(xml) {
