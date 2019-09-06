@@ -85,7 +85,8 @@ function parseScore(xml, resources) {
     }))
       .join('\n');
     var args = unique(deps.concat(...resources.map(r => r.args))).join(',');
-    return 'function('+args+') {'+lines+'}';
+    var strArgs = unique(deps).map(arg => arg + ' = String(' + arg + ')').join(';')
+    return 'function('+args+') {'+strArgs+';'+lines+'}';
 }
 
 function parseObjective(xml) {
