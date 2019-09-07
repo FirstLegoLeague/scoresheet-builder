@@ -84,6 +84,7 @@
         <string id="precision-desc">                <![CDATA[You are allowed to Interrupt your Robot and bring it back to re-Launch, but Interruptions do lose Precision Tokens.]]></string>
         <string id="precision-scoring">             Number of Precision Tokens left on the Field:</string>
 
+        <string id="building-unit-error">           Too many building units in use</string>
     </strings>
 
     <!-- Do NOT edit below this line -->
@@ -133,7 +134,7 @@
 
     <mission name="M02-name" description="M02-desc">
         <objective-yesno id="M02-1" description="M02-scoring1" default="no" />
-        <objective-yesno id="M02-2" description="M02-scoring2" default="no" />
+        <objective-yesno id="M02-2" description="M02-scoring2" default="no" resource="building-unit"/>
         <objective-yesno id="M02-3" description="M02-scoring3" default="no" />
         <score>
             <indexes>
@@ -200,27 +201,27 @@
     </mission>
 
     <mission name="M05-name" description="M05-desc">
-        <objective-enum id="M05-lg" description="M05-scoring1" default="0" >
-            <option name="0" description="0" />
-            <option name="1" description="1" />
-            <option name="2" description="2" />
-            <option name="3" description="3" />
-            <option name="4" description="4" />
-            <option name="5" description="5" />
-            <option name="6" description="6" />
-            <option name="7" description="7" />
-            <option name="8" description="8" />
+        <objective-enum id="M05-lg" description="M05-scoring1" default="0" resource="building-unit" >
+            <option name="0" description="0" resource-use="0" />
+            <option name="1" description="1" resource-use="1" />
+            <option name="2" description="2" resource-use="2" />
+            <option name="3" description="3" resource-use="3" />
+            <option name="4" description="4" resource-use="4" />
+            <option name="5" description="5" resource-use="5" />
+            <option name="6" description="6" resource-use="6" />
+            <option name="7" description="7" resource-use="7" />
+            <option name="8" description="8" resource-use="8" />
         </objective-enum>
-        <objective-enum id="M05-sm" description="M05-scoring2" default="0" >
-            <option name="0" description="0" />
-            <option name="1" description="1" />
-            <option name="2" description="2" />
-            <option name="3" description="3" />
-            <option name="4" description="4" />
-            <option name="5" description="5" />
-            <option name="6" description="6" />
-            <option name="7" description="7" />
-            <option name="8" description="8" />
+        <objective-enum id="M05-sm" description="M05-scoring2" default="0" resource="building-unit" >
+            <option name="0" description="0" resource-use="0" />
+            <option name="1" description="1" resource-use="1" />
+            <option name="2" description="2" resource-use="2" />
+            <option name="3" description="3" resource-use="3" />
+            <option name="4" description="4" resource-use="4" />
+            <option name="5" description="5" resource-use="5" />
+            <option name="6" description="6" resource-use="6" />
+            <option name="7" description="7" resource-use="7" />
+            <option name="8" description="8" resource-use="8" />
         </objective-enum>
 
         <score>
@@ -636,22 +637,22 @@
             <option name="2" description="2" />
             <option name="3" description="3" />
         </objective-enum>
-        <objective-enum id="M12-2" description="M12-scoring2" default="0" >
-            <option name="0" description="0" />
-            <option name="1" description="1" />
-            <option name="2" description="2" />
+        <objective-enum id="M12-2" description="M12-scoring2" default="0" resource="building-unit">
+            <option name="0" description="0" resource-use="0" />
+            <option name="1" description="1" resource-use="10" />
+            <option name="2" description="2" resource-use="20" />
         </objective-enum>
-        <objective-enum id="M12-3" description="M12-scoring3" default="0" >
-            <option name="0" description="0" />
-            <option name="1" description="1" />
-            <option name="2" description="2" />
-            <option name="3" description="3" />
-            <option name="4" description="4" />
-            <option name="5" description="5" />
-            <option name="6" description="6" />
-            <option name="7" description="7" />
-            <option name="8" description="8" />
-            <option name="9" description="9" />
+        <objective-enum id="M12-3" description="M12-scoring3" default="0" resource="building-unit">
+            <option name="0" description="0" resource-use="0" />
+            <option name="1" description="1" resource-use="1" />
+            <option name="2" description="2" resource-use="2" />
+            <option name="3" description="3" resource-use="3" />
+            <option name="4" description="4" resource-use="4" />
+            <option name="5" description="5" resource-use="5" />
+            <option name="6" description="6" resource-use="6" />
+            <option name="7" description="7" resource-use="7" />
+            <option name="8" description="8" resource-use="8" />
+            <option name="9" description="9" resource-use="9" />
         </objective-enum>
         <score>
             <indexes>
@@ -954,5 +955,9 @@
             </cases>
         </score>
     </mission>
+
+    <resources>
+        <resource name="building-unit" quota="20" message="building-unit-error" />
+    </resources>
 
 </fll:challenge>

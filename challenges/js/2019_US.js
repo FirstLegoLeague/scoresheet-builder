@@ -1,4 +1,4 @@
-{
+({
     "title": "CITY SHAPER",
     "missions": [{
             "title": "Advantage",
@@ -102,7 +102,45 @@
                     "type": "yesno"
                 }
             ],
-            "score": [function(M02_1, M02_2, M02_3, bonus) {
+            "score": [function(M02_1, M02_2, M02_3, bonus, M05_lg, M05_sm, M12_2, M12_3) {
+                if (((M02_2 === 'yes') ? 1 : 0) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8
+                    } [M05_lg]) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8
+                    } [M05_sm]) + ({
+                        "0": 0,
+                        "1": 10,
+                        "2": 20
+                    } [M12_2]) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8,
+                        "9": 9
+                    } [M12_3]) > 20) {
+                    return new Error('Too many building units in use')
+                }
                 if (M02_1 === 'no' && M02_2 === 'no' && M02_3 === 'no' && bonus === 'no') {
                     return 0
                 }
@@ -287,7 +325,45 @@
                     "type": "enum"
                 }
             ],
-            "score": [function(M05_lg, M05_sm, bonus) {
+            "score": [function(M05_lg, M05_sm, bonus, M02_2, M12_2, M12_3) {
+                if (((M02_2 === 'yes') ? 1 : 0) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8
+                    } [M05_lg]) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8
+                    } [M05_sm]) + ({
+                        "0": 0,
+                        "1": 10,
+                        "2": 20
+                    } [M12_2]) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8,
+                        "9": 9
+                    } [M12_3]) > 20) {
+                    return new Error('Too many building units in use')
+                }
                 if (M05_lg === '0' && M05_sm === '0' && bonus === 'no') {
                     return 0
                 }
@@ -1413,7 +1489,45 @@
                     "type": "enum"
                 }
             ],
-            "score": [function(M12_1, M12_2, M12_3, bonus) {
+            "score": [function(M12_1, M12_2, M12_3, bonus, M02_2, M05_lg, M05_sm) {
+                if (((M02_2 === 'yes') ? 1 : 0) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8
+                    } [M05_lg]) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8
+                    } [M05_sm]) + ({
+                        "0": 0,
+                        "1": 10,
+                        "2": 20
+                    } [M12_2]) + ({
+                        "0": 0,
+                        "1": 1,
+                        "2": 2,
+                        "3": 3,
+                        "4": 4,
+                        "5": 5,
+                        "6": 6,
+                        "7": 7,
+                        "8": 8,
+                        "9": 9
+                    } [M12_3]) > 20) {
+                    return new Error('Too many building units in use')
+                }
                 if (M12_1 === '0' && M12_2 === '0' && M12_3 === '0' && bonus === 'no') {
                     return 0
                 }
@@ -2313,7 +2427,8 @@
         "M13-scoring": "Number of Upgrades that are Independent and Supported only by a Stack which is at least partly in a Circle:",
         "precision-name": "M14 Precision",
         "precision-desc": "You are allowed to Interrupt your Robot and bring it back to re-Launch, but Interruptions do lose Precision Tokens.",
-        "precision-scoring": "Number of Precision Tokens left on the Field:"
+        "precision-scoring": "Number of Precision Tokens left on the Field:",
+        "building-unit-error": "Too many building units in use"
     },
     "rtl": false
-}
+})

@@ -2,21 +2,29 @@
     targetNamespace="http://fll-tools.com/applications/scoring/v1/challenge.xsd"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd">
-    <xs:element name="challenge" type="fll:challenge" />
+    <xs:element name="challenge">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Strings node for translations -->
+                <xs:element name="strings" type="fll:strings" minOccurs="1" maxOccurs="unbounded" />
 
-    <!-- Definition of main fll node -->
-    <xs:complexType name="challenge">
-    <xs:sequence>
-        <!-- Strings node for translations -->
-        <xs:element name="strings" type="fll:strings" minOccurs="1" maxOccurs="unbounded" />
-
-        <!-- We need at least one mission to make sense -->
-        <xs:element name="mission" type="fll:mission" minOccurs="1" maxOccurs="unbounded" />
-    </xs:sequence>
-    <xs:attribute name="year" type="xs:integer" use="required" />
-    <xs:attribute name="version" type="xs:integer" use="required" />
-    <xs:attribute name="name" type="xs:string"  use="required" />
-    </xs:complexType>
+                <!-- We need at least one mission to make sense -->
+                <xs:element name="mission" type="fll:mission" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="resources" type="fll:resources" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="year" type="xs:integer" use="required" />
+            <xs:attribute name="version" type="xs:integer" use="required" />
+            <xs:attribute name="name" type="xs:string"  use="required" />
+        </xs:complexType>
+        <xs:key name="resourceKey">
+            <xs:selector xpath=".//resources/resource" />
+            <xs:field xpath="@name" />
+        </xs:key>
+        <xs:keyref name="resourceKeyref" refer="resourceKey">
+            <xs:selector xpath=".//[@resource]" />
+            <xs:field xpath="@resource" />
+        </xs:keyref>
+    </xs:element>
 
     <!-- Definition of <strings/> node -->
     <xs:complexType name="strings">
@@ -69,6 +77,8 @@
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
+        <xs:attribute name="resource" type="xs:string" />
+        <xs:attribute name="resource-use" type="xs:positiveInteger" default="1" />
     </xs:complexType>
 
     <!-- Number objective. Requires id, description, min and max and has optional integer default -->
@@ -78,6 +88,8 @@
         <xs:attribute name="min" type="xs:integer" use="required" />
         <xs:attribute name="max" type="xs:integer" use="required" />
         <xs:attribute name="default" type="xs:integer" />
+        <xs:attribute name="resource" type="xs:string" />
+        <xs:attribute name="resource-use" type="xs:positiveInteger" default="1" />
     </xs:complexType>
 
     <!-- Enum objective. Requires id and description. Optional default and has sub-options -->
@@ -88,12 +100,14 @@
         <xs:attribute name="id" type="xs:string" use="required" />
         <xs:attribute name="description" type="xs:string" use="required" />
         <xs:attribute name="default" type="xs:string" />
+        <xs:attribute name="resource" type="xs:string" />
     </xs:complexType>
 
     <!-- <option> node for enums -->
     <xs:complexType name="option">
         <xs:attribute name="name" type="xs:string" use="required" />
         <xs:attribute name="description" type="xs:string" use="required" />
+        <xs:attribute name="resource-use" type="xs:nonNegativeInteger" default="0" />
     </xs:complexType>
 
     <!-- Score node for values -->
@@ -153,5 +167,18 @@
     <!-- Error as result for a case -->
     <xs:complexType name="error">
         <xs:attribute name="message" type="xs:string" />
+    </xs:complexType>
+
+    <!-- Resources for cross mission validations -->
+    <xs:complexType name="resources">
+        <xs:sequence>
+            <xs:element name="resource" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:attribute name="name" id="resource-name" type="xs:string" />
+                    <xs:attribute name="quota" type="xs:positiveInteger" />
+                    <xs:attribute name="message" type="xs:string" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
     </xs:complexType>
 </xs:schema>
