@@ -53,10 +53,10 @@
                     return 0
                 }
                 if (M01_1 === 'no' && M01_2 === '1' && bonus === 'no') {
-                    return 0
+                    return new Error("Flags raised without Robot on Bridge")
                 }
                 if (M01_1 === 'no' && M01_2 === '2' && bonus === 'no') {
-                    return 0
+                    return new Error("Flags raised without Robot on Bridge")
                 }
                 if (M01_1 === 'yes' && M01_2 === '0' && bonus === 'no') {
                     return 20
@@ -71,10 +71,10 @@
                     return 0
                 }
                 if (M01_1 === 'no' && M01_2 === '1' && bonus === 'yes') {
-                    return 0
+                    return new Error("Flags raised without Robot on Bridge")
                 }
                 if (M01_1 === 'no' && M01_2 === '2' && bonus === 'yes') {
-                    return 0
+                    return new Error("Flags raised without Robot on Bridge")
                 }
                 if (M01_1 === 'yes' && M01_2 === '0' && bonus === 'yes') {
                     return 25
@@ -501,7 +501,7 @@
                     return 205
                 }
                 if (M05_lg === '7' && M05_sm === '10' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return 220
                 }
                 if (M05_lg === '8' && M05_sm === '0' && bonus === 'no') {
                     return 80
@@ -531,7 +531,7 @@
                     return 200
                 }
                 if (M05_lg === '8' && M05_sm === '9' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return 215
                 }
                 if (M05_lg === '8' && M05_sm === '10' && bonus === 'no') {
                     return new Error("Too many Building Units in use")
@@ -561,7 +561,7 @@
                     return 195
                 }
                 if (M05_lg === '9' && M05_sm === '8' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return 210
                 }
                 if (M05_lg === '9' && M05_sm === '9' && bonus === 'no') {
                     return new Error("Too many Building Units in use")
@@ -591,7 +591,7 @@
                     return 190
                 }
                 if (M05_lg === '10' && M05_sm === '7' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return 205
                 }
                 if (M05_lg === '10' && M05_sm === '8' && bonus === 'no') {
                     return new Error("Too many Building Units in use")
@@ -864,7 +864,7 @@
                     return 210
                 }
                 if (M05_lg === '7' && M05_sm === '10' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return 225
                 }
                 if (M05_lg === '8' && M05_sm === '0' && bonus === 'yes') {
                     return 85
@@ -894,7 +894,7 @@
                     return 205
                 }
                 if (M05_lg === '8' && M05_sm === '9' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return 220
                 }
                 if (M05_lg === '8' && M05_sm === '10' && bonus === 'yes') {
                     return new Error("Too many Building Units in use")
@@ -924,7 +924,7 @@
                     return 200
                 }
                 if (M05_lg === '9' && M05_sm === '8' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return 215
                 }
                 if (M05_lg === '9' && M05_sm === '9' && bonus === 'yes') {
                     return new Error("Too many Building Units in use")
@@ -954,7 +954,7 @@
                     return 195
                 }
                 if (M05_lg === '10' && M05_sm === '7' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return 210
                 }
                 if (M05_lg === '10' && M05_sm === '8' && bonus === 'yes') {
                     return new Error("Too many Building Units in use")
@@ -2231,6 +2231,7 @@
         "precision-scoring": "Number of Precision Tokens left on the Field:",
         "building-unit-error": "Too many Building Units in use",
         "crane-error": "Conflict in position of Blue Units",
+        "M01-error": "Flags raised without Robot on Bridge",
         "M12-error2": "Height too small for number of color-matching Units"
     },
     "rtl": false
