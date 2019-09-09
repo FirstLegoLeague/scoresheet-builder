@@ -28,6 +28,7 @@ function parseObjectiveAmount(objective) {
 }
 
 function parseResources(xml) {
+    if( xml.resources == null ) return [];
     return xml.resources[0].resource.map(resource => {
         const objectives = xml.mission
           .map(m => Object.keys(m)
