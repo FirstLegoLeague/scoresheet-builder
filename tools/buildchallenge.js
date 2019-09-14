@@ -104,8 +104,8 @@ function parseObjective(xml) {
     }
     if (obj.title.length===1) {obj.title = obj.title[0];}
     obj.type = xml.$.type;
-    if (xml.$.min!==undefined) {obj.min = xml.$.min;}
-    if (xml.$.max!==undefined) {obj.max = xml.$.max;}
+    if (xml.$.min!==undefined) {obj.min = Number(xml.$.min);}
+    if (xml.$.max!==undefined) {obj.max = Number(xml.$.max);}
     return obj;
 }
 
