@@ -53,10 +53,10 @@
                     return 0
                 }
                 if (M01_1 === 'no' && M01_2 === '1' && bonus === 'no') {
-                    return new Error("Flags raised without Robot on Bridge")
+                    return 0
                 }
                 if (M01_1 === 'no' && M01_2 === '2' && bonus === 'no') {
-                    return new Error("Flags raised without Robot on Bridge")
+                    return 0
                 }
                 if (M01_1 === 'yes' && M01_2 === '0' && bonus === 'no') {
                     return 20
@@ -71,10 +71,10 @@
                     return 0
                 }
                 if (M01_1 === 'no' && M01_2 === '1' && bonus === 'yes') {
-                    return new Error("Flags raised without Robot on Bridge")
+                    return 0
                 }
                 if (M01_1 === 'no' && M01_2 === '2' && bonus === 'yes') {
-                    return new Error("Flags raised without Robot on Bridge")
+                    return 0
                 }
                 if (M01_1 === 'yes' && M01_2 === '0' && bonus === 'yes') {
                     return 25
@@ -221,15 +221,15 @@
                     "id": "M05_lg",
                     "title": "Number of Units Independent and Supported by the Tree's Large Branches:",
                     "type": "number",
-                    "min": "0",
-                    "max": "10"
+                    "min": 0,
+                    "max": 10
                 },
                 {
                     "id": "M05_sm",
                     "title": "Number of Units Independent and Supported by the Tree's Small Branches:",
                     "type": "number",
-                    "min": "0",
-                    "max": "10"
+                    "min": 0,
+                    "max": 10
                 }
             ],
             "score": [function(M05_lg, M05_sm, bonus, M02_1, M02_2, M12_4) {
@@ -534,7 +534,7 @@
                     return 215
                 }
                 if (M05_lg === '8' && M05_sm === '10' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '9' && M05_sm === '0' && bonus === 'no') {
                     return 90
@@ -564,10 +564,10 @@
                     return 210
                 }
                 if (M05_lg === '9' && M05_sm === '9' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '9' && M05_sm === '10' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '10' && M05_sm === '0' && bonus === 'no') {
                     return 100
@@ -594,13 +594,13 @@
                     return 205
                 }
                 if (M05_lg === '10' && M05_sm === '8' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '10' && M05_sm === '9' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '10' && M05_sm === '10' && bonus === 'no') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '0' && M05_sm === '0' && bonus === 'yes') {
                     return 0
@@ -897,7 +897,7 @@
                     return 220
                 }
                 if (M05_lg === '8' && M05_sm === '10' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '9' && M05_sm === '0' && bonus === 'yes') {
                     return 95
@@ -927,10 +927,10 @@
                     return 215
                 }
                 if (M05_lg === '9' && M05_sm === '9' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '9' && M05_sm === '10' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '10' && M05_sm === '0' && bonus === 'yes') {
                     return 105
@@ -957,13 +957,13 @@
                     return 210
                 }
                 if (M05_lg === '10' && M05_sm === '8' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '10' && M05_sm === '9' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
                 if (M05_lg === '10' && M05_sm === '10' && bonus === 'yes') {
-                    return new Error("Too many Building Units in use")
+                    return new Error("M12-error")
                 }
             }]
         },
@@ -1317,8 +1317,8 @@
                     "id": "M12_4",
                     "title": "Sum of heights of all Independent Stacks at least partly in any Circle:",
                     "type": "number",
-                    "min": "0",
-                    "max": "29"
+                    "min": 0,
+                    "max": 29
                 }
             ],
             "score": [function(M12_1, M12_4, bonus, M02_1, M02_2, M05_lg, M05_sm) {
@@ -2231,7 +2231,6 @@
         "precision-scoring": "Number of Precision Tokens left on the Field:",
         "building-unit-error": "Too many Building Units in use",
         "crane-error": "Conflict in position of Blue Units",
-        "M01-error": "Flags raised without Robot on Bridge",
         "M12-error2": "Height too small for number of color-matching Units"
     },
     "rtl": false
