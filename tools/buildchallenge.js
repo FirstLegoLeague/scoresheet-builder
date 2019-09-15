@@ -105,7 +105,7 @@ function parseObjective(xml) {
     if (obj.title.length===1) {obj.title = obj.title[0];}
     obj.type = xml.$.type;
     obj.default = xml.$.default;
-    if (obj.type === 'number') obj.default = Number(xml.$.default):
+    if (obj.type === 'number') obj.default = Number(xml.$.default);
     if (xml.$.min!==undefined) {obj.min = Number(xml.$.min);}
     if (xml.$.max!==undefined) {obj.max = Number(xml.$.max);}
     return obj;
