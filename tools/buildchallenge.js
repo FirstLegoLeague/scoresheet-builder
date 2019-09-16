@@ -108,6 +108,7 @@ function parseObjective(xml) {
     if (obj.type === 'number') obj.default = Number(xml.$.default);
     if (xml.$.min!==undefined) {obj.min = Number(xml.$.min);}
     if (xml.$.max!==undefined) {obj.max = Number(xml.$.max);}
+    if (xml.$.resource) obj.value = null;
     return obj;
 }
 
