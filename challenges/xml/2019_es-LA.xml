@@ -4,7 +4,7 @@
     xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd" year="2019" version="0" name="CITY SHAPER">
     <!-- 2019 Challenge XML version 2, 7 Sept 2019-->
 
-    <strings language="es-UY">
+    <strings language="es-LA">
 
         <string id="yes">                           Si</string>
         <string id="no">                            No</string>
