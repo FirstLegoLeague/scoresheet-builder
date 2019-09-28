@@ -73,11 +73,6 @@
         <string id="M12-name">                      M12 Design and Build</string>
         <string id="M12-desc">                      <![CDATA[The Blue Circle is not part of Mission 12.]]></string>
         <string id="M12-scoring1">                  Number of Circles with a color-matching Unit, flat down on the Mat, and Completely in Circle:</string>
-<!--
-        <string id="M12-scoring2">                  Sum of heights of all Independent Stacks at least partly in any Circle (tens digit):</string>
-        <string id="M12-scoring3">                  Sum of heights of all Independent Stacks at least partly in any Circle (ones digit):</string>
-        <string id="M12-error">                     Too many levels</string>
--->
         <string id="M12-scoring4">                  Sum of heights of all Independent Stacks at least partly in any Circle:</string>
 
         <string id="M13-name">                      M13 Sustainability Upgrades</string>
