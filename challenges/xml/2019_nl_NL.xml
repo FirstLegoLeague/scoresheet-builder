@@ -76,7 +76,7 @@
         <string id="M12-scoring4">                  Som van de hoogten van alle onafhankelijke stapels, ten minste gedeeltelijk in een willekeurige cirkel:</string>
 
         <string id="M13-name">                      M13 Duurzaamheid upgrades</string>
-        <string id="M13-desc">                      <![CDATA[Slechts een upgrade (zonnepanelen, daktuin, isolatie) telt per stapel.]]></string>
+        <string id="M13-desc">                      <![CDATA[Slechts 1 upgrade (zonnepanelen, daktuin, isolatie) telt per stapel.]]></string>
         <string id="M13-scoring">                   Aantal upgrades dat onafhankelijk is en alleen wordt ondersteund door een stapel die zich tenminste gedeeltelijk in een cirkel bevindt:</string>
 
         <string id="precision-name">                M14 Precisie</string>
