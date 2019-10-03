@@ -1,11 +1,11 @@
 ({
     "title": "CITY SHAPER",
     "missions": [{
-            "title": "Ventaja",
-            "description": "Si todo su equipamiento cabe en el área de inspección pequeña durante la preparación del partido, obtendrá una ventaja.",
+            "title": "Beneficio",
+            "description": "Si todo tu equipamiento cabe en la Zona de Inspección Menor, durante la preparación de la Partida, obtienes un beneficio.",
             "objectives": [{
                 "id": "bonus",
-                "title": "El Robot y el equipamiento del equipo entran en el área de inspección pequeña:",
+                "title": "Tu Robot y Equipamiento caben en la Zona de Inspección Menor:",
                 "type": "yesno",
                 "default": "no"
             }],
@@ -20,17 +20,17 @@
             }]
         },
         {
-            "title": "M01 Lugares elevados",
-            "description": "Solo puede obtener puntos de bandera si obtiene puntos de puente. Está bien y se espera que los robots choquen al intentar ganar puntos de bandera.",
+            "title": "M01 Pisos Elevados",
+            "description": "Solo pueden conseguir puntos por Banderas si obtienen los puntos del Puente. Está permitido y es de esperar que los Robots colisionen mientras intentan ganar los puntos de las Banderas.",
             "objectives": [{
                     "id": "M01_1",
-                    "title": "Si el Robot es soportado por el puente:",
+                    "title": "El Robot está soportado por el Puente:",
                     "type": "yesno",
                     "default": "no"
                 },
                 {
                     "id": "M01_2",
-                    "title": "úmero de banderas que se elevan claramente a cualquier distancia, sólo por el Robot:",
+                    "title": "Número de banderas claramente elevadas, a cualquier altura, solo debido al Robot:",
                     "options": [{
                             "value": "0",
                             "title": "0"
@@ -92,24 +92,24 @@
         },
         {
             "title": "M02 Grúa",
-            "description": "Puntúa todo lo que aplique.",
+            "description": "Puentúen todo lo que corresponda",
             "objectives": [{
                     "id": "M02_1",
-                    "title": "La Unidad Azul Enganchada se baja claramente a cualquier distancia del Agujero de Guía:",
+                    "title": "El Módulo Azul enganchado esta bajado, a cualquier distancia del Agujero de la Guía:",
                     "type": "yesno",
                     "default": "no",
                     "value": null
                 },
                 {
                     "id": "M02_2",
-                    "title": "La Unidad Azul Enganchada es Independiente y está soportada por otra Unidad Azul:",
+                    "title": "El Módulo Azul enganchado es Independiente y Soportado por otro Módulo Azul:",
                     "type": "yesno",
                     "default": "no",
                     "value": null
                 },
                 {
                     "id": "M02_3",
-                    "title": "Y el Nivel 1 está Completamente en el Círculo Azul:",
+                    "title": "Y el Nivel 1 está completamente en el Círculo Azul:",
                     "type": "yesno",
                     "default": "no"
                 }
@@ -120,25 +120,25 @@
                 M02_3 = String(M02_3);
                 bonus = String(bonus);
                 if (((M02_1 === 'yes') ? 1 : 0) + ((M02_2 === 'yes') ? 1 : 0) + (M05_lg * 1) + (M05_sm * 1) + (M12_4 * 0.5) > 17) {
-                    return new Error('Demasiadas unidades de construcción en uso')
+                    return new Error('Demasiados módulos en uso')
                 }
                 if (M02_1 === 'no' && M02_2 === 'no' && M02_3 === 'no' && bonus === 'no') {
                     return 0
                 }
                 if (M02_1 === 'no' && M02_2 === 'no' && M02_3 === 'yes' && bonus === 'no') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'no' && M02_2 === 'yes' && M02_3 === 'no' && bonus === 'no') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'no' && M02_2 === 'yes' && M02_3 === 'yes' && bonus === 'no') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'yes' && M02_2 === 'no' && M02_3 === 'no' && bonus === 'no') {
                     return 20
                 }
                 if (M02_1 === 'yes' && M02_2 === 'no' && M02_3 === 'yes' && bonus === 'no') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'yes' && M02_2 === 'yes' && M02_3 === 'no' && bonus === 'no') {
                     return 35
@@ -150,19 +150,19 @@
                     return 0
                 }
                 if (M02_1 === 'no' && M02_2 === 'no' && M02_3 === 'yes' && bonus === 'yes') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'no' && M02_2 === 'yes' && M02_3 === 'no' && bonus === 'yes') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'no' && M02_2 === 'yes' && M02_3 === 'yes' && bonus === 'yes') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'yes' && M02_2 === 'no' && M02_3 === 'no' && bonus === 'yes') {
                     return 30
                 }
                 if (M02_1 === 'yes' && M02_2 === 'no' && M02_3 === 'yes' && bonus === 'yes') {
-                    return new Error("Conflicto en posición de unidades azules")
+                    return new Error("Conflicto en la posición de módulos azules")
                 }
                 if (M02_1 === 'yes' && M02_2 === 'yes' && M02_3 === 'no' && bonus === 'yes') {
                     return 45
@@ -174,10 +174,10 @@
         },
         {
             "title": "M03 Dron de Inspección",
-            "description": "La misión de inspección de drones con cámara revela una forma económica de ver puentes y otras estructuras altas. Los drones pueden volar durante horas y enviar imágenes detalladas e incluso escaneos 3D.",
+            "description": "La Misión del Dron con Cámara de Inspección muestra una manera barata de revisar puentes y otras estructuras altas. Los Drones pueden volar por horas y obtener imágenes detalladas, incluso escanear en 3D.",
             "objectives": [{
                 "id": "M03_1",
-                "title": "El Dron de Inspección está Soportado por el eje en el Puente:",
+                "title": "El Dron de Inspección es Soportado por el eje del Puente:",
                 "type": "yesno",
                 "default": "no"
             }],
@@ -200,10 +200,10 @@
         },
         {
             "title": "M04 Diseño para la Vida Silvestre",
-            "description": "El murciélago necesita terminar en la rama marrón.",
+            "description": "El Murciélago debe estar en la Rama café",
             "objectives": [{
                 "id": "M04_1",
-                "title": "El Murciélago es Soportado por la Rama en el Árbol:",
+                "title": "El Murciélago es Soportado por la Rama del Arbol:",
                 "type": "yesno",
                 "default": "no"
             }],
@@ -225,11 +225,11 @@
             }]
         },
         {
-            "title": "M05 Casa del Árbol",
-            "description": "Puntúa todo lo que aplique.",
+            "title": "M05 Casa en el Árbol",
+            "description": "Puentúen todo lo que corresponda.",
             "objectives": [{
                     "id": "M05_lg",
-                    "title": "Número de Unidades Independientes y Soportadas por las Ramas Grandes del Árbol:",
+                    "title": "Cantidad de Módulos Independientes y Soportados por las Ramas Grandes del Árbol:",
                     "type": "number",
                     "default": 0,
                     "min": 0,
@@ -238,7 +238,7 @@
                 },
                 {
                     "id": "M05_sm",
-                    "title": "Número de Unidades Independientes y Soportadas por las Ramas Pequeñas del Árbol:",
+                    "title": "Cantidad de Módulos Independientes y Soportados por las Ramas Pequeñas del Árbol:",
                     "type": "number",
                     "default": 0,
                     "min": 0,
@@ -251,7 +251,7 @@
                 M05_sm = String(M05_sm);
                 bonus = String(bonus);
                 if (((M02_1 === 'yes') ? 1 : 0) + ((M02_2 === 'yes') ? 1 : 0) + (M05_lg * 1) + (M05_sm * 1) + (M12_4 * 0.5) > 17) {
-                    return new Error('Demasiadas unidades de construcción en uso')
+                    return new Error('Demasiados módulos en uso')
                 }
                 if (M05_lg === '0' && M05_sm === '0' && bonus === 'no') {
                     return 0
@@ -2200,11 +2200,11 @@
             }]
         },
         {
-            "title": "M06 Embotellamiento",
-            "description": "Despeja el camino levantando el embotellamiento.",
+            "title": "M06 Taco",
+            "description": "Despeja la calle levantando el Taco.",
             "objectives": [{
                 "id": "M06_1",
-                "title": "El Embotellamiento de Tráfico se levanta, su parte móvil es Independiente y solo está Soportado por sus bisagras:",
+                "title": "El Taco está levantado, su parte Móvil es Independiente, y está Soportado solo por sus bisagras:",
                 "type": "yesno",
                 "default": "no"
             }],
@@ -2227,10 +2227,10 @@
         },
         {
             "title": "M07 Columpio",
-            "description": "Suelte el Columpio.",
+            "description": "Libera el Columpio.",
             "objectives": [{
                 "id": "M07_1",
-                "title": "Se suelta el columpio:",
+                "title": "El Columpio está liberado:",
                 "type": "yesno",
                 "default": "no"
             }],
@@ -2252,18 +2252,18 @@
             }]
         },
         {
-            "title": "M08 Elevador",
-            "description": "Puntúa uno o el otro, pero no ambos.",
+            "title": "M08 Montacargas",
+            "description": "Puentúen una u otra, no ambas.",
             "objectives": [{
                 "id": "M08_1",
-                "title": "Las partes móviles del elevador son independientes y solo están soportadas por sus bisagras en la siguiente posición:",
+                "title": "Las partes móviles del Montacargas son Independientes y estan Soportadas solo por sus bisagras en la siguiente posición:",
                 "options": [{
                         "value": "neither",
                         "title": "Ninguna"
                     },
                     {
                         "value": "car",
-                        "title": "Coche azul debajo"
+                        "title": "Auto Azul Abajo"
                     },
                     {
                         "value": "balanced",
@@ -2298,16 +2298,16 @@
         },
         {
             "title": "M09 Factor de Seguridad",
-            "description": "¿Puede el Edificio de prueba mantenerse en pie cuando se mueven algunas de sus vigas de soporte?",
+            "description": "Puede el Edificio Piloto sostenerse cuando algunas de sus vigas de soporte son desplazadas?",
             "objectives": [{
                     "id": "M09_1",
-                    "title": "El Edificio de Prueba es Independiente y solo está Soportado por las vigas azules:",
+                    "title": "El Edificio Piloto es Independiente y Soportado solo por vigas azules:",
                     "type": "yesno",
                     "default": "no"
                 },
                 {
                     "id": "M09_2",
-                    "title": "Número de vigas azules está claramente baja al menos la mitad de su recorrido:",
+                    "title": "Cantidad de Vigas Azules apartadas, al menos a medio camino:",
                     "options": [{
                             "value": "0",
                             "title": "0"
@@ -2433,10 +2433,10 @@
         },
         {
             "title": "M10 Construcción de Acero",
-            "description": "Hacer que la estructura de acero está de pie.",
+            "description": "Haz que la Construcción de Acero se eleve.",
             "objectives": [{
                 "id": "M10",
-                "title": "La Estructura de Acero está de pie y es Independiente y solo está Soportada por sus bisagras:",
+                "title": "La construcción de acero está vertical, Independiente y Soportada solo por sus Bisagras:",
                 "type": "yesno",
                 "default": "no"
             }],
@@ -2459,16 +2459,16 @@
         },
         {
             "title": "M11 Arquitectura Innovadora",
-            "description": "Diseña y construye tu propia estructura y transportar a cualquier círculo.",
+            "description": "Diseña y Construye to propia Estructura y llévala a cualquier Círculo.",
             "objectives": [{
                     "id": "M11_1",
-                    "title": "La Estructura es más grande que una Unidad de Construcción Azul y está construida con los ladrillos blancos LEGO del equipo:",
+                    "title": "La Estructura es mayor a un Módulo Azul y está construida solo con ladrillos LEGO blancos:",
                     "type": "yesno",
                     "default": "no"
                 },
                 {
                     "id": "M11_2",
-                    "title": "La Estructura está en cualquier Círculo:",
+                    "title": "La Estructura está en cualquier Circulo:",
                     "options": [{
                             "value": "no",
                             "title": "No"
@@ -2530,10 +2530,10 @@
         },
         {
             "title": "M12 Diseño y Construcción",
-            "description": "El Círculo Azul no es parte de la misión 12.",
+            "description": "El Círculo Azul no es parte de la Misión 12.",
             "objectives": [{
                     "id": "M12_1",
-                    "title": "Número de Círculos con una Unidad de combinación de colores, plana sobre el tapete y completamente en círculo:",
+                    "title": "Cantidad de Círculos con módulo de igual color completamente dentro y en contacto plano con el Tapete:",
                     "options": [{
                             "value": "0",
                             "title": "0"
@@ -2556,7 +2556,7 @@
                 },
                 {
                     "id": "M12_4",
-                    "title": "Suma de alturas de todas las pilas independientes al menos en parte en cualquier círculo:",
+                    "title": "Suma de las altura de Pilas Independientes, al menos parcialmente dentro de cualquier Circulo:",
                     "type": "number",
                     "default": 1,
                     "min": 0,
@@ -2569,7 +2569,7 @@
                 M12_4 = String(M12_4);
                 bonus = String(bonus);
                 if (((M02_1 === 'yes') ? 1 : 0) + ((M02_2 === 'yes') ? 1 : 0) + (M05_lg * 1) + (M05_sm * 1) + (M12_4 * 0.5) > 17) {
-                    return new Error('Demasiadas unidades de construcción en uso')
+                    return new Error('Demasiados módulos en uso')
                 }
                 if (M12_1 === '0' && M12_4 === '0' && bonus === 'no') {
                     return 0
@@ -2662,7 +2662,7 @@
                     return 145
                 }
                 if (M12_1 === '1' && M12_4 === '0' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '1' && M12_4 === '1' && bonus === 'no') {
                     return 15
@@ -2752,13 +2752,13 @@
                     return 155
                 }
                 if (M12_1 === '2' && M12_4 === '0' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '2' && M12_4 === '1' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '2' && M12_4 === '2' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '2' && M12_4 === '3' && bonus === 'no') {
                     return 35
@@ -2842,19 +2842,19 @@
                     return 165
                 }
                 if (M12_1 === '3' && M12_4 === '0' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '1' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '2' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '3' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '4' && bonus === 'no') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '5' && bonus === 'no') {
                     return 55
@@ -3022,7 +3022,7 @@
                     return 150
                 }
                 if (M12_1 === '1' && M12_4 === '0' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '1' && M12_4 === '1' && bonus === 'yes') {
                     return 20
@@ -3112,13 +3112,13 @@
                     return 160
                 }
                 if (M12_1 === '2' && M12_4 === '0' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '2' && M12_4 === '1' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '2' && M12_4 === '2' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '2' && M12_4 === '3' && bonus === 'yes') {
                     return 40
@@ -3202,19 +3202,19 @@
                     return 170
                 }
                 if (M12_1 === '3' && M12_4 === '0' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '1' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '2' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '3' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '4' && bonus === 'yes') {
-                    return new Error("Altura demasiado pequeña para la cantidad de unidades de combinación de colores")
+                    return new Error("Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos")
                 }
                 if (M12_1 === '3' && M12_4 === '5' && bonus === 'yes') {
                     return 60
@@ -3294,11 +3294,11 @@
             }]
         },
         {
-            "title": "M13 Mejoras de Sostenibilidad",
-            "description": "Solo una Actualización (paneles solares, jardín de techo, aislamiento) cuenta por Pila.",
+            "title": "M13 Mejoras en Sustentabilidad",
+            "description": "Solo una mejora (Paneles Solares, Techos Verdes, Aislamientos) cuenta por Pila.",
             "objectives": [{
                 "id": "M13",
-                "title": "Número de Actualizaciones que son Independientes y Soportados solo con una pila que está al menos parcialmente en un Círculo:",
+                "title": "Cantidad de Mejoras Independientes y Soportadas por una sola Pila que este al menos Parcialmente en algún Círculo:",
                 "options": [{
                         "value": "0",
                         "title": "0"
@@ -3350,10 +3350,10 @@
         },
         {
             "title": "M14 Precisión",
-            "description": "Se  permite interrumpir su robot y devolver a relanzarlo, pero pierden por la interrupcion una fichas de precisión.",
+            "description": "Tienen permitido Interrumpir el Robot y llevarlo para Re-Lanzar, pero las Interrupciones pierden Testigos de Precisión.",
             "objectives": [{
                 "id": "precision",
-                "title": "Número de fichas de precisión que quedan en el campo:",
+                "title": "Cantidad de Testigos de Precisión restantes en el Campo:",
                 "options": [{
                         "value": "0",
                         "title": "0"
@@ -3415,68 +3415,68 @@
     "strings": {
         "yes": "Si",
         "no": "No",
-        "advantage-name": "Ventaja",
-        "advantage-desc": "Si todo su equipamiento cabe en el área de inspección pequeña durante la preparación del partido, obtendrá una ventaja.",
-        "advantage-scoring": "El Robot y el equipamiento del equipo entran en el área de inspección pequeña:",
-        "M01-name": "M01 Lugares elevados",
-        "M01-desc": "Solo puede obtener puntos de bandera si obtiene puntos de puente. Está bien y se espera que los robots choquen al intentar ganar puntos de bandera.",
-        "M01-scoring1": "Si el Robot es soportado por el puente:",
-        "M01-scoring2": "úmero de banderas que se elevan claramente a cualquier distancia, sólo por el Robot:",
+        "advantage-name": "Beneficio",
+        "advantage-desc": "Si todo tu equipamiento cabe en la Zona de Inspección Menor, durante la preparación de la Partida, obtienes un beneficio.",
+        "advantage-scoring": "Tu Robot y Equipamiento caben en la Zona de Inspección Menor:",
+        "M01-name": "M01 Pisos Elevados",
+        "M01-desc": "Solo pueden conseguir puntos por Banderas si obtienen los puntos del Puente. Está permitido y es de esperar que los Robots colisionen mientras intentan ganar los puntos de las Banderas.",
+        "M01-scoring1": "El Robot está soportado por el Puente:",
+        "M01-scoring2": "Número de banderas claramente elevadas, a cualquier altura, solo debido al Robot:",
         "M02-name": "M02 Grúa",
-        "M02-desc": "Puntúa todo lo que aplique.",
-        "M02-scoring1": "La Unidad Azul Enganchada se baja claramente a cualquier distancia del Agujero de Guía:",
-        "M02-scoring2": "La Unidad Azul Enganchada es Independiente y está soportada por otra Unidad Azul:",
-        "M02-scoring3": "Y el Nivel 1 está Completamente en el Círculo Azul:",
+        "M02-desc": "Puentúen todo lo que corresponda",
+        "M02-scoring1": "El Módulo Azul enganchado esta bajado, a cualquier distancia del Agujero de la Guía:",
+        "M02-scoring2": "El Módulo Azul enganchado es Independiente y Soportado por otro Módulo Azul:",
+        "M02-scoring3": "Y el Nivel 1 está completamente en el Círculo Azul:",
         "M03-name": "M03 Dron de Inspección",
-        "M03-desc": "La misión de inspección de drones con cámara revela una forma económica de ver puentes y otras estructuras altas. Los drones pueden volar durante horas y enviar imágenes detalladas e incluso escaneos 3D.",
-        "M03-scoring1": "El Dron de Inspección está Soportado por el eje en el Puente:",
+        "M03-desc": "La Misión del Dron con Cámara de Inspección muestra una manera barata de revisar puentes y otras estructuras altas. Los Drones pueden volar por horas y obtener imágenes detalladas, incluso escanear en 3D.",
+        "M03-scoring1": "El Dron de Inspección es Soportado por el eje del Puente:",
         "M04-name": "M04 Diseño para la Vida Silvestre",
-        "M04-desc": "El murciélago necesita terminar en la rama marrón.",
-        "M04-scoring1": "El Murciélago es Soportado por la Rama en el Árbol:",
-        "M05-name": "M05 Casa del Árbol",
-        "M05-desc": "Puntúa todo lo que aplique.",
-        "M05-scoring1": "Número de Unidades Independientes y Soportadas por las Ramas Grandes del Árbol:",
-        "M05-scoring2": "Número de Unidades Independientes y Soportadas por las Ramas Pequeñas del Árbol:",
-        "M05-error": "Demasiadas unidades",
-        "M06-name": "M06 Embotellamiento",
-        "M06-desc": "Despeja el camino levantando el embotellamiento.",
-        "M06-scoring1": "El Embotellamiento de Tráfico se levanta, su parte móvil es Independiente y solo está Soportado por sus bisagras:",
+        "M04-desc": "El Murciélago debe estar en la Rama café",
+        "M04-scoring1": "El Murciélago es Soportado por la Rama del Arbol:",
+        "M05-name": "M05 Casa en el Árbol",
+        "M05-desc": "Puentúen todo lo que corresponda.",
+        "M05-scoring1": "Cantidad de Módulos Independientes y Soportados por las Ramas Grandes del Árbol:",
+        "M05-scoring2": "Cantidad de Módulos Independientes y Soportados por las Ramas Pequeñas del Árbol:",
+        "M05-error": "Demasiados Módulos",
+        "M06-name": "M06 Taco",
+        "M06-desc": "Despeja la calle levantando el Taco.",
+        "M06-scoring1": "El Taco está levantado, su parte Móvil es Independiente, y está Soportado solo por sus bisagras:",
         "M07-name": "M07 Columpio",
-        "M07-desc": "Suelte el Columpio.",
-        "M07-scoring1": "Se suelta el columpio:",
-        "M08-name": "M08 Elevador",
-        "M08-desc": "Puntúa uno o el otro, pero no ambos.",
-        "M08-scoring1": "Las partes móviles del elevador son independientes y solo están soportadas por sus bisagras en la siguiente posición:",
+        "M07-desc": "Libera el Columpio.",
+        "M07-scoring1": "El Columpio está liberado:",
+        "M08-name": "M08 Montacargas",
+        "M08-desc": "Puentúen una u otra, no ambas.",
+        "M08-scoring1": "Las partes móviles del Montacargas son Independientes y estan Soportadas solo por sus bisagras en la siguiente posición:",
         "M08-scoring2": "Ninguna",
-        "M08-scoring3": "Coche azul debajo",
+        "M08-scoring3": "Auto Azul Abajo",
         "M08-scoring4": "Equilibrado",
         "M09-name": "M09 Factor de Seguridad",
-        "M09-desc": "¿Puede el Edificio de prueba mantenerse en pie cuando se mueven algunas de sus vigas de soporte?",
-        "M09-scoring1": "El Edificio de Prueba es Independiente y solo está Soportado por las vigas azules:",
-        "M09-scoring2": "Número de vigas azules está claramente baja al menos la mitad de su recorrido:",
+        "M09-desc": "Puede el Edificio Piloto sostenerse cuando algunas de sus vigas de soporte son desplazadas?",
+        "M09-scoring1": "El Edificio Piloto es Independiente y Soportado solo por vigas azules:",
+        "M09-scoring2": "Cantidad de Vigas Azules apartadas, al menos a medio camino:",
         "M10-name": "M10 Construcción de Acero",
-        "M10-desc": "Hacer que la estructura de acero está de pie.",
-        "M10-scoring": "La Estructura de Acero está de pie y es Independiente y solo está Soportada por sus bisagras:",
+        "M10-desc": "Haz que la Construcción de Acero se eleve.",
+        "M10-scoring": "La construcción de acero está vertical, Independiente y Soportada solo por sus Bisagras:",
         "M11-name": "M11 Arquitectura Innovadora",
-        "M11-desc": "Diseña y construye tu propia estructura y transportar a cualquier círculo.",
-        "M11-scoring1": "La Estructura es más grande que una Unidad de Construcción Azul y está construida con los ladrillos blancos LEGO del equipo:",
-        "M11-scoring2": "La Estructura está en cualquier Círculo:",
+        "M11-desc": "Diseña y Construye to propia Estructura y llévala a cualquier Círculo.",
+        "M11-scoring1": "La Estructura es mayor a un Módulo Azul y está construida solo con ladrillos LEGO blancos:",
+        "M11-scoring2": "La Estructura está en cualquier Circulo:",
         "M11-scoring3": "No",
         "M11-scoring4": "Parcialmente",
         "M11-scoring5": "Completamente",
         "M12-name": "M12 Diseño y Construcción",
-        "M12-desc": "El Círculo Azul no es parte de la misión 12.",
-        "M12-scoring1": "Número de Círculos con una Unidad de combinación de colores, plana sobre el tapete y completamente en círculo:",
-        "M12-scoring4": "Suma de alturas de todas las pilas independientes al menos en parte en cualquier círculo:",
-        "M13-name": "M13 Mejoras de Sostenibilidad",
-        "M13-desc": "Solo una Actualización (paneles solares, jardín de techo, aislamiento) cuenta por Pila.",
-        "M13-scoring": "Número de Actualizaciones que son Independientes y Soportados solo con una pila que está al menos parcialmente en un Círculo:",
+        "M12-desc": "El Círculo Azul no es parte de la Misión 12.",
+        "M12-scoring1": "Cantidad de Círculos con módulo de igual color completamente dentro y en contacto plano con el Tapete:",
+        "M12-scoring4": "Suma de las altura de Pilas Independientes, al menos parcialmente dentro de cualquier Circulo:",
+        "M13-name": "M13 Mejoras en Sustentabilidad",
+        "M13-desc": "Solo una mejora (Paneles Solares, Techos Verdes, Aislamientos) cuenta por Pila.",
+        "M13-scoring": "Cantidad de Mejoras Independientes y Soportadas por una sola Pila que este al menos Parcialmente en algún Círculo:",
         "precision-name": "M14 Precisión",
-        "precision-desc": "Se  permite interrumpir su robot y devolver a relanzarlo, pero pierden por la interrupcion una fichas de precisión.",
-        "precision-scoring": "Número de fichas de precisión que quedan en el campo:",
-        "building-unit-error": "Demasiadas unidades de construcción en uso",
-        "crane-error": "Conflicto en posición de unidades azules",
-        "M12-error2": "Altura demasiado pequeña para la cantidad de unidades de combinación de colores"
+        "precision-desc": "Tienen permitido Interrumpir el Robot y llevarlo para Re-Lanzar, pero las Interrupciones pierden Testigos de Precisión.",
+        "precision-scoring": "Cantidad de Testigos de Precisión restantes en el Campo:",
+        "building-unit-error": "Demasiados módulos en uso",
+        "crane-error": "Conflicto en la posición de módulos azules",
+        "M12-error2": "Suma de alturas muy baja para la cantidad de módulos con color coincidente a sus Círculos"
     },
     "rtl": false
 })
