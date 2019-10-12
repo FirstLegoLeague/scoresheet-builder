@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/challenge.xsl"?>
+<fll:challenge
+    xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd" year="2019" version="0" name="VILLE AVENIR">
+    <!-- 2019 Challenge XML version 2, 7 Sept 2019-->
+
+    <strings language="en-US">
+
+        <string id="yes">                           Oui</string>
+        <string id="no">                            Non</string>
+
+        <string id="advantage-name">                Advantage</string>
+        <string id="advantage-desc">                <![CDATA[Si tout votre équipement tient dans la petite zone d'inspection avant le début du match, vous avez un avantage. ]]></string>
+        <string id="advantage-scoring">             Le robot de l'équipe ainsi que tout équipement tient dans la petite zone d'inspection:</string>
+
+        <string id="M01-name">                      M01 Emplacements élevés </string>
+        <string id="M01-desc">                      <![CDATA[Vous ne pouvez obtenir des points Drapeau que si vous obtenez des points Pont. Il est probable et correct que les robots entrent en collision en essayant de remporter des points Drapeau.]]></string>
+        <string id="M01-scoring1">                   Le robot est supporté par le Pont:</string>
+        <string id="M01-scoring2">                   Nombre de drapeaux clairement levés à n’importe quelle hauteur, seulement par l’action du robot:</string>
+
+        <string id="M02-name">                      M02  La grue </string>
+        <string id="M02-desc">                      <![CDATA[Pointage: tout ce qui s’applique]]></string>
+        <string id="M02-scoring1">                   Le module suspendu bleu est clairement baissé à n’importe quelle distance du trou de guidage:</string>
+        <string id="M02-scoring2">                   Le module suspendu bleu est indépendant supporté par un autre module bleu:</string>
+        <string id="M02-scoring3">                   et le niveau 1 est complètement dans le cercle bleu:</string>
+
+        <string id="M03-name">                      M03  L’inspection par drone </string>
+        <string id="M03-desc">                      <![CDATA[La mission «caméra d’inspection par drone» présente une façon peu couteuse de vérifier des ponts et autres grandes structures. Les drones peuvent voler pendant des heures et transmettre des photos détaillées et même des numérisations 3D.]]></string>
+        <string id="M03-scoring1">                  Le drone d’inspection est supporté par l’essieu (A) du Pont:</string>
+
+        <string id="M04-name">                      M04 Conception pour la faune </string>
+        <string id="M04-desc">                      <![CDATA[La chauvesouris doit se retrouver sur la branche brune.]]></string>
+        <string id="M04-scoring1">                  La chauvesouris est supportée par la branche de l’arbre:</string>
+
+        <string id="M05-name">                      M05  La cabane perchée </string>
+        <string id="M05-desc">                      <![CDATA[ (Pointage: tout ce qui s’applique.]]></string>
+        <string id="M05-scoring1">                  Nombre de modules indépendants et supportés par les grandes branches de l'arbre:</string>
+        <string id="M05-scoring2">                  Nombre de modules indépendants et supportés par les petites branches de l'arbre:</string>
+        <string id="M05-error">                     Trop de modules </string>
+
+        <string id="M06-name">                      M06  L’embouteillage </string>
+        <string id="M06-desc">                      <![CDATA[Dégagez la route en soulevant l’embouteillage.]]></string>
+        <string id="M06-scoring1">                   L’embouteillage est levé, sa partie mobile est indépendante et n'est soutenue que par ses charnières:</string>
+
+        <string id="M07-name">                      M07  La balançoire </string>
+        <string id="M07-desc">                      <![CDATA[Lâchez la balançoire.]]></string>
+        <string id="M07-scoring1">                   La balançoire est lâchée:</string>
+
+        <string id="M08-name">                      M08  L’ascenseur </string>
+        <string id="M08-desc">                      <![CDATA[Pointage : l’un ou l’autre]]></string>
+        <string id="M08-scoring1">                  Les pièces mobiles de l'ascenseur sont indépendantes et supportées uniquement par ses charnières dans la position suivante:</string>
+        <string id="M08-scoring2">                  Aucune </string>
+        <string id="M08-scoring3">                  Cabine bleue en bas </string>
+        <string id="M08-scoring4">                  En équilibre </string>
+
+        <string id="M09-name">                      M09  Sécurité </string>
+        <string id="M09-desc">                      <![CDATA[Le bâtiment test peut-il rester debout lorsque certaines de ses poutres bleues sont déplacées?]]></string>
+        <string id="M09-scoring1">                  Le bâtiment de simulation est supporté uniquement par les poutres bleues :</string>
+        <string id="M09-scoring2">                  Nombre de poutres bleues tombées au moins à mi-chemin du tapis:</string>
+
+        <string id="M10-name">                      M10 Structure en acier </string>
+        <string id="M10-desc">                      <![CDATA[Faites que la structure en acier tient debout.]]></string>
+        <string id="M10-scoring">                   La structure en acier est debout, indépendante et soutenue uniquement par ses charnières :</string>
+
+        <string id="M11-name">                      M11 L’architecture innovante </string>
+        <string id="M11-desc">                      <![CDATA[Concevez et construisez votre propre structure et livrez-le à n'importe quel cercle.]]></string>
+        <string id="M11-scoring1">                  Une structure construite par votre équipe à partir de briques LEGO blanches uniquement est visiblement plus grande qu’un module bleu:</string>
+        <string id="M11-scoring2">                  La structure est dans n’importe quel cercle :</string>
+        <string id="M11-scoring3">                  Non</string>
+        <string id="M11-scoring4">                  Partiellement</string>
+        <string id="M11-scoring5">                  Complètement</string>
+
+        <string id="M12-name">                      M12 Conception et construction </string>
+        <string id="M12-desc">                      <![CDATA[ le cercle bleu ne fait pas partie de la mission 12.]]></string>
+        <string id="M12-scoring1">                  Le nombre de cercles avec au moins un module de couleur correspondante complètement à l’intérieur et à plat sur le tapis de jeu:</string>
+        <string id="M12-scoring4">                  La somme des niveaux de tous les empilements indépendants se trouvant au moins partiellement dans un cercle:</string>
+
+        <string id="M13-name">                      M13  La rénovation durable </string>
+        <string id="M13-desc">                      <![CDATA[(une seule rénovation (panneaux solaires, toit vert,isolation) compte par empilement.]]></string>
+        <string id="M13-scoring">                   Nombre de rénovations indépendantes et supportées uniquement par un empilement situé au moins partiellement dans un cercle:</string>
+
+        <string id="precision-name">                M14 Précision </string>
+        <string id="precision-desc">                <![CDATA[Vous avez le droit d'interrompre votre robot et de le ramener à zone de lancement, mais les interruptions vous font perdre des jetons de précision.]]></string>
+        <string id="precision-scoring">             Le nombre de jetons de précision laissé sur le terrain :</string>
+
+        <string id="building-unit-error">           Trop de modules de construction sont utilisés </string>
+        <string id="crane-error">                   Conflit de position des unités bleues </string>
+        <string id="M12-error2">                    Hauteur trop petite pour le nombre de modules se trouvant dans des cercles de la même couleur </string>
+
+    </strings>
+
+    <!-- Do NOT edit below this line -->
+
+    <mission name="advantage-name" description="advantage-desc">
+        <objective-yesno id="bonus" description="advantage-scoring" default="no" />
+        <score>
+            <indexes>
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /> <points amount="0" /> </case>
+                <case> <index-ref value="yes" /> <points amount="0" /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M01-name" description="M01-desc">
+        <objective-yesno id="M01-1" description="M01-scoring1" default="no" />
+        <objective-enum id="M01-2" description="M01-scoring2" default="0" >
+            <option name="0" description="0" />
+            <option name="1" description="1" />
+            <option name="2" description="2" />
+        </objective-enum>
+        <score>
+            <indexes>
+                <index objective="M01-1" />
+                <index objective="M01-2" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="0" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="1" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="2" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="0" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="1" /><index-ref value="no" /> <points amount="35"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="2" /><index-ref value="no" /> <points amount="50"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="0" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="1" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="2" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="0" /><index-ref value="yes" /> <points amount="25"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="1" /><index-ref value="yes" /> <points amount="40"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="2" /><index-ref value="yes" /> <points amount="55"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M02-name" description="M02-desc">
+        <objective-yesno id="M02-1" description="M02-scoring1" default="no" resource="building-unit" />
+        <objective-yesno id="M02-2" description="M02-scoring2" default="no" resource="building-unit" />
+        <objective-yesno id="M02-3" description="M02-scoring3" default="no" />
+        <score>
+            <indexes>
+                <index objective="M02-1" />
+                <index objective="M02-2" />
+                <index objective="M02-3" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /> <index-ref value="no" /> <index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /> <index-ref value="no" /> <index-ref value="yes" /><index-ref value="no" /> <error message="crane-error" /> </case>
+                <case> <index-ref value="no" /> <index-ref value="yes" /> <index-ref value="no" /><index-ref value="no" /> <error message="crane-error" /> </case>
+                <case> <index-ref value="no" /> <index-ref value="yes" /> <index-ref value="yes" /><index-ref value="no" /> <error message="crane-error" /> </case>
+
+                <case> <index-ref value="yes" /> <index-ref value="no" /> <index-ref value="no" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="yes" /> <index-ref value="no" /> <index-ref value="yes" /><index-ref value="no" /> <error message="crane-error" /> </case>
+                <case> <index-ref value="yes" /> <index-ref value="yes" /> <index-ref value="no" /><index-ref value="no" /> <points amount="35"  /> </case>
+                <case> <index-ref value="yes" /> <index-ref value="yes" /> <index-ref value="yes" /><index-ref value="no" /> <points amount="50"  /> </case>
+
+                <case> <index-ref value="no" /> <index-ref value="no" /> <index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /> <index-ref value="no" /> <index-ref value="yes" /><index-ref value="yes" /> <error message="crane-error" /> </case>
+                <case> <index-ref value="no" /> <index-ref value="yes" /> <index-ref value="no" /><index-ref value="yes" /> <error message="crane-error" /> </case>
+                <case> <index-ref value="no" /> <index-ref value="yes" /> <index-ref value="yes" /><index-ref value="yes" /> <error message="crane-error" /> </case>
+
+                <case> <index-ref value="yes" /> <index-ref value="no" /> <index-ref value="no" /><index-ref value="yes" /> <points amount="30"  /> </case>
+                <case> <index-ref value="yes" /> <index-ref value="no" /> <index-ref value="yes" /><index-ref value="yes" /> <error message="crane-error" /> </case>
+                <case> <index-ref value="yes" /> <index-ref value="yes" /> <index-ref value="no" /><index-ref value="yes" /> <points amount="45"  /> </case>
+                <case> <index-ref value="yes" /> <index-ref value="yes" /> <index-ref value="yes" /><index-ref value="yes" /> <points amount="60"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M03-name" description="M03-desc">
+        <objective-yesno id="M03-1" description="M03-scoring1" default="no" />
+        <score>
+            <indexes>
+                <index objective="M03-1" />
+                <index objective="bonus" />
+
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /> <points amount="10"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="yes" /> <points amount="15"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M04-name" description="M04-desc">
+        <objective-yesno id="M04-1" description="M04-scoring1" default="no" />
+        <score>
+            <indexes>
+                <index objective="M04-1" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /> <points amount="10"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="yes" /> <points amount="15"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M05-name" description="M05-desc">
+        <objective-number id="M05-lg" description="M05-scoring1" min="0" max="17" default="0" resource="building-unit" />
+        <objective-number id="M05-sm" description="M05-scoring2" min="0" max="17" default="0" resource="building-unit" />
+
+        <score>
+            <indexes>
+                <index objective="M05-lg" />
+                <index objective="M05-sm" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+<case> <index-ref value="0" /><index-ref value="0" /><index-ref value="no" /> <points amount="0" /> </case>
+<case> <index-ref value="0" /><index-ref value="1" /><index-ref value="no" /> <points amount="15" /> </case>
+<case> <index-ref value="0" /><index-ref value="2" /><index-ref value="no" /> <points amount="30" /> </case>
+<case> <index-ref value="0" /><index-ref value="3" /><index-ref value="no" /> <points amount="45" /> </case>
+<case> <index-ref value="0" /><index-ref value="4" /><index-ref value="no" /> <points amount="60" /> </case>
+<case> <index-ref value="0" /><index-ref value="5" /><index-ref value="no" /> <points amount="75" /> </case>
+<case> <index-ref value="0" /><index-ref value="6" /><index-ref value="no" /> <points amount="90" /> </case>
+<case> <index-ref value="0" /><index-ref value="7" /><index-ref value="no" /> <points amount="105" /> </case>
+<case> <index-ref value="0" /><index-ref value="8" /><index-ref value="no" /> <points amount="120" /> </case>
+<case> <index-ref value="0" /><index-ref value="9" /><index-ref value="no" /> <points amount="135" /> </case>
+<case> <index-ref value="0" /><index-ref value="10" /><index-ref value="no" /> <points amount="150" /> </case>
+<case> <index-ref value="0" /><index-ref value="11" /><index-ref value="no" /> <points amount="165" /> </case>
+<case> <index-ref value="0" /><index-ref value="12" /><index-ref value="no" /> <points amount="180" /> </case>
+<case> <index-ref value="0" /><index-ref value="13" /><index-ref value="no" /> <points amount="195" /> </case>
+<case> <index-ref value="0" /><index-ref value="14" /><index-ref value="no" /> <points amount="210" /> </case>
+<case> <index-ref value="0" /><index-ref value="15" /><index-ref value="no" /> <points amount="225" /> </case>
+<case> <index-ref value="0" /><index-ref value="16" /><index-ref value="no" /> <points amount="240" /> </case>
+<case> <index-ref value="0" /><index-ref value="17" /><index-ref value="no" /> <points amount="255" /> </case>
+<case> <index-ref value="1" /><index-ref value="0" /><index-ref value="no" /> <points amount="10" /> </case>
+<case> <index-ref value="1" /><index-ref value="1" /><index-ref value="no" /> <points amount="25" /> </case>
+<case> <index-ref value="1" /><index-ref value="2" /><index-ref value="no" /> <points amount="40" /> </case>
+<case> <index-ref value="1" /><index-ref value="3" /><index-ref value="no" /> <points amount="55" /> </case>
+<case> <index-ref value="1" /><index-ref value="4" /><index-ref value="no" /> <points amount="70" /> </case>
+<case> <index-ref value="1" /><index-ref value="5" /><index-ref value="no" /> <points amount="85" /> </case>
+<case> <index-ref value="1" /><index-ref value="6" /><index-ref value="no" /> <points amount="100" /> </case>
+<case> <index-ref value="1" /><index-ref value="7" /><index-ref value="no" /> <points amount="115" /> </case>
+<case> <index-ref value="1" /><index-ref value="8" /><index-ref value="no" /> <points amount="130" /> </case>
+<case> <index-ref value="1" /><index-ref value="9" /><index-ref value="no" /> <points amount="145" /> </case>
+<case> <index-ref value="1" /><index-ref value="10" /><index-ref value="no" /> <points amount="160" /> </case>
+<case> <index-ref value="1" /><index-ref value="11" /><index-ref value="no" /> <points amount="175" /> </case>
+<case> <index-ref value="1" /><index-ref value="12" /><index-ref value="no" /> <points amount="190" /> </case>
+<case> <index-ref value="1" /><index-ref value="13" /><index-ref value="no" /> <points amount="205" /> </case>
+<case> <index-ref value="1" /><index-ref value="14" /><index-ref value="no" /> <points amount="220" /> </case>
+<case> <index-ref value="1" /><index-ref value="15" /><index-ref value="no" /> <points amount="235" /> </case>
+<case> <index-ref value="1" /><index-ref value="16" /><index-ref value="no" /> <points amount="250" /> </case>
+<case> <index-ref value="1" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="2" /><index-ref value="0" /><index-ref value="no" /> <points amount="20" /> </case>
+<case> <index-ref value="2" /><index-ref value="1" /><index-ref value="no" /> <points amount="35" /> </case>
+<case> <index-ref value="2" /><index-ref value="2" /><index-ref value="no" /> <points amount="50" /> </case>
+<case> <index-ref value="2" /><index-ref value="3" /><index-ref value="no" /> <points amount="65" /> </case>
+<case> <index-ref value="2" /><index-ref value="4" /><index-ref value="no" /> <points amount="80" /> </case>
+<case> <index-ref value="2" /><index-ref value="5" /><index-ref value="no" /> <points amount="95" /> </case>
+<case> <index-ref value="2" /><index-ref value="6" /><index-ref value="no" /> <points amount="110" /> </case>
+<case> <index-ref value="2" /><index-ref value="7" /><index-ref value="no" /> <points amount="125" /> </case>
+<case> <index-ref value="2" /><index-ref value="8" /><index-ref value="no" /> <points amount="140" /> </case>
+<case> <index-ref value="2" /><index-ref value="9" /><index-ref value="no" /> <points amount="155" /> </case>
+<case> <index-ref value="2" /><index-ref value="10" /><index-ref value="no" /> <points amount="170" /> </case>
+<case> <index-ref value="2" /><index-ref value="11" /><index-ref value="no" /> <points amount="185" /> </case>
+<case> <index-ref value="2" /><index-ref value="12" /><index-ref value="no" /> <points amount="200" /> </case>
+<case> <index-ref value="2" /><index-ref value="13" /><index-ref value="no" /> <points amount="215" /> </case>
+<case> <index-ref value="2" /><index-ref value="14" /><index-ref value="no" /> <points amount="230" /> </case>
+<case> <index-ref value="2" /><index-ref value="15" /><index-ref value="no" /> <points amount="245" /> </case>
+<case> <index-ref value="2" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="2" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="3" /><index-ref value="0" /><index-ref value="no" /> <points amount="30" /> </case>
+<case> <index-ref value="3" /><index-ref value="1" /><index-ref value="no" /> <points amount="45" /> </case>
+<case> <index-ref value="3" /><index-ref value="2" /><index-ref value="no" /> <points amount="60" /> </case>
+<case> <index-ref value="3" /><index-ref value="3" /><index-ref value="no" /> <points amount="75" /> </case>
+<case> <index-ref value="3" /><index-ref value="4" /><index-ref value="no" /> <points amount="90" /> </case>
+<case> <index-ref value="3" /><index-ref value="5" /><index-ref value="no" /> <points amount="105" /> </case>
+<case> <index-ref value="3" /><index-ref value="6" /><index-ref value="no" /> <points amount="120" /> </case>
+<case> <index-ref value="3" /><index-ref value="7" /><index-ref value="no" /> <points amount="135" /> </case>
+<case> <index-ref value="3" /><index-ref value="8" /><index-ref value="no" /> <points amount="150" /> </case>
+<case> <index-ref value="3" /><index-ref value="9" /><index-ref value="no" /> <points amount="165" /> </case>
+<case> <index-ref value="3" /><index-ref value="10" /><index-ref value="no" /> <points amount="180" /> </case>
+<case> <index-ref value="3" /><index-ref value="11" /><index-ref value="no" /> <points amount="195" /> </case>
+<case> <index-ref value="3" /><index-ref value="12" /><index-ref value="no" /> <points amount="210" /> </case>
+<case> <index-ref value="3" /><index-ref value="13" /><index-ref value="no" /> <points amount="225" /> </case>
+<case> <index-ref value="3" /><index-ref value="14" /><index-ref value="no" /> <points amount="240" /> </case>
+<case> <index-ref value="3" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="3" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="3" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="0" /><index-ref value="no" /> <points amount="40" /> </case>
+<case> <index-ref value="4" /><index-ref value="1" /><index-ref value="no" /> <points amount="55" /> </case>
+<case> <index-ref value="4" /><index-ref value="2" /><index-ref value="no" /> <points amount="70" /> </case>
+<case> <index-ref value="4" /><index-ref value="3" /><index-ref value="no" /> <points amount="85" /> </case>
+<case> <index-ref value="4" /><index-ref value="4" /><index-ref value="no" /> <points amount="100" /> </case>
+<case> <index-ref value="4" /><index-ref value="5" /><index-ref value="no" /> <points amount="115" /> </case>
+<case> <index-ref value="4" /><index-ref value="6" /><index-ref value="no" /> <points amount="130" /> </case>
+<case> <index-ref value="4" /><index-ref value="7" /><index-ref value="no" /> <points amount="145" /> </case>
+<case> <index-ref value="4" /><index-ref value="8" /><index-ref value="no" /> <points amount="160" /> </case>
+<case> <index-ref value="4" /><index-ref value="9" /><index-ref value="no" /> <points amount="175" /> </case>
+<case> <index-ref value="4" /><index-ref value="10" /><index-ref value="no" /> <points amount="190" /> </case>
+<case> <index-ref value="4" /><index-ref value="11" /><index-ref value="no" /> <points amount="205" /> </case>
+<case> <index-ref value="4" /><index-ref value="12" /><index-ref value="no" /> <points amount="220" /> </case>
+<case> <index-ref value="4" /><index-ref value="13" /><index-ref value="no" /> <points amount="235" /> </case>
+<case> <index-ref value="4" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="0" /><index-ref value="no" /> <points amount="50" /> </case>
+<case> <index-ref value="5" /><index-ref value="1" /><index-ref value="no" /> <points amount="65" /> </case>
+<case> <index-ref value="5" /><index-ref value="2" /><index-ref value="no" /> <points amount="80" /> </case>
+<case> <index-ref value="5" /><index-ref value="3" /><index-ref value="no" /> <points amount="95" /> </case>
+<case> <index-ref value="5" /><index-ref value="4" /><index-ref value="no" /> <points amount="110" /> </case>
+<case> <index-ref value="5" /><index-ref value="5" /><index-ref value="no" /> <points amount="125" /> </case>
+<case> <index-ref value="5" /><index-ref value="6" /><index-ref value="no" /> <points amount="140" /> </case>
+<case> <index-ref value="5" /><index-ref value="7" /><index-ref value="no" /> <points amount="155" /> </case>
+<case> <index-ref value="5" /><index-ref value="8" /><index-ref value="no" /> <points amount="170" /> </case>
+<case> <index-ref value="5" /><index-ref value="9" /><index-ref value="no" /> <points amount="185" /> </case>
+<case> <index-ref value="5" /><index-ref value="10" /><index-ref value="no" /> <points amount="200" /> </case>
+<case> <index-ref value="5" /><index-ref value="11" /><index-ref value="no" /> <points amount="215" /> </case>
+<case> <index-ref value="5" /><index-ref value="12" /><index-ref value="no" /> <points amount="230" /> </case>
+<case> <index-ref value="5" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="0" /><index-ref value="no" /> <points amount="60" /> </case>
+<case> <index-ref value="6" /><index-ref value="1" /><index-ref value="no" /> <points amount="75" /> </case>
+<case> <index-ref value="6" /><index-ref value="2" /><index-ref value="no" /> <points amount="90" /> </case>
+<case> <index-ref value="6" /><index-ref value="3" /><index-ref value="no" /> <points amount="105" /> </case>
+<case> <index-ref value="6" /><index-ref value="4" /><index-ref value="no" /> <points amount="120" /> </case>
+<case> <index-ref value="6" /><index-ref value="5" /><index-ref value="no" /> <points amount="135" /> </case>
+<case> <index-ref value="6" /><index-ref value="6" /><index-ref value="no" /> <points amount="150" /> </case>
+<case> <index-ref value="6" /><index-ref value="7" /><index-ref value="no" /> <points amount="165" /> </case>
+<case> <index-ref value="6" /><index-ref value="8" /><index-ref value="no" /> <points amount="180" /> </case>
+<case> <index-ref value="6" /><index-ref value="9" /><index-ref value="no" /> <points amount="195" /> </case>
+<case> <index-ref value="6" /><index-ref value="10" /><index-ref value="no" /> <points amount="210" /> </case>
+<case> <index-ref value="6" /><index-ref value="11" /><index-ref value="no" /> <points amount="225" /> </case>
+<case> <index-ref value="6" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="0" /><index-ref value="no" /> <points amount="70" /> </case>
+<case> <index-ref value="7" /><index-ref value="1" /><index-ref value="no" /> <points amount="85" /> </case>
+<case> <index-ref value="7" /><index-ref value="2" /><index-ref value="no" /> <points amount="100" /> </case>
+<case> <index-ref value="7" /><index-ref value="3" /><index-ref value="no" /> <points amount="115" /> </case>
+<case> <index-ref value="7" /><index-ref value="4" /><index-ref value="no" /> <points amount="130" /> </case>
+<case> <index-ref value="7" /><index-ref value="5" /><index-ref value="no" /> <points amount="145" /> </case>
+<case> <index-ref value="7" /><index-ref value="6" /><index-ref value="no" /> <points amount="160" /> </case>
+<case> <index-ref value="7" /><index-ref value="7" /><index-ref value="no" /> <points amount="175" /> </case>
+<case> <index-ref value="7" /><index-ref value="8" /><index-ref value="no" /> <points amount="190" /> </case>
+<case> <index-ref value="7" /><index-ref value="9" /><index-ref value="no" /> <points amount="205" /> </case>
+<case> <index-ref value="7" /><index-ref value="10" /><index-ref value="no" /> <points amount="220" /> </case>
+<case> <index-ref value="7" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="0" /><index-ref value="no" /> <points amount="80" /> </case>
+<case> <index-ref value="8" /><index-ref value="1" /><index-ref value="no" /> <points amount="95" /> </case>
+<case> <index-ref value="8" /><index-ref value="2" /><index-ref value="no" /> <points amount="110" /> </case>
+<case> <index-ref value="8" /><index-ref value="3" /><index-ref value="no" /> <points amount="125" /> </case>
+<case> <index-ref value="8" /><index-ref value="4" /><index-ref value="no" /> <points amount="140" /> </case>
+<case> <index-ref value="8" /><index-ref value="5" /><index-ref value="no" /> <points amount="155" /> </case>
+<case> <index-ref value="8" /><index-ref value="6" /><index-ref value="no" /> <points amount="170" /> </case>
+<case> <index-ref value="8" /><index-ref value="7" /><index-ref value="no" /> <points amount="185" /> </case>
+<case> <index-ref value="8" /><index-ref value="8" /><index-ref value="no" /> <points amount="200" /> </case>
+<case> <index-ref value="8" /><index-ref value="9" /><index-ref value="no" /> <points amount="215" /> </case>
+<case> <index-ref value="8" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="0" /><index-ref value="no" /> <points amount="90" /> </case>
+<case> <index-ref value="9" /><index-ref value="1" /><index-ref value="no" /> <points amount="105" /> </case>
+<case> <index-ref value="9" /><index-ref value="2" /><index-ref value="no" /> <points amount="120" /> </case>
+<case> <index-ref value="9" /><index-ref value="3" /><index-ref value="no" /> <points amount="135" /> </case>
+<case> <index-ref value="9" /><index-ref value="4" /><index-ref value="no" /> <points amount="150" /> </case>
+<case> <index-ref value="9" /><index-ref value="5" /><index-ref value="no" /> <points amount="165" /> </case>
+<case> <index-ref value="9" /><index-ref value="6" /><index-ref value="no" /> <points amount="180" /> </case>
+<case> <index-ref value="9" /><index-ref value="7" /><index-ref value="no" /> <points amount="195" /> </case>
+<case> <index-ref value="9" /><index-ref value="8" /><index-ref value="no" /> <points amount="210" /> </case>
+<case> <index-ref value="9" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="0" /><index-ref value="no" /> <points amount="100" /> </case>
+<case> <index-ref value="10" /><index-ref value="1" /><index-ref value="no" /> <points amount="115" /> </case>
+<case> <index-ref value="10" /><index-ref value="2" /><index-ref value="no" /> <points amount="130" /> </case>
+<case> <index-ref value="10" /><index-ref value="3" /><index-ref value="no" /> <points amount="145" /> </case>
+<case> <index-ref value="10" /><index-ref value="4" /><index-ref value="no" /> <points amount="160" /> </case>
+<case> <index-ref value="10" /><index-ref value="5" /><index-ref value="no" /> <points amount="175" /> </case>
+<case> <index-ref value="10" /><index-ref value="6" /><index-ref value="no" /> <points amount="190" /> </case>
+<case> <index-ref value="10" /><index-ref value="7" /><index-ref value="no" /> <points amount="205" /> </case>
+<case> <index-ref value="10" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="0" /><index-ref value="no" /> <points amount="110" /> </case>
+<case> <index-ref value="11" /><index-ref value="1" /><index-ref value="no" /> <points amount="125" /> </case>
+<case> <index-ref value="11" /><index-ref value="2" /><index-ref value="no" /> <points amount="140" /> </case>
+<case> <index-ref value="11" /><index-ref value="3" /><index-ref value="no" /> <points amount="155" /> </case>
+<case> <index-ref value="11" /><index-ref value="4" /><index-ref value="no" /> <points amount="170" /> </case>
+<case> <index-ref value="11" /><index-ref value="5" /><index-ref value="no" /> <points amount="185" /> </case>
+<case> <index-ref value="11" /><index-ref value="6" /><index-ref value="no" /> <points amount="200" /> </case>
+<case> <index-ref value="11" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="0" /><index-ref value="no" /> <points amount="120" /> </case>
+<case> <index-ref value="12" /><index-ref value="1" /><index-ref value="no" /> <points amount="135" /> </case>
+<case> <index-ref value="12" /><index-ref value="2" /><index-ref value="no" /> <points amount="150" /> </case>
+<case> <index-ref value="12" /><index-ref value="3" /><index-ref value="no" /> <points amount="165" /> </case>
+<case> <index-ref value="12" /><index-ref value="4" /><index-ref value="no" /> <points amount="180" /> </case>
+<case> <index-ref value="12" /><index-ref value="5" /><index-ref value="no" /> <points amount="195" /> </case>
+<case> <index-ref value="12" /><index-ref value="6" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="0" /><index-ref value="no" /> <points amount="130" /> </case>
+<case> <index-ref value="13" /><index-ref value="1" /><index-ref value="no" /> <points amount="145" /> </case>
+<case> <index-ref value="13" /><index-ref value="2" /><index-ref value="no" /> <points amount="160" /> </case>
+<case> <index-ref value="13" /><index-ref value="3" /><index-ref value="no" /> <points amount="175" /> </case>
+<case> <index-ref value="13" /><index-ref value="4" /><index-ref value="no" /> <points amount="190" /> </case>
+<case> <index-ref value="13" /><index-ref value="5" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="6" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="0" /><index-ref value="no" /> <points amount="140" /> </case>
+<case> <index-ref value="14" /><index-ref value="1" /><index-ref value="no" /> <points amount="155" /> </case>
+<case> <index-ref value="14" /><index-ref value="2" /><index-ref value="no" /> <points amount="170" /> </case>
+<case> <index-ref value="14" /><index-ref value="3" /><index-ref value="no" /> <points amount="185" /> </case>
+<case> <index-ref value="14" /><index-ref value="4" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="5" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="6" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="0" /><index-ref value="no" /> <points amount="150" /> </case>
+<case> <index-ref value="15" /><index-ref value="1" /><index-ref value="no" /> <points amount="165" /> </case>
+<case> <index-ref value="15" /><index-ref value="2" /><index-ref value="no" /> <points amount="180" /> </case>
+<case> <index-ref value="15" /><index-ref value="3" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="4" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="5" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="6" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="0" /><index-ref value="no" /> <points amount="160" /> </case>
+<case> <index-ref value="16" /><index-ref value="1" /><index-ref value="no" /> <points amount="175" /> </case>
+<case> <index-ref value="16" /><index-ref value="2" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="3" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="4" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="5" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="6" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="0" /><index-ref value="no" /> <points amount="170" /> </case>
+<case> <index-ref value="17" /><index-ref value="1" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="2" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="3" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="4" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="5" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="6" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="7" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="8" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="9" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="10" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="11" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="12" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="13" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="14" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="15" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="16" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="17" /><index-ref value="no" /><error message="M12-error"  /> </case>
+<case> <index-ref value="0" /><index-ref value="0" /><index-ref value="yes" /> <points amount="0" /> </case>
+<case> <index-ref value="0" /><index-ref value="1" /><index-ref value="yes" /> <points amount="20" /> </case>
+<case> <index-ref value="0" /><index-ref value="2" /><index-ref value="yes" /> <points amount="35" /> </case>
+<case> <index-ref value="0" /><index-ref value="3" /><index-ref value="yes" /> <points amount="50" /> </case>
+<case> <index-ref value="0" /><index-ref value="4" /><index-ref value="yes" /> <points amount="65" /> </case>
+<case> <index-ref value="0" /><index-ref value="5" /><index-ref value="yes" /> <points amount="80" /> </case>
+<case> <index-ref value="0" /><index-ref value="6" /><index-ref value="yes" /> <points amount="95" /> </case>
+<case> <index-ref value="0" /><index-ref value="7" /><index-ref value="yes" /> <points amount="110" /> </case>
+<case> <index-ref value="0" /><index-ref value="8" /><index-ref value="yes" /> <points amount="125" /> </case>
+<case> <index-ref value="0" /><index-ref value="9" /><index-ref value="yes" /> <points amount="140" /> </case>
+<case> <index-ref value="0" /><index-ref value="10" /><index-ref value="yes" /> <points amount="155" /> </case>
+<case> <index-ref value="0" /><index-ref value="11" /><index-ref value="yes" /> <points amount="170" /> </case>
+<case> <index-ref value="0" /><index-ref value="12" /><index-ref value="yes" /> <points amount="185" /> </case>
+<case> <index-ref value="0" /><index-ref value="13" /><index-ref value="yes" /> <points amount="200" /> </case>
+<case> <index-ref value="0" /><index-ref value="14" /><index-ref value="yes" /> <points amount="215" /> </case>
+<case> <index-ref value="0" /><index-ref value="15" /><index-ref value="yes" /> <points amount="230" /> </case>
+<case> <index-ref value="0" /><index-ref value="16" /><index-ref value="yes" /> <points amount="245" /> </case>
+<case> <index-ref value="0" /><index-ref value="17" /><index-ref value="yes" /> <points amount="260" /> </case>
+<case> <index-ref value="1" /><index-ref value="0" /><index-ref value="yes" /> <points amount="15" /> </case>
+<case> <index-ref value="1" /><index-ref value="1" /><index-ref value="yes" /> <points amount="30" /> </case>
+<case> <index-ref value="1" /><index-ref value="2" /><index-ref value="yes" /> <points amount="45" /> </case>
+<case> <index-ref value="1" /><index-ref value="3" /><index-ref value="yes" /> <points amount="60" /> </case>
+<case> <index-ref value="1" /><index-ref value="4" /><index-ref value="yes" /> <points amount="75" /> </case>
+<case> <index-ref value="1" /><index-ref value="5" /><index-ref value="yes" /> <points amount="90" /> </case>
+<case> <index-ref value="1" /><index-ref value="6" /><index-ref value="yes" /> <points amount="105" /> </case>
+<case> <index-ref value="1" /><index-ref value="7" /><index-ref value="yes" /> <points amount="120" /> </case>
+<case> <index-ref value="1" /><index-ref value="8" /><index-ref value="yes" /> <points amount="135" /> </case>
+<case> <index-ref value="1" /><index-ref value="9" /><index-ref value="yes" /> <points amount="150" /> </case>
+<case> <index-ref value="1" /><index-ref value="10" /><index-ref value="yes" /> <points amount="165" /> </case>
+<case> <index-ref value="1" /><index-ref value="11" /><index-ref value="yes" /> <points amount="180" /> </case>
+<case> <index-ref value="1" /><index-ref value="12" /><index-ref value="yes" /> <points amount="195" /> </case>
+<case> <index-ref value="1" /><index-ref value="13" /><index-ref value="yes" /> <points amount="210" /> </case>
+<case> <index-ref value="1" /><index-ref value="14" /><index-ref value="yes" /> <points amount="225" /> </case>
+<case> <index-ref value="1" /><index-ref value="15" /><index-ref value="yes" /> <points amount="240" /> </case>
+<case> <index-ref value="1" /><index-ref value="16" /><index-ref value="yes" /> <points amount="255" /> </case>
+<case> <index-ref value="1" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="2" /><index-ref value="0" /><index-ref value="yes" /> <points amount="25" /> </case>
+<case> <index-ref value="2" /><index-ref value="1" /><index-ref value="yes" /> <points amount="40" /> </case>
+<case> <index-ref value="2" /><index-ref value="2" /><index-ref value="yes" /> <points amount="55" /> </case>
+<case> <index-ref value="2" /><index-ref value="3" /><index-ref value="yes" /> <points amount="70" /> </case>
+<case> <index-ref value="2" /><index-ref value="4" /><index-ref value="yes" /> <points amount="85" /> </case>
+<case> <index-ref value="2" /><index-ref value="5" /><index-ref value="yes" /> <points amount="100" /> </case>
+<case> <index-ref value="2" /><index-ref value="6" /><index-ref value="yes" /> <points amount="115" /> </case>
+<case> <index-ref value="2" /><index-ref value="7" /><index-ref value="yes" /> <points amount="130" /> </case>
+<case> <index-ref value="2" /><index-ref value="8" /><index-ref value="yes" /> <points amount="145" /> </case>
+<case> <index-ref value="2" /><index-ref value="9" /><index-ref value="yes" /> <points amount="160" /> </case>
+<case> <index-ref value="2" /><index-ref value="10" /><index-ref value="yes" /> <points amount="175" /> </case>
+<case> <index-ref value="2" /><index-ref value="11" /><index-ref value="yes" /> <points amount="190" /> </case>
+<case> <index-ref value="2" /><index-ref value="12" /><index-ref value="yes" /> <points amount="205" /> </case>
+<case> <index-ref value="2" /><index-ref value="13" /><index-ref value="yes" /> <points amount="220" /> </case>
+<case> <index-ref value="2" /><index-ref value="14" /><index-ref value="yes" /> <points amount="235" /> </case>
+<case> <index-ref value="2" /><index-ref value="15" /><index-ref value="yes" /> <points amount="250" /> </case>
+<case> <index-ref value="2" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="2" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="3" /><index-ref value="0" /><index-ref value="yes" /> <points amount="35" /> </case>
+<case> <index-ref value="3" /><index-ref value="1" /><index-ref value="yes" /> <points amount="50" /> </case>
+<case> <index-ref value="3" /><index-ref value="2" /><index-ref value="yes" /> <points amount="65" /> </case>
+<case> <index-ref value="3" /><index-ref value="3" /><index-ref value="yes" /> <points amount="80" /> </case>
+<case> <index-ref value="3" /><index-ref value="4" /><index-ref value="yes" /> <points amount="95" /> </case>
+<case> <index-ref value="3" /><index-ref value="5" /><index-ref value="yes" /> <points amount="110" /> </case>
+<case> <index-ref value="3" /><index-ref value="6" /><index-ref value="yes" /> <points amount="125" /> </case>
+<case> <index-ref value="3" /><index-ref value="7" /><index-ref value="yes" /> <points amount="140" /> </case>
+<case> <index-ref value="3" /><index-ref value="8" /><index-ref value="yes" /> <points amount="155" /> </case>
+<case> <index-ref value="3" /><index-ref value="9" /><index-ref value="yes" /> <points amount="170" /> </case>
+<case> <index-ref value="3" /><index-ref value="10" /><index-ref value="yes" /> <points amount="185" /> </case>
+<case> <index-ref value="3" /><index-ref value="11" /><index-ref value="yes" /> <points amount="200" /> </case>
+<case> <index-ref value="3" /><index-ref value="12" /><index-ref value="yes" /> <points amount="215" /> </case>
+<case> <index-ref value="3" /><index-ref value="13" /><index-ref value="yes" /> <points amount="230" /> </case>
+<case> <index-ref value="3" /><index-ref value="14" /><index-ref value="yes" /> <points amount="245" /> </case>
+<case> <index-ref value="3" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="3" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="3" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="0" /><index-ref value="yes" /> <points amount="45" /> </case>
+<case> <index-ref value="4" /><index-ref value="1" /><index-ref value="yes" /> <points amount="60" /> </case>
+<case> <index-ref value="4" /><index-ref value="2" /><index-ref value="yes" /> <points amount="75" /> </case>
+<case> <index-ref value="4" /><index-ref value="3" /><index-ref value="yes" /> <points amount="90" /> </case>
+<case> <index-ref value="4" /><index-ref value="4" /><index-ref value="yes" /> <points amount="105" /> </case>
+<case> <index-ref value="4" /><index-ref value="5" /><index-ref value="yes" /> <points amount="120" /> </case>
+<case> <index-ref value="4" /><index-ref value="6" /><index-ref value="yes" /> <points amount="135" /> </case>
+<case> <index-ref value="4" /><index-ref value="7" /><index-ref value="yes" /> <points amount="150" /> </case>
+<case> <index-ref value="4" /><index-ref value="8" /><index-ref value="yes" /> <points amount="165" /> </case>
+<case> <index-ref value="4" /><index-ref value="9" /><index-ref value="yes" /> <points amount="180" /> </case>
+<case> <index-ref value="4" /><index-ref value="10" /><index-ref value="yes" /> <points amount="195" /> </case>
+<case> <index-ref value="4" /><index-ref value="11" /><index-ref value="yes" /> <points amount="210" /> </case>
+<case> <index-ref value="4" /><index-ref value="12" /><index-ref value="yes" /> <points amount="225" /> </case>
+<case> <index-ref value="4" /><index-ref value="13" /><index-ref value="yes" /> <points amount="240" /> </case>
+<case> <index-ref value="4" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="4" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="0" /><index-ref value="yes" /> <points amount="55" /> </case>
+<case> <index-ref value="5" /><index-ref value="1" /><index-ref value="yes" /> <points amount="70" /> </case>
+<case> <index-ref value="5" /><index-ref value="2" /><index-ref value="yes" /> <points amount="85" /> </case>
+<case> <index-ref value="5" /><index-ref value="3" /><index-ref value="yes" /> <points amount="100" /> </case>
+<case> <index-ref value="5" /><index-ref value="4" /><index-ref value="yes" /> <points amount="115" /> </case>
+<case> <index-ref value="5" /><index-ref value="5" /><index-ref value="yes" /> <points amount="130" /> </case>
+<case> <index-ref value="5" /><index-ref value="6" /><index-ref value="yes" /> <points amount="145" /> </case>
+<case> <index-ref value="5" /><index-ref value="7" /><index-ref value="yes" /> <points amount="160" /> </case>
+<case> <index-ref value="5" /><index-ref value="8" /><index-ref value="yes" /> <points amount="175" /> </case>
+<case> <index-ref value="5" /><index-ref value="9" /><index-ref value="yes" /> <points amount="190" /> </case>
+<case> <index-ref value="5" /><index-ref value="10" /><index-ref value="yes" /> <points amount="205" /> </case>
+<case> <index-ref value="5" /><index-ref value="11" /><index-ref value="yes" /> <points amount="220" /> </case>
+<case> <index-ref value="5" /><index-ref value="12" /><index-ref value="yes" /> <points amount="235" /> </case>
+<case> <index-ref value="5" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="5" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="0" /><index-ref value="yes" /> <points amount="65" /> </case>
+<case> <index-ref value="6" /><index-ref value="1" /><index-ref value="yes" /> <points amount="80" /> </case>
+<case> <index-ref value="6" /><index-ref value="2" /><index-ref value="yes" /> <points amount="95" /> </case>
+<case> <index-ref value="6" /><index-ref value="3" /><index-ref value="yes" /> <points amount="110" /> </case>
+<case> <index-ref value="6" /><index-ref value="4" /><index-ref value="yes" /> <points amount="125" /> </case>
+<case> <index-ref value="6" /><index-ref value="5" /><index-ref value="yes" /> <points amount="140" /> </case>
+<case> <index-ref value="6" /><index-ref value="6" /><index-ref value="yes" /> <points amount="155" /> </case>
+<case> <index-ref value="6" /><index-ref value="7" /><index-ref value="yes" /> <points amount="170" /> </case>
+<case> <index-ref value="6" /><index-ref value="8" /><index-ref value="yes" /> <points amount="185" /> </case>
+<case> <index-ref value="6" /><index-ref value="9" /><index-ref value="yes" /> <points amount="200" /> </case>
+<case> <index-ref value="6" /><index-ref value="10" /><index-ref value="yes" /> <points amount="215" /> </case>
+<case> <index-ref value="6" /><index-ref value="11" /><index-ref value="yes" /> <points amount="230" /> </case>
+<case> <index-ref value="6" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="6" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="0" /><index-ref value="yes" /> <points amount="75" /> </case>
+<case> <index-ref value="7" /><index-ref value="1" /><index-ref value="yes" /> <points amount="90" /> </case>
+<case> <index-ref value="7" /><index-ref value="2" /><index-ref value="yes" /> <points amount="105" /> </case>
+<case> <index-ref value="7" /><index-ref value="3" /><index-ref value="yes" /> <points amount="120" /> </case>
+<case> <index-ref value="7" /><index-ref value="4" /><index-ref value="yes" /> <points amount="135" /> </case>
+<case> <index-ref value="7" /><index-ref value="5" /><index-ref value="yes" /> <points amount="150" /> </case>
+<case> <index-ref value="7" /><index-ref value="6" /><index-ref value="yes" /> <points amount="165" /> </case>
+<case> <index-ref value="7" /><index-ref value="7" /><index-ref value="yes" /> <points amount="180" /> </case>
+<case> <index-ref value="7" /><index-ref value="8" /><index-ref value="yes" /> <points amount="195" /> </case>
+<case> <index-ref value="7" /><index-ref value="9" /><index-ref value="yes" /> <points amount="210" /> </case>
+<case> <index-ref value="7" /><index-ref value="10" /><index-ref value="yes" /> <points amount="225" /> </case>
+<case> <index-ref value="7" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="7" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="0" /><index-ref value="yes" /> <points amount="85" /> </case>
+<case> <index-ref value="8" /><index-ref value="1" /><index-ref value="yes" /> <points amount="100" /> </case>
+<case> <index-ref value="8" /><index-ref value="2" /><index-ref value="yes" /> <points amount="115" /> </case>
+<case> <index-ref value="8" /><index-ref value="3" /><index-ref value="yes" /> <points amount="130" /> </case>
+<case> <index-ref value="8" /><index-ref value="4" /><index-ref value="yes" /> <points amount="145" /> </case>
+<case> <index-ref value="8" /><index-ref value="5" /><index-ref value="yes" /> <points amount="160" /> </case>
+<case> <index-ref value="8" /><index-ref value="6" /><index-ref value="yes" /> <points amount="175" /> </case>
+<case> <index-ref value="8" /><index-ref value="7" /><index-ref value="yes" /> <points amount="190" /> </case>
+<case> <index-ref value="8" /><index-ref value="8" /><index-ref value="yes" /> <points amount="205" /> </case>
+<case> <index-ref value="8" /><index-ref value="9" /><index-ref value="yes" /> <points amount="220" /> </case>
+<case> <index-ref value="8" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="8" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="0" /><index-ref value="yes" /> <points amount="95" /> </case>
+<case> <index-ref value="9" /><index-ref value="1" /><index-ref value="yes" /> <points amount="110" /> </case>
+<case> <index-ref value="9" /><index-ref value="2" /><index-ref value="yes" /> <points amount="125" /> </case>
+<case> <index-ref value="9" /><index-ref value="3" /><index-ref value="yes" /> <points amount="140" /> </case>
+<case> <index-ref value="9" /><index-ref value="4" /><index-ref value="yes" /> <points amount="155" /> </case>
+<case> <index-ref value="9" /><index-ref value="5" /><index-ref value="yes" /> <points amount="170" /> </case>
+<case> <index-ref value="9" /><index-ref value="6" /><index-ref value="yes" /> <points amount="185" /> </case>
+<case> <index-ref value="9" /><index-ref value="7" /><index-ref value="yes" /> <points amount="200" /> </case>
+<case> <index-ref value="9" /><index-ref value="8" /><index-ref value="yes" /> <points amount="215" /> </case>
+<case> <index-ref value="9" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="9" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="0" /><index-ref value="yes" /> <points amount="105" /> </case>
+<case> <index-ref value="10" /><index-ref value="1" /><index-ref value="yes" /> <points amount="120" /> </case>
+<case> <index-ref value="10" /><index-ref value="2" /><index-ref value="yes" /> <points amount="135" /> </case>
+<case> <index-ref value="10" /><index-ref value="3" /><index-ref value="yes" /> <points amount="150" /> </case>
+<case> <index-ref value="10" /><index-ref value="4" /><index-ref value="yes" /> <points amount="165" /> </case>
+<case> <index-ref value="10" /><index-ref value="5" /><index-ref value="yes" /> <points amount="180" /> </case>
+<case> <index-ref value="10" /><index-ref value="6" /><index-ref value="yes" /> <points amount="195" /> </case>
+<case> <index-ref value="10" /><index-ref value="7" /><index-ref value="yes" /> <points amount="210" /> </case>
+<case> <index-ref value="10" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="10" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="0" /><index-ref value="yes" /> <points amount="115" /> </case>
+<case> <index-ref value="11" /><index-ref value="1" /><index-ref value="yes" /> <points amount="130" /> </case>
+<case> <index-ref value="11" /><index-ref value="2" /><index-ref value="yes" /> <points amount="145" /> </case>
+<case> <index-ref value="11" /><index-ref value="3" /><index-ref value="yes" /> <points amount="160" /> </case>
+<case> <index-ref value="11" /><index-ref value="4" /><index-ref value="yes" /> <points amount="175" /> </case>
+<case> <index-ref value="11" /><index-ref value="5" /><index-ref value="yes" /> <points amount="190" /> </case>
+<case> <index-ref value="11" /><index-ref value="6" /><index-ref value="yes" /> <points amount="205" /> </case>
+<case> <index-ref value="11" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="11" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="0" /><index-ref value="yes" /> <points amount="125" /> </case>
+<case> <index-ref value="12" /><index-ref value="1" /><index-ref value="yes" /> <points amount="140" /> </case>
+<case> <index-ref value="12" /><index-ref value="2" /><index-ref value="yes" /> <points amount="155" /> </case>
+<case> <index-ref value="12" /><index-ref value="3" /><index-ref value="yes" /> <points amount="170" /> </case>
+<case> <index-ref value="12" /><index-ref value="4" /><index-ref value="yes" /> <points amount="185" /> </case>
+<case> <index-ref value="12" /><index-ref value="5" /><index-ref value="yes" /> <points amount="200" /> </case>
+<case> <index-ref value="12" /><index-ref value="6" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="12" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="0" /><index-ref value="yes" /> <points amount="135" /> </case>
+<case> <index-ref value="13" /><index-ref value="1" /><index-ref value="yes" /> <points amount="150" /> </case>
+<case> <index-ref value="13" /><index-ref value="2" /><index-ref value="yes" /> <points amount="165" /> </case>
+<case> <index-ref value="13" /><index-ref value="3" /><index-ref value="yes" /> <points amount="180" /> </case>
+<case> <index-ref value="13" /><index-ref value="4" /><index-ref value="yes" /> <points amount="195" /> </case>
+<case> <index-ref value="13" /><index-ref value="5" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="6" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="13" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="0" /><index-ref value="yes" /> <points amount="145" /> </case>
+<case> <index-ref value="14" /><index-ref value="1" /><index-ref value="yes" /> <points amount="160" /> </case>
+<case> <index-ref value="14" /><index-ref value="2" /><index-ref value="yes" /> <points amount="175" /> </case>
+<case> <index-ref value="14" /><index-ref value="3" /><index-ref value="yes" /> <points amount="190" /> </case>
+<case> <index-ref value="14" /><index-ref value="4" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="5" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="6" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="14" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="0" /><index-ref value="yes" /> <points amount="155" /> </case>
+<case> <index-ref value="15" /><index-ref value="1" /><index-ref value="yes" /> <points amount="170" /> </case>
+<case> <index-ref value="15" /><index-ref value="2" /><index-ref value="yes" /> <points amount="185" /> </case>
+<case> <index-ref value="15" /><index-ref value="3" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="4" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="5" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="6" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="15" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="0" /><index-ref value="yes" /> <points amount="165" /> </case>
+<case> <index-ref value="16" /><index-ref value="1" /><index-ref value="yes" /> <points amount="180" /> </case>
+<case> <index-ref value="16" /><index-ref value="2" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="3" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="4" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="5" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="6" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="16" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="0" /><index-ref value="yes" /> <points amount="175" /> </case>
+<case> <index-ref value="17" /><index-ref value="1" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="2" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="3" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="4" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="5" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="6" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="7" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="8" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="9" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="10" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="11" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="12" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="13" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="14" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="15" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="16" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+<case> <index-ref value="17" /><index-ref value="17" /><index-ref value="yes" /><error message="M12-error"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M06-name" description="M06-desc">
+        <objective-yesno id="M06-1" description="M06-scoring1" default="no" />
+        <score>
+            <indexes>
+                <index objective="M06-1" />
+                <index objective="bonus" />
+
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /> <points amount="10"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="yes" /> <points amount="15"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M07-name" description="M07-desc">
+        <objective-yesno id="M07-1" description="M07-scoring1" default="no" />
+        <score>
+            <indexes>
+                <index objective="M07-1" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="yes" /> <points amount="25"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M08-name" description="M08-desc">
+        <objective-enum id="M08-1" description="M08-scoring1" default="neither" >
+            <option name="neither" description="M08-scoring2" />
+            <option name="car" description="M08-scoring3" />
+            <option name="balanced" description="M08-scoring4" />
+        </objective-enum>
+        <score>
+            <indexes>
+                <index objective="M08-1" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="neither" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="car" /><index-ref value="no" /> <points amount="15"  /> </case>
+                <case> <index-ref value="balanced" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="neither" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="car" /><index-ref value="yes" /> <points amount="20"  /> </case>
+                <case> <index-ref value="balanced" /><index-ref value="yes" /> <points amount="25"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M09-name" description="M09-desc">
+        <objective-yesno id="M09-1" description="M09-scoring1" default="no" />
+        <objective-enum id="M09-2" description="M09-scoring2" default="0" >
+            <option name="0" description="0" />
+            <option name="1" description="1" />
+            <option name="2" description="2" />
+            <option name="3" description="3" />
+            <option name="4" description="4" />
+            <option name="5" description="5" />
+            <option name="6" description="6" />
+        </objective-enum>
+        <score>
+            <indexes>
+                <index objective="M09-1" />
+                <index objective="M09-2" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="0" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="1" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="2" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="3" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="4" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="5" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="6" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="0" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="1" /><index-ref value="no" /> <points amount="10"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="2" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="3" /><index-ref value="no" /> <points amount="30"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="4" /><index-ref value="no" /> <points amount="40"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="5" /><index-ref value="no" /> <points amount="50"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="6" /><index-ref value="no" /> <points amount="60"  /> </case>
+
+                <case> <index-ref value="no" /><index-ref value="0" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="1" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="2" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="3" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="4" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="5" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="6" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="0" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="1" /><index-ref value="yes" /> <points amount="15"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="2" /><index-ref value="yes" /> <points amount="25"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="3" /><index-ref value="yes" /> <points amount="35"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="4" /><index-ref value="yes" /> <points amount="45"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="5" /><index-ref value="yes" /> <points amount="55"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="6" /><index-ref value="yes" /> <points amount="65"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M10-name" description="M10-desc">
+        <objective-yesno id="M10" description="M10-scoring" default="no" />
+        <score>
+            <indexes>
+                <index objective="M10" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="yes" /> <points amount="25"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M11-name" description="M11-desc">
+        <objective-yesno id="M11-1" description="M11-scoring1" default="no" />
+        <objective-enum id="M11-2" description="M11-scoring2" default="no">
+            <option name="no" description="M11-scoring3" />
+            <option name="partly" description="M11-scoring4" />
+            <option name="completely" description="M11-scoring5" />
+        </objective-enum>
+        <score>
+            <indexes>
+                <index objective="M11-1" />
+                <index objective="M11-2" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="no" /><index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="partly" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="completely" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="partly" /><index-ref value="no" /> <points amount="10"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="completely" /><index-ref value="no" /> <points amount="15"  /> </case>
+
+                <case> <index-ref value="no" /><index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="partly" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="no" /><index-ref value="completely" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="no" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="partly" /><index-ref value="yes" /> <points amount="15"  /> </case>
+                <case> <index-ref value="yes" /><index-ref value="completely" /><index-ref value="yes" /> <points amount="20"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="M12-name" description="M12-desc">
+        <objective-enum id="M12-1" description="M12-scoring1" default="1" >
+            <option name="0" description="0" />
+            <option name="1" description="1" />
+            <option name="2" description="2" />
+            <option name="3" description="3" />
+        </objective-enum>
+        <objective-number id="M12-4" description="M12-scoring4" min="0" max="29" default="1" resource="building-unit" resource-use="0.5" />
+        <score>
+            <indexes>
+                <index objective="M12-1" />
+                <index objective="M12-4" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+            <case> <index-ref value="0" /><index-ref value="0" /><index-ref value="no" /> <points amount="0" /> </case>
+            <case> <index-ref value="0" /><index-ref value="1" /><index-ref value="no" /> <points amount="5" /> </case>
+            <case> <index-ref value="0" /><index-ref value="2" /><index-ref value="no" /> <points amount="10" /> </case>
+            <case> <index-ref value="0" /><index-ref value="3" /><index-ref value="no" /> <points amount="15" /> </case>
+            <case> <index-ref value="0" /><index-ref value="4" /><index-ref value="no" /> <points amount="20" /> </case>
+            <case> <index-ref value="0" /><index-ref value="5" /><index-ref value="no" /> <points amount="25" /> </case>
+            <case> <index-ref value="0" /><index-ref value="6" /><index-ref value="no" /> <points amount="30" /> </case>
+            <case> <index-ref value="0" /><index-ref value="7" /><index-ref value="no" /> <points amount="35" /> </case>
+            <case> <index-ref value="0" /><index-ref value="8" /><index-ref value="no" /> <points amount="40" /> </case>
+            <case> <index-ref value="0" /><index-ref value="9" /><index-ref value="no" /> <points amount="45" /> </case>
+            <case> <index-ref value="0" /><index-ref value="10" /><index-ref value="no" /> <points amount="50" /> </case>
+            <case> <index-ref value="0" /><index-ref value="11" /><index-ref value="no" /> <points amount="55" /> </case>
+            <case> <index-ref value="0" /><index-ref value="12" /><index-ref value="no" /> <points amount="60" /> </case>
+            <case> <index-ref value="0" /><index-ref value="13" /><index-ref value="no" /> <points amount="65" /> </case>
+            <case> <index-ref value="0" /><index-ref value="14" /><index-ref value="no" /> <points amount="70" /> </case>
+            <case> <index-ref value="0" /><index-ref value="15" /><index-ref value="no" /> <points amount="75" /> </case>
+            <case> <index-ref value="0" /><index-ref value="16" /><index-ref value="no" /> <points amount="80" /> </case>
+            <case> <index-ref value="0" /><index-ref value="17" /><index-ref value="no" /> <points amount="85" /> </case>
+            <case> <index-ref value="0" /><index-ref value="18" /><index-ref value="no" /> <points amount="90" /> </case>
+            <case> <index-ref value="0" /><index-ref value="19" /><index-ref value="no" /> <points amount="95" /> </case>
+            <case> <index-ref value="0" /><index-ref value="20" /><index-ref value="no" /> <points amount="100" /> </case>
+            <case> <index-ref value="0" /><index-ref value="21" /><index-ref value="no" /> <points amount="105" /> </case>
+            <case> <index-ref value="0" /><index-ref value="22" /><index-ref value="no" /> <points amount="110" /> </case>
+            <case> <index-ref value="0" /><index-ref value="23" /><index-ref value="no" /> <points amount="115" /> </case>
+            <case> <index-ref value="0" /><index-ref value="24" /><index-ref value="no" /> <points amount="120" /> </case>
+            <case> <index-ref value="0" /><index-ref value="25" /><index-ref value="no" /> <points amount="125" /> </case>
+            <case> <index-ref value="0" /><index-ref value="26" /><index-ref value="no" /> <points amount="130" /> </case>
+            <case> <index-ref value="0" /><index-ref value="27" /><index-ref value="no" /> <points amount="135" /> </case>
+            <case> <index-ref value="0" /><index-ref value="28" /><index-ref value="no" /> <points amount="140" /> </case>
+            <case> <index-ref value="0" /><index-ref value="29" /><index-ref value="no" /> <points amount="145" /> </case>
+            <case> <index-ref value="1" /><index-ref value="0" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="1" /><index-ref value="1" /><index-ref value="no" /> <points amount="15" /> </case>
+            <case> <index-ref value="1" /><index-ref value="2" /><index-ref value="no" /> <points amount="20" /> </case>
+            <case> <index-ref value="1" /><index-ref value="3" /><index-ref value="no" /> <points amount="25" /> </case>
+            <case> <index-ref value="1" /><index-ref value="4" /><index-ref value="no" /> <points amount="30" /> </case>
+            <case> <index-ref value="1" /><index-ref value="5" /><index-ref value="no" /> <points amount="35" /> </case>
+            <case> <index-ref value="1" /><index-ref value="6" /><index-ref value="no" /> <points amount="40" /> </case>
+            <case> <index-ref value="1" /><index-ref value="7" /><index-ref value="no" /> <points amount="45" /> </case>
+            <case> <index-ref value="1" /><index-ref value="8" /><index-ref value="no" /> <points amount="50" /> </case>
+            <case> <index-ref value="1" /><index-ref value="9" /><index-ref value="no" /> <points amount="55" /> </case>
+            <case> <index-ref value="1" /><index-ref value="10" /><index-ref value="no" /> <points amount="60" /> </case>
+            <case> <index-ref value="1" /><index-ref value="11" /><index-ref value="no" /> <points amount="65" /> </case>
+            <case> <index-ref value="1" /><index-ref value="12" /><index-ref value="no" /> <points amount="70" /> </case>
+            <case> <index-ref value="1" /><index-ref value="13" /><index-ref value="no" /> <points amount="75" /> </case>
+            <case> <index-ref value="1" /><index-ref value="14" /><index-ref value="no" /> <points amount="80" /> </case>
+            <case> <index-ref value="1" /><index-ref value="15" /><index-ref value="no" /> <points amount="85" /> </case>
+            <case> <index-ref value="1" /><index-ref value="16" /><index-ref value="no" /> <points amount="90" /> </case>
+            <case> <index-ref value="1" /><index-ref value="17" /><index-ref value="no" /> <points amount="95" /> </case>
+            <case> <index-ref value="1" /><index-ref value="18" /><index-ref value="no" /> <points amount="100" /> </case>
+            <case> <index-ref value="1" /><index-ref value="19" /><index-ref value="no" /> <points amount="105" /> </case>
+            <case> <index-ref value="1" /><index-ref value="20" /><index-ref value="no" /> <points amount="110" /> </case>
+            <case> <index-ref value="1" /><index-ref value="21" /><index-ref value="no" /> <points amount="115" /> </case>
+            <case> <index-ref value="1" /><index-ref value="22" /><index-ref value="no" /> <points amount="120" /> </case>
+            <case> <index-ref value="1" /><index-ref value="23" /><index-ref value="no" /> <points amount="125" /> </case>
+            <case> <index-ref value="1" /><index-ref value="24" /><index-ref value="no" /> <points amount="130" /> </case>
+            <case> <index-ref value="1" /><index-ref value="25" /><index-ref value="no" /> <points amount="135" /> </case>
+            <case> <index-ref value="1" /><index-ref value="26" /><index-ref value="no" /> <points amount="140" /> </case>
+            <case> <index-ref value="1" /><index-ref value="27" /><index-ref value="no" /> <points amount="145" /> </case>
+            <case> <index-ref value="1" /><index-ref value="28" /><index-ref value="no" /> <points amount="150" /> </case>
+            <case> <index-ref value="1" /><index-ref value="29" /><index-ref value="no" /> <points amount="155" /> </case>
+            <case> <index-ref value="2" /><index-ref value="0" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="2" /><index-ref value="1" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="2" /><index-ref value="2" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="2" /><index-ref value="3" /><index-ref value="no" /> <points amount="35" /> </case>
+            <case> <index-ref value="2" /><index-ref value="4" /><index-ref value="no" /> <points amount="40" /> </case>
+            <case> <index-ref value="2" /><index-ref value="5" /><index-ref value="no" /> <points amount="45" /> </case>
+            <case> <index-ref value="2" /><index-ref value="6" /><index-ref value="no" /> <points amount="50" /> </case>
+            <case> <index-ref value="2" /><index-ref value="7" /><index-ref value="no" /> <points amount="55" /> </case>
+            <case> <index-ref value="2" /><index-ref value="8" /><index-ref value="no" /> <points amount="60" /> </case>
+            <case> <index-ref value="2" /><index-ref value="9" /><index-ref value="no" /> <points amount="65" /> </case>
+            <case> <index-ref value="2" /><index-ref value="10" /><index-ref value="no" /> <points amount="70" /> </case>
+            <case> <index-ref value="2" /><index-ref value="11" /><index-ref value="no" /> <points amount="75" /> </case>
+            <case> <index-ref value="2" /><index-ref value="12" /><index-ref value="no" /> <points amount="80" /> </case>
+            <case> <index-ref value="2" /><index-ref value="13" /><index-ref value="no" /> <points amount="85" /> </case>
+            <case> <index-ref value="2" /><index-ref value="14" /><index-ref value="no" /> <points amount="90" /> </case>
+            <case> <index-ref value="2" /><index-ref value="15" /><index-ref value="no" /> <points amount="95" /> </case>
+            <case> <index-ref value="2" /><index-ref value="16" /><index-ref value="no" /> <points amount="100" /> </case>
+            <case> <index-ref value="2" /><index-ref value="17" /><index-ref value="no" /> <points amount="105" /> </case>
+            <case> <index-ref value="2" /><index-ref value="18" /><index-ref value="no" /> <points amount="110" /> </case>
+            <case> <index-ref value="2" /><index-ref value="19" /><index-ref value="no" /> <points amount="115" /> </case>
+            <case> <index-ref value="2" /><index-ref value="20" /><index-ref value="no" /> <points amount="120" /> </case>
+            <case> <index-ref value="2" /><index-ref value="21" /><index-ref value="no" /> <points amount="125" /> </case>
+            <case> <index-ref value="2" /><index-ref value="22" /><index-ref value="no" /> <points amount="130" /> </case>
+            <case> <index-ref value="2" /><index-ref value="23" /><index-ref value="no" /> <points amount="135" /> </case>
+            <case> <index-ref value="2" /><index-ref value="24" /><index-ref value="no" /> <points amount="140" /> </case>
+            <case> <index-ref value="2" /><index-ref value="25" /><index-ref value="no" /> <points amount="145" /> </case>
+            <case> <index-ref value="2" /><index-ref value="26" /><index-ref value="no" /> <points amount="150" /> </case>
+            <case> <index-ref value="2" /><index-ref value="27" /><index-ref value="no" /> <points amount="155" /> </case>
+            <case> <index-ref value="2" /><index-ref value="28" /><index-ref value="no" /> <points amount="160" /> </case>
+            <case> <index-ref value="2" /><index-ref value="29" /><index-ref value="no" /> <points amount="165" /> </case>
+            <case> <index-ref value="3" /><index-ref value="0" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="1" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="2" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="3" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="4" /><index-ref value="no" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="5" /><index-ref value="no" /> <points amount="55" /> </case>
+            <case> <index-ref value="3" /><index-ref value="6" /><index-ref value="no" /> <points amount="60" /> </case>
+            <case> <index-ref value="3" /><index-ref value="7" /><index-ref value="no" /> <points amount="65" /> </case>
+            <case> <index-ref value="3" /><index-ref value="8" /><index-ref value="no" /> <points amount="70" /> </case>
+            <case> <index-ref value="3" /><index-ref value="9" /><index-ref value="no" /> <points amount="75" /> </case>
+            <case> <index-ref value="3" /><index-ref value="10" /><index-ref value="no" /> <points amount="80" /> </case>
+            <case> <index-ref value="3" /><index-ref value="11" /><index-ref value="no" /> <points amount="85" /> </case>
+            <case> <index-ref value="3" /><index-ref value="12" /><index-ref value="no" /> <points amount="90" /> </case>
+            <case> <index-ref value="3" /><index-ref value="13" /><index-ref value="no" /> <points amount="95" /> </case>
+            <case> <index-ref value="3" /><index-ref value="14" /><index-ref value="no" /> <points amount="100" /> </case>
+            <case> <index-ref value="3" /><index-ref value="15" /><index-ref value="no" /> <points amount="105" /> </case>
+            <case> <index-ref value="3" /><index-ref value="16" /><index-ref value="no" /> <points amount="110" /> </case>
+            <case> <index-ref value="3" /><index-ref value="17" /><index-ref value="no" /> <points amount="115" /> </case>
+            <case> <index-ref value="3" /><index-ref value="18" /><index-ref value="no" /> <points amount="120" /> </case>
+            <case> <index-ref value="3" /><index-ref value="19" /><index-ref value="no" /> <points amount="125" /> </case>
+            <case> <index-ref value="3" /><index-ref value="20" /><index-ref value="no" /> <points amount="130" /> </case>
+            <case> <index-ref value="3" /><index-ref value="21" /><index-ref value="no" /> <points amount="135" /> </case>
+            <case> <index-ref value="3" /><index-ref value="22" /><index-ref value="no" /> <points amount="140" /> </case>
+            <case> <index-ref value="3" /><index-ref value="23" /><index-ref value="no" /> <points amount="145" /> </case>
+            <case> <index-ref value="3" /><index-ref value="24" /><index-ref value="no" /> <points amount="150" /> </case>
+            <case> <index-ref value="3" /><index-ref value="25" /><index-ref value="no" /> <points amount="155" /> </case>
+            <case> <index-ref value="3" /><index-ref value="26" /><index-ref value="no" /> <points amount="160" /> </case>
+            <case> <index-ref value="3" /><index-ref value="27" /><index-ref value="no" /> <points amount="165" /> </case>
+            <case> <index-ref value="3" /><index-ref value="28" /><index-ref value="no" /> <points amount="170" /> </case>
+            <case> <index-ref value="3" /><index-ref value="29" /><index-ref value="no" /> <points amount="175" /> </case>
+            <case> <index-ref value="0" /><index-ref value="0" /><index-ref value="yes" /> <points amount="0" /> </case>
+            <case> <index-ref value="0" /><index-ref value="1" /><index-ref value="yes" /> <points amount="10" /> </case>
+            <case> <index-ref value="0" /><index-ref value="2" /><index-ref value="yes" /> <points amount="15" /> </case>
+            <case> <index-ref value="0" /><index-ref value="3" /><index-ref value="yes" /> <points amount="20" /> </case>
+            <case> <index-ref value="0" /><index-ref value="4" /><index-ref value="yes" /> <points amount="25" /> </case>
+            <case> <index-ref value="0" /><index-ref value="5" /><index-ref value="yes" /> <points amount="30" /> </case>
+            <case> <index-ref value="0" /><index-ref value="6" /><index-ref value="yes" /> <points amount="35" /> </case>
+            <case> <index-ref value="0" /><index-ref value="7" /><index-ref value="yes" /> <points amount="40" /> </case>
+            <case> <index-ref value="0" /><index-ref value="8" /><index-ref value="yes" /> <points amount="45" /> </case>
+            <case> <index-ref value="0" /><index-ref value="9" /><index-ref value="yes" /> <points amount="50" /> </case>
+            <case> <index-ref value="0" /><index-ref value="10" /><index-ref value="yes" /> <points amount="55" /> </case>
+            <case> <index-ref value="0" /><index-ref value="11" /><index-ref value="yes" /> <points amount="60" /> </case>
+            <case> <index-ref value="0" /><index-ref value="12" /><index-ref value="yes" /> <points amount="65" /> </case>
+            <case> <index-ref value="0" /><index-ref value="13" /><index-ref value="yes" /> <points amount="70" /> </case>
+            <case> <index-ref value="0" /><index-ref value="14" /><index-ref value="yes" /> <points amount="75" /> </case>
+            <case> <index-ref value="0" /><index-ref value="15" /><index-ref value="yes" /> <points amount="80" /> </case>
+            <case> <index-ref value="0" /><index-ref value="16" /><index-ref value="yes" /> <points amount="85" /> </case>
+            <case> <index-ref value="0" /><index-ref value="17" /><index-ref value="yes" /> <points amount="90" /> </case>
+            <case> <index-ref value="0" /><index-ref value="18" /><index-ref value="yes" /> <points amount="95" /> </case>
+            <case> <index-ref value="0" /><index-ref value="19" /><index-ref value="yes" /> <points amount="100" /> </case>
+            <case> <index-ref value="0" /><index-ref value="20" /><index-ref value="yes" /> <points amount="105" /> </case>
+            <case> <index-ref value="0" /><index-ref value="21" /><index-ref value="yes" /> <points amount="110" /> </case>
+            <case> <index-ref value="0" /><index-ref value="22" /><index-ref value="yes" /> <points amount="115" /> </case>
+            <case> <index-ref value="0" /><index-ref value="23" /><index-ref value="yes" /> <points amount="120" /> </case>
+            <case> <index-ref value="0" /><index-ref value="24" /><index-ref value="yes" /> <points amount="125" /> </case>
+            <case> <index-ref value="0" /><index-ref value="25" /><index-ref value="yes" /> <points amount="130" /> </case>
+            <case> <index-ref value="0" /><index-ref value="26" /><index-ref value="yes" /> <points amount="135" /> </case>
+            <case> <index-ref value="0" /><index-ref value="27" /><index-ref value="yes" /> <points amount="140" /> </case>
+            <case> <index-ref value="0" /><index-ref value="28" /><index-ref value="yes" /> <points amount="145" /> </case>
+            <case> <index-ref value="0" /><index-ref value="29" /><index-ref value="yes" /> <points amount="150" /> </case>
+            <case> <index-ref value="1" /><index-ref value="0" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="1" /><index-ref value="1" /><index-ref value="yes" /> <points amount="20" /> </case>
+            <case> <index-ref value="1" /><index-ref value="2" /><index-ref value="yes" /> <points amount="25" /> </case>
+            <case> <index-ref value="1" /><index-ref value="3" /><index-ref value="yes" /> <points amount="30" /> </case>
+            <case> <index-ref value="1" /><index-ref value="4" /><index-ref value="yes" /> <points amount="35" /> </case>
+            <case> <index-ref value="1" /><index-ref value="5" /><index-ref value="yes" /> <points amount="40" /> </case>
+            <case> <index-ref value="1" /><index-ref value="6" /><index-ref value="yes" /> <points amount="45" /> </case>
+            <case> <index-ref value="1" /><index-ref value="7" /><index-ref value="yes" /> <points amount="50" /> </case>
+            <case> <index-ref value="1" /><index-ref value="8" /><index-ref value="yes" /> <points amount="55" /> </case>
+            <case> <index-ref value="1" /><index-ref value="9" /><index-ref value="yes" /> <points amount="60" /> </case>
+            <case> <index-ref value="1" /><index-ref value="10" /><index-ref value="yes" /> <points amount="65" /> </case>
+            <case> <index-ref value="1" /><index-ref value="11" /><index-ref value="yes" /> <points amount="70" /> </case>
+            <case> <index-ref value="1" /><index-ref value="12" /><index-ref value="yes" /> <points amount="75" /> </case>
+            <case> <index-ref value="1" /><index-ref value="13" /><index-ref value="yes" /> <points amount="80" /> </case>
+            <case> <index-ref value="1" /><index-ref value="14" /><index-ref value="yes" /> <points amount="85" /> </case>
+            <case> <index-ref value="1" /><index-ref value="15" /><index-ref value="yes" /> <points amount="90" /> </case>
+            <case> <index-ref value="1" /><index-ref value="16" /><index-ref value="yes" /> <points amount="95" /> </case>
+            <case> <index-ref value="1" /><index-ref value="17" /><index-ref value="yes" /> <points amount="100" /> </case>
+            <case> <index-ref value="1" /><index-ref value="18" /><index-ref value="yes" /> <points amount="105" /> </case>
+            <case> <index-ref value="1" /><index-ref value="19" /><index-ref value="yes" /> <points amount="110" /> </case>
+            <case> <index-ref value="1" /><index-ref value="20" /><index-ref value="yes" /> <points amount="115" /> </case>
+            <case> <index-ref value="1" /><index-ref value="21" /><index-ref value="yes" /> <points amount="120" /> </case>
+            <case> <index-ref value="1" /><index-ref value="22" /><index-ref value="yes" /> <points amount="125" /> </case>
+            <case> <index-ref value="1" /><index-ref value="23" /><index-ref value="yes" /> <points amount="130" /> </case>
+            <case> <index-ref value="1" /><index-ref value="24" /><index-ref value="yes" /> <points amount="135" /> </case>
+            <case> <index-ref value="1" /><index-ref value="25" /><index-ref value="yes" /> <points amount="140" /> </case>
+            <case> <index-ref value="1" /><index-ref value="26" /><index-ref value="yes" /> <points amount="145" /> </case>
+            <case> <index-ref value="1" /><index-ref value="27" /><index-ref value="yes" /> <points amount="150" /> </case>
+            <case> <index-ref value="1" /><index-ref value="28" /><index-ref value="yes" /> <points amount="155" /> </case>
+            <case> <index-ref value="1" /><index-ref value="29" /><index-ref value="yes" /> <points amount="160" /> </case>
+            <case> <index-ref value="2" /><index-ref value="0" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="2" /><index-ref value="1" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="2" /><index-ref value="2" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="2" /><index-ref value="3" /><index-ref value="yes" /> <points amount="40" /> </case>
+            <case> <index-ref value="2" /><index-ref value="4" /><index-ref value="yes" /> <points amount="45" /> </case>
+            <case> <index-ref value="2" /><index-ref value="5" /><index-ref value="yes" /> <points amount="50" /> </case>
+            <case> <index-ref value="2" /><index-ref value="6" /><index-ref value="yes" /> <points amount="55" /> </case>
+            <case> <index-ref value="2" /><index-ref value="7" /><index-ref value="yes" /> <points amount="60" /> </case>
+            <case> <index-ref value="2" /><index-ref value="8" /><index-ref value="yes" /> <points amount="65" /> </case>
+            <case> <index-ref value="2" /><index-ref value="9" /><index-ref value="yes" /> <points amount="70" /> </case>
+            <case> <index-ref value="2" /><index-ref value="10" /><index-ref value="yes" /> <points amount="75" /> </case>
+            <case> <index-ref value="2" /><index-ref value="11" /><index-ref value="yes" /> <points amount="80" /> </case>
+            <case> <index-ref value="2" /><index-ref value="12" /><index-ref value="yes" /> <points amount="85" /> </case>
+            <case> <index-ref value="2" /><index-ref value="13" /><index-ref value="yes" /> <points amount="90" /> </case>
+            <case> <index-ref value="2" /><index-ref value="14" /><index-ref value="yes" /> <points amount="95" /> </case>
+            <case> <index-ref value="2" /><index-ref value="15" /><index-ref value="yes" /> <points amount="100" /> </case>
+            <case> <index-ref value="2" /><index-ref value="16" /><index-ref value="yes" /> <points amount="105" /> </case>
+            <case> <index-ref value="2" /><index-ref value="17" /><index-ref value="yes" /> <points amount="110" /> </case>
+            <case> <index-ref value="2" /><index-ref value="18" /><index-ref value="yes" /> <points amount="115" /> </case>
+            <case> <index-ref value="2" /><index-ref value="19" /><index-ref value="yes" /> <points amount="120" /> </case>
+            <case> <index-ref value="2" /><index-ref value="20" /><index-ref value="yes" /> <points amount="125" /> </case>
+            <case> <index-ref value="2" /><index-ref value="21" /><index-ref value="yes" /> <points amount="130" /> </case>
+            <case> <index-ref value="2" /><index-ref value="22" /><index-ref value="yes" /> <points amount="135" /> </case>
+            <case> <index-ref value="2" /><index-ref value="23" /><index-ref value="yes" /> <points amount="140" /> </case>
+            <case> <index-ref value="2" /><index-ref value="24" /><index-ref value="yes" /> <points amount="145" /> </case>
+            <case> <index-ref value="2" /><index-ref value="25" /><index-ref value="yes" /> <points amount="150" /> </case>
+            <case> <index-ref value="2" /><index-ref value="26" /><index-ref value="yes" /> <points amount="155" /> </case>
+            <case> <index-ref value="2" /><index-ref value="27" /><index-ref value="yes" /> <points amount="160" /> </case>
+            <case> <index-ref value="2" /><index-ref value="28" /><index-ref value="yes" /> <points amount="165" /> </case>
+            <case> <index-ref value="2" /><index-ref value="29" /><index-ref value="yes" /> <points amount="170" /> </case>
+            <case> <index-ref value="3" /><index-ref value="0" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="1" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="2" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="3" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="4" /><index-ref value="yes" /> <error message="M12-error2" /> </case>
+            <case> <index-ref value="3" /><index-ref value="5" /><index-ref value="yes" /> <points amount="60" /> </case>
+            <case> <index-ref value="3" /><index-ref value="6" /><index-ref value="yes" /> <points amount="65" /> </case>
+            <case> <index-ref value="3" /><index-ref value="7" /><index-ref value="yes" /> <points amount="70" /> </case>
+            <case> <index-ref value="3" /><index-ref value="8" /><index-ref value="yes" /> <points amount="75" /> </case>
+            <case> <index-ref value="3" /><index-ref value="9" /><index-ref value="yes" /> <points amount="80" /> </case>
+            <case> <index-ref value="3" /><index-ref value="10" /><index-ref value="yes" /> <points amount="85" /> </case>
+            <case> <index-ref value="3" /><index-ref value="11" /><index-ref value="yes" /> <points amount="90" /> </case>
+            <case> <index-ref value="3" /><index-ref value="12" /><index-ref value="yes" /> <points amount="95" /> </case>
+            <case> <index-ref value="3" /><index-ref value="13" /><index-ref value="yes" /> <points amount="100" /> </case>
+            <case> <index-ref value="3" /><index-ref value="14" /><index-ref value="yes" /> <points amount="105" /> </case>
+            <case> <index-ref value="3" /><index-ref value="15" /><index-ref value="yes" /> <points amount="110" /> </case>
+            <case> <index-ref value="3" /><index-ref value="16" /><index-ref value="yes" /> <points amount="115" /> </case>
+            <case> <index-ref value="3" /><index-ref value="17" /><index-ref value="yes" /> <points amount="120" /> </case>
+            <case> <index-ref value="3" /><index-ref value="18" /><index-ref value="yes" /> <points amount="125" /> </case>
+            <case> <index-ref value="3" /><index-ref value="19" /><index-ref value="yes" /> <points amount="130" /> </case>
+            <case> <index-ref value="3" /><index-ref value="20" /><index-ref value="yes" /> <points amount="135" /> </case>
+            <case> <index-ref value="3" /><index-ref value="21" /><index-ref value="yes" /> <points amount="140" /> </case>
+            <case> <index-ref value="3" /><index-ref value="22" /><index-ref value="yes" /> <points amount="145" /> </case>
+            <case> <index-ref value="3" /><index-ref value="23" /><index-ref value="yes" /> <points amount="150" /> </case>
+            <case> <index-ref value="3" /><index-ref value="24" /><index-ref value="yes" /> <points amount="155" /> </case>
+            <case> <index-ref value="3" /><index-ref value="25" /><index-ref value="yes" /> <points amount="160" /> </case>
+            <case> <index-ref value="3" /><index-ref value="26" /><index-ref value="yes" /> <points amount="165" /> </case>
+            <case> <index-ref value="3" /><index-ref value="27" /><index-ref value="yes" /> <points amount="170" /> </case>
+            <case> <index-ref value="3" /><index-ref value="28" /><index-ref value="yes" /> <points amount="175" /> </case>
+            <case> <index-ref value="3" /><index-ref value="29" /><index-ref value="yes" /> <points amount="180" /> </case>
+          </cases>
+        </score>
+    </mission>
+
+    <mission name="M13-name" description="M13-desc">
+        <objective-enum id="M13" description="M13-scoring" default="0" >
+            <option name="0" description="0" />
+            <option name="1" description="1" />
+            <option name="2" description="2" />
+            <option name="3" description="3" />
+        </objective-enum>
+        <score>
+            <indexes>
+                <index objective="M13" />
+                <index objective="bonus" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="0" /><index-ref value="no" /> <points amount="0"  /> </case>
+                <case> <index-ref value="1" /><index-ref value="no" /> <points amount="10"  /> </case>
+                <case> <index-ref value="2" /><index-ref value="no" /> <points amount="20"  /> </case>
+                <case> <index-ref value="3" /><index-ref value="no" /> <points amount="30"  /> </case>
+                <case> <index-ref value="0" /><index-ref value="yes" /> <points amount="0"  /> </case>
+                <case> <index-ref value="1" /><index-ref value="yes" /> <points amount="15"  /> </case>
+                <case> <index-ref value="2" /><index-ref value="yes" /> <points amount="25"  /> </case>
+                <case> <index-ref value="3" /><index-ref value="yes" /> <points amount="35"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <mission name="precision-name" description="precision-desc">
+        <objective-enum id="precision" description="precision-scoring" default="6">
+            <option name="0" description="0" />
+            <option name="1" description="1" />
+            <option name="2" description="2" />
+            <option name="3" description="3" />
+            <option name="4" description="4" />
+            <option name="5" description="5" />
+            <option name="6" description="6" />
+        </objective-enum>
+        <score>
+            <indexes>
+                <index objective="precision" />
+            </indexes>
+            <cases>
+                <case> <index-ref value="0" /> <points amount="0"  /> </case>
+                <case> <index-ref value="1" /> <points amount="5"  /> </case>
+                <case> <index-ref value="2" /> <points amount="10"  /> </case>
+                <case> <index-ref value="3" /> <points amount="20"  /> </case>
+                <case> <index-ref value="4" /> <points amount="30"  /> </case>
+                <case> <index-ref value="5" /> <points amount="45"  /> </case>
+                <case> <index-ref value="6" /> <points amount="60"  /> </case>
+            </cases>
+        </score>
+    </mission>
+
+    <resources>
+        <resource name="building-unit" quota="17" message="building-unit-error" />
+    </resources>
+
+</fll:challenge>
