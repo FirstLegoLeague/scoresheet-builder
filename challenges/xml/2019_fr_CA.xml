@@ -4,7 +4,7 @@
     xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd" year="2019" version="0" name="VILLE AVENIR">
     <!-- 2019 Challenge XML version 2, 7 Sept 2019-->
 
-    <strings language="en-US">
+    <strings language="fr-CA">
 
         <string id="yes">                           Oui</string>
         <string id="no">                            Non</string>
