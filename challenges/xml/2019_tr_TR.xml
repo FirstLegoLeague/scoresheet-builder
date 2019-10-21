@@ -40,7 +40,7 @@
 
         <string id="M06-name">                      G06 Trafik Sıkışıklığı</string>
         <string id="M06-desc">                      <![CDATA[Trafik sıkışıklığını kaldırarak yolu aç.]]></string>
-        <string id="M06-scoring1">                  Trafik Sıkışıklığı kaldırılmış, hareket eden kısmı bağımsız ve sadece menteşelerinden Destekleniyor:</string>
+        <string id="M06-scoring1">                  Trafik Sıkışıklığı kaldırılmış, hareket eden kısmı Bağımsız ve kendi menteşelerinden Destekleniyor:</string>
 
         <string id="M07-name">                      G07 Salıncak</string>
         <string id="M07-desc">                      <![CDATA[Salıncak'ı serbest bırak.]]></string>
@@ -77,7 +77,7 @@
 
         <string id="M13-name">                      G13 Sürdürülebilirlik Yükseltmeleri</string>
         <string id="M13-desc">                      <![CDATA[İstif başına bir yükseltme sayılır (güneş panelleri, çatı bahçesi, yalıtım).]]></string>
-        <string id="M13-scoring">                   Bağımsız ve en azından kısmen bir Çemberin içinde bulunan bir İstif tarafından desteklenen Yükseltici sayısı:</string>
+        <string id="M13-scoring">                   Bağımsız ve sadece en azından kısmen bir Çemberin içinde olan bir İstif tarafından desteklenen Yükseltici sayısı:</string>
 
         <string id="precision-name">                G14 Hassasiyet</string>
         <string id="precision-desc">                <![CDATA[Robotunuza Müdahale etmenize ve yeniden Başlatma için geri getirmenize izin verilmiştir fakat Hassasiyet Diskleri kaybedersiniz.]]></string>
