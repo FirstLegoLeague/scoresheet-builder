@@ -4,89 +4,87 @@
     xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd" year="2019" version="0" name="CITY SHAPER">
     <!-- 2019 Challenge XML version 2, 7 Sept 2019-->
 
-    <strings rtlDoc="true" language="he-IL">
+    <strings language="ko-KR">
 
-        <string id="yes">                           כן</string>
-        <string id="no">                            לא</string>
+        <string id="yes">                           예</string>
+        <string id="no">                            아니오</string>
 
-        <string id="advantage-name">                יתרון</string>
-        <string id="advantage-desc">                <![CDATA[If all your Equipment fits in the Small Inspection area during Match preparation, you get an advantage. ]]></string>
-        <string id="advantage-scoring">             הרובוט וכל הציוד שלכם נכנס לאזור הביקורת הקטן:</string>
+        <string id="advantage-name">                혜택</string>
+        <string id="advantage-desc">                <![CDATA[로봇이나 모든 장비가 경기 준비중 소형 점검 구역에 모두 들어가면 혜택이 주어집니다.]]></string>
+        <string id="advantage-scoring">             로봇과 장비가 소형 점검 구역에 들어 맞는다:</string>
 
-        <string id="M01-name">                      M01 מקומות מוגבהים</string>
-        <string id="M01-desc">                      <![CDATA[You can only get Flag points if you get Bridge points. It is okay and expected for Robots to collide while trying to earn Flag points.]]></string>
-        <string id="M01-scoring1">                   הרובוט נתמך על ידי הגשר:</string>
-        <string id="M01-scoring2">                   מספר הדגלים שמורמים באופן ברור, במידה כלשהי, על ידי הרובוט בלבד:</string>
+        <string id="M01-name">                      M01 높은 지역</string>
+        <string id="M01-desc">                      <![CDATA[브릿지 점수를 얻은 경우에만 깃발 점수를 얻을 수 있습니다. 깃발 점수를 획득하는 동안 로봇이 충돌할 수 있으며 이는 경기에 영향을 주지 않습니다.]]></string>
+        <string id="M01-scoring1">                   로봇이 브릿지에 의해 지탱되고 있다:</string>
+        <string id="M01-scoring2">                   오직 로봇에 의해서 일정한 거리를 들어올린 깃발의 갯수::</string>
 
-        <string id="M02-name">                      M02 מנוף</string>
-        <string id="M02-desc">                      <![CDATA[Score all that apply.]]></string>
-        <string id="M02-scoring1">                   היחידה הכחולה התפוסה בוו, מונמכת מרחק כלשהו מראש המנוף:</string>
-        <string id="M02-scoring2">                   היחידה הכחולה התפוסה בוו עצמאית ונתמכת על ידי יחידה כחולה אחרת:</string>
-        <string id="M02-scoring3">                   והקומה הראשונה היא לגמרי בתוך העיגול הכחול:</string>
+        <string id="M02-name">                      M02 크레인</string>
+        <string id="M02-desc">                      <![CDATA[해당되는 항목 모두 점수 획득]]></string>
+        <string id="M02-scoring1">                   크레인에 걸려있는 파란색 유닛이 가이드홀로부터 명확하게 기준거리이상 내려졌다:</string>
+        <string id="M02-scoring2">                   크레인에 걸려있는 파란색 유닛이 독립적이고 다른 파란색 유닛에의해 지탱되고 있다:</string>
+        <string id="M02-scoring3">                   그리고 1층(레벨1)이 완전히 파란색 원안에 위치하고 있다:</string>
 
-        <string id="M03-name">                      M03 רחפן בקרה</string>
-        <string id="M03-desc">                      <![CDATA[The Inspection Camera Drone Mission reveals an inexpensive way to check out bridges and other tall structures. Drones can fly for hours and send back detailed pictures and even 3D scans.]]></string>
-        <string id="M03-scoring1">                  רחפן הבקרה נתמך על ידי המוט שעל הגשר:</string>
+        <string id="M03-name">                      M03 점검 드론</string>
+        <string id="M03-desc">                      <![CDATA[점검 드론 미션은 교량 및 기타 고층 건물을 점검할 수있는 저렴한 방법을 보여줍니다. 드론은 몇 시간 동안 비행 할 수 있으며 상세한 사진과 3D 스캔까지 보낼 수 있습니다.]]></string>
+        <string id="M03-scoring1">                  점검 드론이 브릿지에 있는 축에 의해 지탱되고 있다:</string>
 
-        <string id="M04-name">                      M04 עיצוב ידידותי לחיות בר</string>
-        <string id="M04-desc">                      <![CDATA[The Bat needs to end up on the brown Branch]]></string>
-        <string id="M04-scoring1">                  העטלף נתמך על ידי הענף שעל העץ:</string>
+        <string id="M04-name">                      M04 야생동물을 위한 설계</string>
+        <string id="M04-desc">                      <![CDATA[박쥐가 갈색 나뭇가지에 도착해야 합니다.]]></string>
+        <string id="M04-scoring1">                  박쥐가 올바른 나뭇가지에의해 지탱되고 있다:</string>
 
-        <string id="M05-name">                      M05 בית עץ</string>
-        <string id="M05-desc">                      <![CDATA[Score all that apply.]]></string>
-        <string id="M05-scoring1">                  מספר היחידות העצמאיות הנתמכות על ידי הענפים הגדולים של העץ:</string>
-        <string id="M05-scoring2">                  מספר היחידות העצמאיות הנתמכות על ידי הענפים הקטנים של העץ:</string>
-        <string id="M05-error">                     יותר מידי יחידות</string>
+        <string id="M05-name">                      M05 나무집</string>
+        <string id="M05-desc">                      <![CDATA[해당되는 항목 모두 점수 획득]]></string>
+        <string id="M05-scoring1">                  독립적이고, 큰 나뭇가지에의해 지탱되고 있는 유닛의 갯수:</string>
+        <string id="M05-scoring2">                  독립적이고, 작은 나뭇가지에의해 지탱되고 있는 유닛의 갯수:</string>
 
-        <string id="M06-name">                      M06 פקק תנועה</string>
-        <string id="M06-desc">                      <![CDATA[Clear the road by lifting the Traffic Jam.]]></string>
-        <string id="M06-scoring1">                  פקק התנועה מורם, והחלק הנע שלו עצמאי ונתמך על ידי הצירים בלבד:</string>
+        <string id="M06-name">                      M06 교통 체증</string>
+        <string id="M06-desc">                      <![CDATA[교통 체증을 들어올려서 교통을 원할하게 하십시오.]]></string>
+        <string id="M06-scoring1">                  교통 체증이 올려진 상태에서 교통 체증이 독립적이고, 힌지에의해서만 지탱되고 있다:</string>
 
-        <string id="M07-name">                      M07 נדנדה</string>
-        <string id="M07-desc">                      <![CDATA[Release the Swing.]]></string>
-        <string id="M07-scoring1">                  הנדנדה משוחררת:</string>
+        <string id="M07-name">                      M07 그네</string>
+        <string id="M07-desc">                      <![CDATA[그네를 풀어주십시오.]]></string>
+        <string id="M07-scoring1">                  그네가 풀려있다:</string>
 
-        <string id="M08-name">                      M08 מעלית</string>
-        <string id="M08-desc">                      <![CDATA[Score one or the other, but not both.]]></string>
-        <string id="M08-scoring1">                  החלקים הנעים של המעלית עצמאיים, ונתמכים על ידי צירי המעלית בלבד, במצב הבא:</string>
-        <string id="M08-scoring2">                  כלום</string>
-        <string id="M08-scoring3">                  קרון כחול למטה</string>
-        <string id="M08-scoring4">                  מאוזן</string>
+        <string id="M08-name">                      M08 엘리베이터</string>
+        <string id="M08-desc">                      <![CDATA[둘 중 하나의 점수만 획득할 수 있습니다.]]></string>
+        <string id="M08-scoring1">                  엘리베이터의 움직이는 부분이 독립적이고, 오직 힌지에의해서만 지탱되고 있으며,다음 상태에 있다.</string>
+        <string id="M08-scoring2">                  어느 상태도 아님</string>
+        <string id="M08-scoring3">                  파란색 차가 아래에 있음</string>
+        <string id="M08-scoring4">                  균형잡힘</string>
 
-        <string id="M09-name">                      M09 מקדם בטיחות</string>
-        <string id="M09-desc">                      <![CDATA[Can the Test Building stand when some of its support beams are moved?]]></string>
-        <string id="M09-scoring1">                  מבנה הבדיקה עצמאי ונתמך רק על ידי הקורות הכחולות:</string>
-        <string id="M09-scoring2">                  מספר הקורות שהוסטו לפחות מחצית הדרך:</string>
+        <string id="M09-name">                      M09 안전 요건</string>
+        <string id="M09-desc">                      <![CDATA[지지하고 있는 빔들 중 몇개가 움직여도 시험용 건물이 서있을 수 있습니까?]]></string>
+        <string id="M09-scoring1">                  시험용건물이 독립적이고 오직 파란색 빔에의해서만 지탱되고 있다:</string>
+        <string id="M09-scoring2">                  적어도 반이상 누워있는 파란색 빔의 개수:</string>
 
-        <string id="M10-name">                      M10 מבנה פלדה</string>
-        <string id="M10-desc">                      <![CDATA[Make the Steel Structure stand up.]]></string>
-        <string id="M10-scoring">                   מבנה הפלדה עומד, עצמאי, ונתמך על ידי הצירים שלו בלבד:</string>
+        <string id="M10-name">                      M10철골 구조</string>
+        <string id="M10-desc">                      <![CDATA[누워있는 철골구조물을 세우십시오]]></string>
+        <string id="M10-scoring">                   철골 구조가 서있으며 독립적이고 힌지에의해서만 지탱되고 있다:</string>
 
-        <string id="M11-name">                      M11 ארכיטקטורה חדשנית</string>
-        <string id="M11-desc">                      <![CDATA[Design and build your own Structure and deliver to any Circle.]]></string>
-        <string id="M11-scoring1">                  מבנה גדול יותר מחלק לגו עם 4 בליטות, וגם נבנה רק מחלקי ה- LEGO הלבנים של הקבוצה:</string>
-        <string id="M11-scoring2">                  המבנה בעיגול כלשהו:</string>
-        <string id="M11-scoring3">                  כלום</string>
-        <string id="M11-scoring4">                  חלקית</string>
-        <string id="M11-scoring5">                  לגמרי בתוך</string>
+        <string id="M11-name">                      M11 혁신적인건축</string>
+        <string id="M11-desc">                      <![CDATA[팀만의 건출물을 디자인해 만들고 아무 원으로 옮기십시오.]]></string>
+        <string id="M11-scoring1">                  팀이 레고브릭으로 만든 유닛이 파란색 빌딩유닛보다 크다:</string>
+        <string id="M11-scoring2">                  그 유닛이 원안에 있다:</string>
+        <string id="M11-scoring3">                  아니오</string>
+        <string id="M11-scoring4">                  부분적으로</string>
+        <string id="M11-scoring5">                  완전히</string>
 
-        <string id="M12-name">                      M12 עצבו ובנו</string>
-        <string id="M12-desc">                      <![CDATA[The Blue Circle is not part of Mission 12.]]></string>
-        <string id="M12-scoring1">                  מספר העיגולים עם לפחות יחידה אחת, בצבע זהה, לגמרי בתוך העיגול, פאה נוגעת בשטיח:</string>
-        <string id="M12-scoring4">                  סכום הגבהים של מגדלים עצמאיים הנמצאים לפחות באופן חלקי בתוך עיגולים כלשהם:</string>
+        <string id="M12-name">                      M12 설계와 만들기</string>
+        <string id="M12-desc">                      <![CDATA[파란 원은 미션 12에 속하지 않습니다.]]></string>
+        <string id="M12-scoring1">                  완전히 원안에 위치하고 매트위에 편평하게 닿아있는 유닛과 색이 일치하는 원의 갯수:</string>
+        <string id="M12-scoring4">                  적어도 부분적으로 원안에 있는 독립적인 스택들의 층수의 합:</string>
 
-        <string id="M13-name">                      M13 שדרוגי קיימות</string>
-        <string id="M13-desc">                      <![CDATA[Only one Upgrade (solar panels, roof garden, insulation) counts per Stack.]]></string>
-        <string id="M13-scoring">                   מספר השדרוגים שהם עצמאיים, הנתמכים רק על ידי מגדל, הנמצא לפחות באופן חלקי בעיגול כלשהו:</string>
+        <string id="M13-name">                      M13 환경 보존 구조 개선물</string>
+        <string id="M13-desc">                      <![CDATA[스택 1개당 오직 한개의 환경 보존 구조 개선물(태양 전지판, 지붕정원, 단열) 만이 유효합니다.]]></string>
+        <string id="M13-scoring">                   부분적으로 원안에 있고 독립적이고 스택에의해서만 지탱되고 있는 구조 개선물의 갯수::</string>
 
-        <string id="precision-name">                M14 דיוק</string>
-        <string id="precision-desc">                <![CDATA[You are allowed to Interrupt your Robot and bring it back to re-Launch, but Interruptions do lose Precision Tokens.]]></string>
-        <string id="precision-scoring">             מספר אסימוני דיוק שנותרו על המגרש</string>
+        <string id="precision-name">                M14 정확성</string>
+        <string id="precision-desc">                <![CDATA[로봇을 중단하고 다시 시작하도록 할 수 있지만 한번의 중단으로 인해 1개의 정밀 토큰을 잃습니다.]]></string>
+        <string id="precision-scoring">             경기장에 남아있는 정밀토큰의 갯수:</string>
 
-        <string id="building-unit-error">           יותר מידי יחידות בנייה בשימוש</string>
-        <string id="crane-error">                   סתירה במיקום יחידות הבנייה הכחולות</string>
-        <string id="M12-error2">                    גובה נמוך מידי ביחס למספר התאמות הצבעים</string>
-
+        <string id="building-unit-error">           너무 많은 수의 건물 유닛이 사용되었습니다.</string>
+        <string id="crane-error">                   파란색 유닛의 위치가 서로 맞지 않습니다..</string>
+        <string id="M12-error2">                    원의 색상과 일치하는 유닛의 수에 비해 높이가 너무 작습니다.</string>
     </strings>
 
     <!-- Do NOT edit below this line -->
