@@ -15,16 +15,16 @@
 
         <string id="M01-name">                      M01 Emplacements élevés </string>
         <string id="M01-desc">                      <![CDATA[Vous ne pouvez obtenir des points Drapeau que si vous obtenez des points Pont. Il est probable et correct que les robots entrent en collision en essayant de remporter des points Drapeau.]]></string>
-        <string id="M01-scoring1">                   Le robot est supporté par le Pont</string>
-        <string id="M01-scoring2">                   Nombre de drapeaux clairement levés à n’importe quelle hauteur, seulement par l’action du robot</string>
+        <string id="M01-scoring1">                  Le robot est supporté par le Pont</string>
+        <string id="M01-scoring2">                  Nombre de drapeaux clairement levés à n’importe quelle hauteur, seulement par l’action du robot</string>
 
-        <string id="M02-name">                      M02  La grue </string>
+        <string id="M02-name">                      M02 La grue </string>
         <string id="M02-desc">                      <![CDATA[Pointage: tout ce qui s’applique]]></string>
-        <string id="M02-scoring1">                   Le module suspendu bleu est clairement baissé à n’importe quelle distance du trou de guidage</string>
-        <string id="M02-scoring2">                   Le module suspendu bleu est indépendant et supporté par un autre module bleu</string>
-        <string id="M02-scoring3">                   ET le niveau 1 est complètement dans le cercle bleu</string>
+        <string id="M02-scoring1">                  Le module suspendu bleu est clairement baissé à n’importe quelle distance du trou de guidage</string>
+        <string id="M02-scoring2">                  Le module suspendu bleu est indépendant et supporté par un autre module bleu</string>
+        <string id="M02-scoring3">                  ET le niveau 1 est complètement dans le cercle bleu</string>
 
-        <string id="M03-name">                      M03  L’inspection par drone </string>
+        <string id="M03-name">                      M03 L’inspection par drone </string>
         <string id="M03-desc">                      <![CDATA[La mission présente une manière économique d'inspecter les ponts et les grandes structures. Les drones peuvent voler pendant des heures et transmettre des photos détaillées ainsi que des numérisations 3D.]]></string>
         <string id="M03-scoring1">                  Le drone d’inspection est supporté par l’essieu du Pont</string>
 
@@ -32,28 +32,28 @@
         <string id="M04-desc">                      <![CDATA[La chauve-souris doit se retrouver sur la branche brune.]]></string>
         <string id="M04-scoring1">                  La chauvesouris est supportée par la branche de l’arbre</string>
 
-        <string id="M05-name">                      M05  La cabane perchée </string>
+        <string id="M05-name">                      M05 La cabane perchée </string>
         <string id="M05-desc">                      <![CDATA[ (Pointage: tout ce qui s’applique.]]></string>
         <string id="M05-scoring1">                  Nombre de modules indépendants et supportés par les grandes branches de l'arbre</string>
         <string id="M05-scoring2">                  Nombre de modules indépendants et supportés par les petites branches de l'arbre</string>
         <string id="M05-error">                     Trop de modules </string>
 
-        <string id="M06-name">                      M06  L’embouteillage </string>
+        <string id="M06-name">                      M06 L’embouteillage </string>
         <string id="M06-desc">                      <![CDATA[Désengorgez la route en soulevant l’embouteillage.]]></string>
-        <string id="M06-scoring1">                   L’embouteillage est levé, sa partie mobile est indépendante et n'est soutenue que par ses charnières</string>
+        <string id="M06-scoring1">                  L’embouteillage est levé, sa partie mobile est indépendante et n'est soutenue que par ses charnières</string>
 
-        <string id="M07-name">                      M07  La balançoire </string>
+        <string id="M07-name">                      M07 La balançoire </string>
         <string id="M07-desc">                      <![CDATA[Lâchez la balançoire.]]></string>
-        <string id="M07-scoring1">                   La balançoire est lâchée</string>
+        <string id="M07-scoring1">                  La balançoire est lâchée</string>
 
-        <string id="M08-name">                      M08  L’ascenseur </string>
+        <string id="M08-name">                      M08 L’ascenseur </string>
         <string id="M08-desc">                      <![CDATA[Pointage: l’un ou l’autre]]></string>
         <string id="M08-scoring1">                  La partie mobile de l'ascenseur est indépendante et supportée uniquement par ses charnières dans la position suivante</string>
         <string id="M08-scoring2">                  Aucune </string>
         <string id="M08-scoring3">                  Cabine bleue en bas </string>
         <string id="M08-scoring4">                  En équilibre </string>
 
-        <string id="M09-name">                      M09  Sécurité </string>
+        <string id="M09-name">                      M09 Sécurité </string>
         <string id="M09-desc">                      <![CDATA[Le bâtiment de simulation peut-il rester debout lorsque certaines de ses poutres bleues sont déplacées?]]></string>
         <string id="M09-scoring1">                  Le bâtiment de simulation est supporté uniquement par les poutres bleues</string>
         <string id="M09-scoring2">                  Nombre de poutres bleues déplacées au moins à mi-chemin du tapis</string>
