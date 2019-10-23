@@ -9,83 +9,83 @@
         <string id="yes">                           Oui</string>
         <string id="no">                            Non</string>
 
-        <string id="advantage-name">                Advantage</string>
-        <string id="advantage-desc">                <![CDATA[Si tout votre équipement tient dans la petite zone d'inspection avant le début du match, vous avez un avantage. ]]></string>
-        <string id="advantage-scoring">             Le robot de l'équipe ainsi que tout équipement tient dans la petite zone d'inspection:</string>
+        <string id="advantage-name">                Avantage</string>
+        <string id="advantage-desc">                <![CDATA[Si tout votre équipement tient dans la petite zone d'inspection avant le début du match, vous avez un avantage.]]></string>
+        <string id="advantage-scoring">             Le robot de l'équipe ainsi que tout l'équipement tient dans la petite zone d'inspection</string>
 
         <string id="M01-name">                      M01 Emplacements élevés </string>
         <string id="M01-desc">                      <![CDATA[Vous ne pouvez obtenir des points Drapeau que si vous obtenez des points Pont. Il est probable et correct que les robots entrent en collision en essayant de remporter des points Drapeau.]]></string>
-        <string id="M01-scoring1">                   Le robot est supporté par le Pont:</string>
-        <string id="M01-scoring2">                   Nombre de drapeaux clairement levés à n’importe quelle hauteur, seulement par l’action du robot:</string>
+        <string id="M01-scoring1">                   Le robot est supporté par le Pont</string>
+        <string id="M01-scoring2">                   Nombre de drapeaux clairement levés à n’importe quelle hauteur, seulement par l’action du robot</string>
 
         <string id="M02-name">                      M02  La grue </string>
         <string id="M02-desc">                      <![CDATA[Pointage: tout ce qui s’applique]]></string>
-        <string id="M02-scoring1">                   Le module suspendu bleu est clairement baissé à n’importe quelle distance du trou de guidage:</string>
-        <string id="M02-scoring2">                   Le module suspendu bleu est indépendant supporté par un autre module bleu:</string>
-        <string id="M02-scoring3">                   et le niveau 1 est complètement dans le cercle bleu:</string>
+        <string id="M02-scoring1">                   Le module suspendu bleu est clairement baissé à n’importe quelle distance du trou de guidage</string>
+        <string id="M02-scoring2">                   Le module suspendu bleu est indépendant et supporté par un autre module bleu</string>
+        <string id="M02-scoring3">                   ET le niveau 1 est complètement dans le cercle bleu</string>
 
         <string id="M03-name">                      M03  L’inspection par drone </string>
-        <string id="M03-desc">                      <![CDATA[La mission «caméra d’inspection par drone» présente une façon peu couteuse de vérifier des ponts et autres grandes structures. Les drones peuvent voler pendant des heures et transmettre des photos détaillées et même des numérisations 3D.]]></string>
-        <string id="M03-scoring1">                  Le drone d’inspection est supporté par l’essieu (A) du Pont:</string>
+        <string id="M03-desc">                      <![CDATA[La mission présente une manière économique d'inspecter les ponts et les grandes structures. Les drones peuvent voler pendant des heures et transmettre des photos détaillées ainsi que des numérisations 3D.]]></string>
+        <string id="M03-scoring1">                  Le drone d’inspection est supporté par l’essieu du Pont</string>
 
         <string id="M04-name">                      M04 Conception pour la faune </string>
-        <string id="M04-desc">                      <![CDATA[La chauvesouris doit se retrouver sur la branche brune.]]></string>
-        <string id="M04-scoring1">                  La chauvesouris est supportée par la branche de l’arbre:</string>
+        <string id="M04-desc">                      <![CDATA[La chauve-souris doit se retrouver sur la branche brune.]]></string>
+        <string id="M04-scoring1">                  La chauvesouris est supportée par la branche de l’arbre</string>
 
         <string id="M05-name">                      M05  La cabane perchée </string>
         <string id="M05-desc">                      <![CDATA[ (Pointage: tout ce qui s’applique.]]></string>
-        <string id="M05-scoring1">                  Nombre de modules indépendants et supportés par les grandes branches de l'arbre:</string>
-        <string id="M05-scoring2">                  Nombre de modules indépendants et supportés par les petites branches de l'arbre:</string>
+        <string id="M05-scoring1">                  Nombre de modules indépendants et supportés par les grandes branches de l'arbre</string>
+        <string id="M05-scoring2">                  Nombre de modules indépendants et supportés par les petites branches de l'arbre</string>
         <string id="M05-error">                     Trop de modules </string>
 
         <string id="M06-name">                      M06  L’embouteillage </string>
-        <string id="M06-desc">                      <![CDATA[Dégagez la route en soulevant l’embouteillage.]]></string>
-        <string id="M06-scoring1">                   L’embouteillage est levé, sa partie mobile est indépendante et n'est soutenue que par ses charnières:</string>
+        <string id="M06-desc">                      <![CDATA[Désengorgez la route en soulevant l’embouteillage.]]></string>
+        <string id="M06-scoring1">                   L’embouteillage est levé, sa partie mobile est indépendante et n'est soutenue que par ses charnières</string>
 
         <string id="M07-name">                      M07  La balançoire </string>
         <string id="M07-desc">                      <![CDATA[Lâchez la balançoire.]]></string>
-        <string id="M07-scoring1">                   La balançoire est lâchée:</string>
+        <string id="M07-scoring1">                   La balançoire est lâchée</string>
 
         <string id="M08-name">                      M08  L’ascenseur </string>
-        <string id="M08-desc">                      <![CDATA[Pointage : l’un ou l’autre]]></string>
-        <string id="M08-scoring1">                  Les pièces mobiles de l'ascenseur sont indépendantes et supportées uniquement par ses charnières dans la position suivante:</string>
+        <string id="M08-desc">                      <![CDATA[Pointage: l’un ou l’autre]]></string>
+        <string id="M08-scoring1">                  La partie mobile de l'ascenseur est indépendante et supportée uniquement par ses charnières dans la position suivante</string>
         <string id="M08-scoring2">                  Aucune </string>
         <string id="M08-scoring3">                  Cabine bleue en bas </string>
         <string id="M08-scoring4">                  En équilibre </string>
 
         <string id="M09-name">                      M09  Sécurité </string>
-        <string id="M09-desc">                      <![CDATA[Le bâtiment test peut-il rester debout lorsque certaines de ses poutres bleues sont déplacées?]]></string>
-        <string id="M09-scoring1">                  Le bâtiment de simulation est supporté uniquement par les poutres bleues :</string>
-        <string id="M09-scoring2">                  Nombre de poutres bleues tombées au moins à mi-chemin du tapis:</string>
+        <string id="M09-desc">                      <![CDATA[Le bâtiment de simulation peut-il rester debout lorsque certaines de ses poutres bleues sont déplacées?]]></string>
+        <string id="M09-scoring1">                  Le bâtiment de simulation est supporté uniquement par les poutres bleues</string>
+        <string id="M09-scoring2">                  Nombre de poutres bleues déplacées au moins à mi-chemin du tapis</string>
 
         <string id="M10-name">                      M10 Structure en acier </string>
-        <string id="M10-desc">                      <![CDATA[Faites que la structure en acier tient debout.]]></string>
-        <string id="M10-scoring">                   La structure en acier est debout, indépendante et soutenue uniquement par ses charnières :</string>
+        <string id="M10-desc">                      <![CDATA[Faites en sorte que la structure en acier tient debout.]]></string>
+        <string id="M10-scoring">                   La structure en acier est debout, indépendante et soutenue uniquement par ses charnières</string>
 
         <string id="M11-name">                      M11 L’architecture innovante </string>
-        <string id="M11-desc">                      <![CDATA[Concevez et construisez votre propre structure et livrez-le à n'importe quel cercle.]]></string>
-        <string id="M11-scoring1">                  Une structure construite par votre équipe à partir de briques LEGO blanches uniquement est visiblement plus grande qu’un module bleu:</string>
-        <string id="M11-scoring2">                  La structure est dans n’importe quel cercle :</string>
+        <string id="M11-desc">                      <![CDATA[Concevez et construisez votre propre structure et livrez-la à n'importe quel cercle.]]></string>
+        <string id="M11-scoring1">                  Une structure, constituée uniquement de pièces LEGO blanches, construite par l'équipe et visiblement plus grande qu’un module bleu</string>
+        <string id="M11-scoring2">                  La structure est dans n’importe quel cercle</string>
         <string id="M11-scoring3">                  Non</string>
         <string id="M11-scoring4">                  Partiellement</string>
         <string id="M11-scoring5">                  Complètement</string>
 
         <string id="M12-name">                      M12 Conception et construction </string>
-        <string id="M12-desc">                      <![CDATA[ le cercle bleu ne fait pas partie de la mission 12.]]></string>
-        <string id="M12-scoring1">                  Le nombre de cercles avec au moins un module de couleur correspondante complètement à l’intérieur et à plat sur le tapis de jeu:</string>
-        <string id="M12-scoring4">                  La somme des niveaux de tous les empilements indépendants se trouvant au moins partiellement dans un cercle:</string>
+        <string id="M12-desc">                      <![CDATA[Le cercle bleu ne fait pas partie de la mission 12.]]></string>
+        <string id="M12-scoring1">                  Nombre de cercles avec au moins un module de couleur correspondante complètement à l’intérieur et à plat sur le tapis</string>
+        <string id="M12-scoring4">                  Somme des niveaux de tous les empilements indépendants se trouvant au moins partiellement dans un cercle</string>
 
-        <string id="M13-name">                      M13  La rénovation durable </string>
-        <string id="M13-desc">                      <![CDATA[(une seule rénovation (panneaux solaires, toit vert,isolation) compte par empilement.]]></string>
-        <string id="M13-scoring">                   Nombre de rénovations indépendantes et supportées uniquement par un empilement situé au moins partiellement dans un cercle:</string>
+        <string id="M13-name">                      M13 La rénovation durable </string>
+        <string id="M13-desc">                      <![CDATA[Une seule rénovation (panneaux solaires, toit vert ou isolation) compte par empilement.]]></string>
+        <string id="M13-scoring">                   Nombre de rénovations indépendantes et supportées uniquement par un empilement situé au moins partiellement dans un cercle</string>
 
         <string id="precision-name">                M14 Précision </string>
-        <string id="precision-desc">                <![CDATA[Vous avez le droit d'interrompre votre robot et de le ramener à zone de lancement, mais les interruptions vous font perdre des jetons de précision.]]></string>
-        <string id="precision-scoring">             Le nombre de jetons de précision laissé sur le terrain :</string>
+        <string id="precision-desc">                <![CDATA[Vous avez le droit d'interrompre votre robot et de le ramener à la zone de lancement, mais les interruptions vous font perdre des jetons de précision.]]></string>
+        <string id="precision-scoring">             Nombre de jetons de précision laissé sur le terrain</string>
 
         <string id="building-unit-error">           Trop de modules de construction sont utilisés </string>
-        <string id="crane-error">                   Conflit de position des unités bleues </string>
-        <string id="M12-error2">                    Hauteur trop petite pour le nombre de modules se trouvant dans des cercles de la même couleur </string>
+        <string id="crane-error">                   Conflit d'emplacement des unités bleues </string>
+        <string id="M12-error2">                    Hauteur trop petite pour le nombre de modules se trouvant dans des cercles de même couleur </string>
 
     </strings>
 
