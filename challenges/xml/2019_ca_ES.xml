@@ -4,88 +4,90 @@
     xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd" year="2019" version="0" name="CITY SHAPER">
     <!-- 2019 Challenge XML version 2, 7 Sept 2019-->
 
-    <strings rtlDoc="true" language="he-IL">
+    <strings language="ca-ES">
 
-        <string id="yes">                           כן</string>
-        <string id="no">                            לא</string>
+        <string id="yes">                           Sí</string>
+        <string id="no">                            No</string>
 
-        <string id="advantage-name">                יתרון</string>
-        <string id="advantage-desc">                <![CDATA[אם כל הציוד שלכ נכנס באזור הביקורת הקטן אתם מקבלים יתרון. ]]></string>
-        <string id="advantage-scoring">             הרובוט וכל הציוד שלכם נכנס לאזור הביקורת הקטן:</string>
+        <string id="advantage-name">                Benefici</string>
+        <string id="advantage-desc">                <![CDATA[Si tot el vostre Equipament cap dins de la Zona de Inspeccció Menor durant la preparació de la partida, rebreu un Benefici. ]]></string>
+        <string id="advantage-scoring">             El vostre Robot i tot el vostre Equipament caben dins  de la Zona d’Inspecció Menor:</string>
 
-        <string id="M01-name">                      M01 מקומות מוגבהים</string>
-        <string id="M01-desc">                      <![CDATA[ניתן לצבור נקודות מהדגלים רק אם צברתם נקודות מהגשר.  :זה צפוי ומקובל שרובוטים יתנגשו בעודם מנסים לצבור נקודות מהדגלים.]]></string>
-        <string id="M01-scoring1">                   הרובוט נתמך על ידי הגשר:</string>
-        <string id="M01-scoring2">                   מספר הדגלים שמורמים באופן ברור, במידה כלשהי, על ידי הרובוט בלבד:</string>
+        <string id="M01-name">                      M01 Pisos Elevatats</string>
+        <string id="M01-desc">                      <![CDATA[Només podeu aconseguir punts per Banderes si aconseguiu els
+punts del pont. Està permès, i és d’esperar, que els robots xoquin mentre intenten guanyar els punts de les
+banderes.]]></string>
+        <string id="M01-scoring1">                   El Robot està Suportat pel Pon:</string>
+        <string id="M01-scoring2">                   Nombre de Banderes que estan clarament aixecades  qualsevol alçada només degut al Robot:</string>
 
-        <string id="M02-name">                      M02 מנוף</string>
-        <string id="M02-desc">                      <![CDATA[נקדו את כל מה שמתקיים.]]></string>
-        <string id="M02-scoring1">                   היחידה הכחולה התפוסה בוו, מונמכת מרחק כלשהו מראש המנוף:</string>
-        <string id="M02-scoring2">                   היחידה הכחולה התפוסה בוו עצמאית ונתמכת על ידי יחידה כחולה אחרת:</string>
-        <string id="M02-scoring3">                   והקומה הראשונה היא לגמרי בתוך העיגול הכחול:</string>
+        <string id="M02-name">                      M02 Grua</string>
+        <string id="M02-desc">                      <![CDATA[Puntueu tot allò que pertoqui.]]></string>
+        <string id="M02-scoring1">                   El Mòdul Blau Enganxat està clarament abaixat qualsevol distància del Forat de la Guia:</string>
+        <string id="M02-scoring2">                   El Mòdul Blau Enganxat és Independent i està Suportat per un altre Mòdul Blau:</string>
+        <string id="M02-scoring3">                   I el 1r Nivell està Completament dins del Cercle Blau:</string>
 
-        <string id="M03-name">                      M03 רחפן בקרה</string>
-        <string id="M03-desc">                      <![CDATA[משימת רחפן הבקרה מדגימה שיטה לא יקרה לבדיקת גשרים ומבנים גבוהים אחרים. רחפנים יכולים לטוס במשף שעות ולשלוח תמונות מפורטות, ואפילו סריקות תלת-מימד.]]></string>
-        <string id="M03-scoring1">                  רחפן הבקרה נתמך על ידי המוט שעל הגשר:</string>
+        <string id="M03-name">                      M03 Dron d'Inspecció</string>
+        <string id="M03-desc">                      <![CDATA[La missió del Dron d'Inspecció ens mostra una manera molt barata de verificar ponts i altres estructures altes. Els Drons poden volar durant hores i enviar imatges detallades o també escanejos 3D.]]></string>
+        <string id="M03-scoring1">                  El Dron d’Inspecció està Suportat per l’eix del Pont:</string>
 
-        <string id="M04-name">                      M04 עיצוב ידידותי לחיות בר</string>
-        <string id="M04-desc">                      <![CDATA[העטלף צריך להגיע לענף החום]]></string>
-        <string id="M04-scoring1">                  העטלף נתמך על ידי הענף שעל העץ:</string>
+        <string id="M04-name">                      M04 Disseny per a la Vida Silvestre</string>
+        <string id="M04-desc">                      <![CDATA[El Raptenat ha d'acabar a la branca marró]]></string>
+        <string id="M04-scoring1">                  El Ratpenat està Suportat per la branca de l’Arbre:</string>
 
-        <string id="M05-name">                      M05 בית עץ</string>
-        <string id="M05-desc">                      <![CDATA[נקדו את כל מה שמתקיים.]]></string>
-        <string id="M05-scoring1">                  מספר היחידות העצמאיות הנתמכות על ידי הענפים הגדולים של העץ:</string>
-        <string id="M05-scoring2">                  מספר היחידות העצמאיות הנתמכות על ידי הענפים הקטנים של העץ:</string>
-        <string id="M05-error">                     יותר מידי יחידות</string>
+        <string id="M05-name">                      M05 Casa de l'árbre</string>
+        <string id="M05-desc">                      <![CDATA[Puntueu tot allò que pertoqui.]]></string>
+        <string id="M05-scoring1">                  Nombre de Mòduls Independents i Suportats per les Branques Grans de l’Arbre:</string>
+        <string id="M05-scoring2">                  Nombre de Mòduls Independents i Suportats per les Branques Petites de l’Arbre:</string>
+        <string id="M05-error">                     Massa Mòduls</string>
 
-        <string id="M06-name">                      M06 פקק תנועה</string>
-        <string id="M06-desc">                      <![CDATA[פנו את הדרך על ידי הרמת פקק התנועה.]]></string>
-        <string id="M06-scoring1">                  פקק התנועה מורם, והחלק הנע שלו עצמאי ונתמך על ידי הצירים בלבד:</string>
+        <string id="M06-name">                      M06 Embús de Trànsit</string>
+        <string id="M06-desc">                      <![CDATA[Descongestioneu la carretera aixecant l' Embús de Trànsit.]]></string>
+        <string id="M06-scoring1">                  L’Embús de Trànsit està aixecat, la seva part mòbil és Independent i està Suportada només per les seves frontisses:</string>
 
-        <string id="M07-name">                      M07 נדנדה</string>
-        <string id="M07-desc">                      <![CDATA[שחררו את הנדנדה.]]></string>
-        <string id="M07-scoring1">                  הנדנדה משוחררת:</string>
+        <string id="M07-name">                      M07 Gronxador</string>
+        <string id="M07-desc">                      <![CDATA[Allibereu el Gronxador.]]></string>
+        <string id="M07-scoring1">                  El Gronxador està alliberat:</string>
 
-        <string id="M08-name">                      M08 מעלית</string>
-        <string id="M08-desc">                      <![CDATA[נקדו אפשרות אחת או אחרת, אך לא את שתיהן.]]></string>
-        <string id="M08-scoring1">                  החלקים הנעים של המעלית עצמאיים, ונתמכים על ידי צירי המעלית בלבד, במצב הבא:</string>
-        <string id="M08-scoring2">                  כלום</string>
-        <string id="M08-scoring3">                  קרון כחול למטה</string>
-        <string id="M08-scoring4">                  מאוזן</string>
+        <string id="M08-name">                      M08 Muntacàrregues</string>
+        <string id="M08-desc">                      <![CDATA[Marqueu una o altre puntuació, però no ambdues.]]></string>
+        <string id="M08-scoring1">                  Les parts mòbils del Muntacàrregues són  Independents i estan Suportades només per les seves frontisses, en la següent posició:</string>
+        <string id="M08-scoring2">                  Cap</string>
+        <string id="M08-scoring3">                  Cotxe blau a sota</string>
+        <string id="M08-scoring4">                  Equilibrades</string>
 
-        <string id="M09-name">                      M09 מקדם בטיחות</string>
-        <string id="M09-desc">                      <![CDATA[האם מבנה הבדיקה יכול לעמוד כשחלק מענודי התמיכה שלו הוסטו?]]></string>
-        <string id="M09-scoring1">                  מבנה הבדיקה עצמאי ונתמך רק על ידי הקורות הכחולות:</string>
-        <string id="M09-scoring2">                  מספר הקורות שהוסטו לפחות מחצית הדרך:</string>
+        <string id="M09-name">                      M09 Factor de Seguretat</string>
+        <string id="M09-desc">                      <![CDATA[Pot l'Edifici Pilot mantenir-se dempeus quan algunes de les barres que el suporten són desplaçades?]]></string>
+        <string id="M09-scoring1">                  L’Edifici Pilot és Independent i està Suportat només per les bigues blaves:</string>
+        <string id="M09-scoring2">                  Nombre de bigues han estat apartades com a mínim a mig camí:</string>
 
-        <string id="M10-name">                      M10 מבנה פלדה</string>
-        <string id="M10-desc">                      <![CDATA[גרמו למבנה הפלדה לעמוד זקוף.]]></string>
-        <string id="M10-scoring">                   מבנה הפלדה עומד, עצמאי, ונתמך על ידי הצירים שלו בלבד:</string>
+        <string id="M10-name">                      M10 Construcció d'Acer</string>
+        <string id="M10-desc">                      <![CDATA[Aconseguiu que la Estructura d'Acero estigui aixecada.]]></string>
+        <string id="M10-scoring">                   L’Estructura d’Acer està enlairada, és Independent i està Suportada només per les seves frontisses:</string>
 
-        <string id="M11-name">                      M11 ארכיטקטורה חדשנית</string>
-        <string id="M11-desc">                      <![CDATA[עצבו ובנו מבנה משלכם והעבירו אותו לעיגול כלשהו.]]></string>
-        <string id="M11-scoring1">                  מבנה גדול יותר מחלק לגו עם 4 בליטות, וגם נבנה רק מחלקי ה- LEGO הלבנים של הקבוצה:</string>
-        <string id="M11-scoring2">                  המבנה בעיגול כלשהו:</string>
-        <string id="M11-scoring3">                  כלום</string>
-        <string id="M11-scoring4">                  חלקית</string>
-        <string id="M11-scoring5">                  לגמרי בתוך</string>
+        <string id="M11-name">                      M11 Arquitectura Innovadora</string>
+        <string id="M11-desc">                      <![CDATA[Dissenyeu i construïu la vostra propia estructura i transporteu-la a qualsevol cercle.]]></string>
+        <string id="M11-scoring1">                  L’Estructura és major que un Mòdul Blau, construïda només amb peces blanques de LEGO  de l’equip:</string>
+        <string id="M11-scoring2">                  L’Estructura és dins de qualsevol Cercle:</string>
+        <string id="M11-scoring3">                  No</string>
+        <string id="M11-scoring4">                  Parcialment</string>
+        <string id="M11-scoring5">                  Completament</string>
 
-        <string id="M12-name">                      M12 עצבו ובנו</string>
-        <string id="M12-desc">                      <![CDATA[העיגול הכחול אינו חלק ממשימה 12.]]></string>
-        <string id="M12-scoring1">                  מספר העיגולים עם לפחות יחידה אחת, בצבע זהה, לגמרי בתוך העיגול, פאה נוגעת בשטיח:</string>
-        <string id="M12-scoring4">                  סכום הגבהים של מגדלים עצמאיים הנמצאים לפחות באופן חלקי בתוך עיגולים כלשהם:</string>
+        <string id="M12-name">                      M12 Disseny i Construcció</string>
+        <string id="M12-desc">                      <![CDATA[El cercle Blau no forma part de la Missió 12.]]></string>
+        <string id="M12-scoring1">                  Nombre de Cercles amb un Mòdul de color coincident amb el cercle, en contacte pla sobre del tapet i Completament dins:</string>
+        <string id="M12-scoring4">                  Suma de les alçades de totes les Piles Independents com  a mínim parcialment dins de qualsevol Cercle:</string>
 
-        <string id="M13-name">                      M13 שדרוגי קיימות</string>
-        <string id="M13-desc">                      <![CDATA[רק שדרוג אחד (לוחות סולריים, גינת גג, בידוד) נחשב לכל מגדל.]]></string>
-        <string id="M13-scoring">                   מספר השדרוגים שהם עצמאיים, הנתמכים רק על ידי מגדל, הנמצא לפחות באופן חלקי בעיגול כלשהו:</string>
+        <string id="M13-name">                      M13 Millores en Sostenibilitat</string>
+        <string id="M13-desc">                      <![CDATA[Només es té en compte una millora (panells solars, Sotre verd, aïllament) per Pila.]]></string>
+        <string id="M13-scoring">                   Nombre de millores que Independents i Suportades per una Pila que es troba com a mínim parcialment dins de qualsevol Cercle:</string>
 
-        <string id="precision-name">                M14 דיוק</string>
-        <string id="precision-desc">                <![CDATA[מותר לכם להפריע לרובוט ולהחזירו לשיגור מחדש, אבל הפרעות גורמות לאיבוד אסימוני דיוק.]]></string>
-        <string id="precision-scoring">             מספר אסימוני דיוק שנשארו על המגרש</string>
+        <string id="precision-name">                M14 Precisió</string>
+        <string id="precision-desc">                <![CDATA[Podeu interrompre el vostre Robot i portar-lo a casa per a un reinici, però les interrupcions us fan perdre Testimonis de Precisió.]]></string>
+        <string id="precision-scoring">             Nombre de Testimonis de Precisió que queden  al Terreny de Joc:</string>
 
-        <string id="building-unit-error">           יותר מידי יחידות בנייה בשימוש</string>
-        <string id="crane-error">                   סתירה במיקום יחידות הבנייה הכחולות</string>
-        <string id="M12-error2">                    גובה נמוך מידי ביחס למספר התאמות הצבעים</string>
+        <string id="building-unit-error">           Massa Mòduls en ús</string>
+        <string id="crane-error">                   Conflicte en la posició dels Mòduls Blaus</string>
+        <string id="M12-error2">                    Alçada massa petita per al nombre de Mòduls coincidentsde color</string>
 
     </strings>
 
