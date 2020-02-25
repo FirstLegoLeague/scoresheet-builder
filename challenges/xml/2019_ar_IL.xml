@@ -4,88 +4,88 @@
     xmlns:fll="http://fll-tools.com/applications/scoring/v1/challenge.xsd" year="2019" version="0" name="CITY SHAPER">
     <!-- 2019 Challenge XML version 2, 7 Sept 2019-->
 
-    <strings language="fr-CA">
+    <strings language="ar-IL">
 
-        <string id="yes">                           Oui</string>
-        <string id="no">                            Non</string>
+        <string id="yes">                           نعم</string>
+        <string id="no">                            لا</string>
 
-        <string id="advantage-name">                Avantage</string>
-        <string id="advantage-desc">                <![CDATA[Si tout votre équipement tient dans la petite zone d'inspection avant le début du match, vous avez un avantage.]]></string>
-        <string id="advantage-scoring">             Le robot de l'équipe ainsi que tout l'équipement tient dans la petite zone d'inspection</string>
+        <string id="advantage-name">                ميزة إضافية</string>
+        <string id="advantage-desc">                <![CDATA[اذا كان الروبوت والمعدات الخاصة بك تتناسب مع منطقة الفحص الصغيرة . ]]></string>
+        <string id="advantage-scoring">             الروبوت والمعدات الخاصة بك تتناسب مع منطقة الفحص الصغيرة:</string>
 
-        <string id="M01-name">                      M01 Emplacements élevés </string>
-        <string id="M01-desc">                      <![CDATA[Vous ne pouvez obtenir des points Drapeau que si vous obtenez des points Pont. Il est probable et correct que les robots entrent en collision en essayant de remporter des points Drapeau.]]></string>
-        <string id="M01-scoring1">                  Le robot est supporté par le Pont</string>
-        <string id="M01-scoring2">                  Nombre de drapeaux clairement levés à n’importe quelle hauteur, seulement par l’action du robot</string>
+        <string id="M01-name">                      M01 أماكن مرتفعة</string>
+        <string id="M01-desc">                      <![CDATA[يمكنك الحصول على علامات الاعلام فقط ان تمكنت من الصعود على الجسر بالربوت]]></string>
+        <string id="M01-scoring1">                   الروبوت مدعم بواسطة الجسر:</string>
+        <string id="M01-scoring2">                   عدد األعالم التي تم رفعها بوضوح الى أي مسافة فقط بواسطة </string>
 
-        <string id="M02-name">                      M02 La grue </string>
-        <string id="M02-desc">                      <![CDATA[Pointage: tout ce qui s’applique]]></string>
-        <string id="M02-scoring1">                  Le module suspendu bleu est clairement baissé à n’importe quelle distance du trou de guidage</string>
-        <string id="M02-scoring2">                  Le module suspendu bleu est indépendant et supporté par un autre module bleu</string>
-        <string id="M02-scoring3">                  ET le niveau 1 est complètement dans le cercle bleu</string>
+        <string id="M02-name">                      M02 الرافعة</string>
+        <string id="M02-desc">                      <![CDATA[يمكن اختيار جميع الحالات.]]></string>
+        <string id="M02-scoring1">                   الوحدة المعلقة الزرقاء تم انزالها بوضوح ألي مسافة من الفتحة:</string>
+        <string id="M02-scoring2">                   الوحدة المعلقة الزرقاء مستقلة ومدعمه بواسطة وحدة زرقاء اخرى:</string>
+        <string id="M02-scoring3">                  باالضافة الى المستوى 1 موجود كليا في الدائرة الزرقاء:</string>
 
-        <string id="M03-name">                      M03 L’inspection par drone </string>
-        <string id="M03-desc">                      <![CDATA[La mission présente une manière économique d'inspecter les ponts et les grandes structures. Les drones peuvent voler pendant des heures et transmettre des photos détaillées ainsi que des numérisations 3D.]]></string>
-        <string id="M03-scoring1">                  Le drone d’inspection est supporté par l’essieu du Pont</string>
+        <string id="M03-name">                      M03 -طائرة استكشافية بدون طيار</string>
+        <string id="M03-desc">                      <![CDATA[يجب على الطائرة الاستكشافية بدون طيار ان تكون مدعمه على الجسر ، يمكن لطائرة الطياران لساعات وارسال صور ]]></string>
+        <string id="M03-scoring1">                  الطائرة يدعمها المحور على الجسر:</string>
 
-        <string id="M04-name">                      M04 Conception pour la faune </string>
-        <string id="M04-desc">                      <![CDATA[La chauve-souris doit se retrouver sur la branche brune.]]></string>
-        <string id="M04-scoring1">                  La chauvesouris est supportée par la branche de l’arbre</string>
+        <string id="M04-name">                      M04 تصميم الحياة البرية </string>
+        <string id="M04-desc">                      <![CDATA[الخفاش يجب ان يكون على رفع الشجرة البني فقط]]></string>
+        <string id="M04-scoring1">                  الخفاش يدعمه الفرع على الشجرة:</string>
 
-        <string id="M05-name">                      M05 La cabane perchée </string>
-        <string id="M05-desc">                      <![CDATA[ (Pointage: tout ce qui s’applique.]]></string>
-        <string id="M05-scoring1">                  Nombre de modules indépendants et supportés par les grandes branches de l'arbre</string>
-        <string id="M05-scoring2">                  Nombre de modules indépendants et supportés par les petites branches de l'arbre</string>
-        <string id="M05-error">                     Trop de modules </string>
+        <string id="M05-name">                      M05 منز ل الشجرة</string>
+        <string id="M05-desc">                      <![CDATA[يمكنك اختيار جميع الاحتمالات]]></string>
+        <string id="M05-scoring1">                  عدد الوحدات المستقلة والمدعمه بواسطة الفروع الكبيرة للشجرة</string>
+        <string id="M05-scoring2">                  عدد الوحدات المستقلة والمدعمه بواسطة الفروع الصغيرة للشجرة</string>
+        <string id="M05-error">                     عدد كبير من الوحدات</string>
 
-        <string id="M06-name">                      M06 L’embouteillage </string>
-        <string id="M06-desc">                      <![CDATA[Désengorgez la route en soulevant l’embouteillage.]]></string>
-        <string id="M06-scoring1">                  L’embouteillage est levé, sa partie mobile est indépendante et n'est soutenue que par ses charnières</string>
+        <string id="M06-name">                      M06 -االزدحام المروري</string>
+        <string id="M06-desc">                      <![CDATA[تم رفع االزدحام المروري]]></string>
+        <string id="M06-scoring1">                  تم رفع االزدحام المروري، الجزء المتحرك الخاص به مستقل، ومدعوم فقط بمفصالته</string>
 
-        <string id="M07-name">                      M07 La balançoire </string>
-        <string id="M07-desc">                      <![CDATA[Lâchez la balançoire.]]></string>
-        <string id="M07-scoring1">                  La balançoire est lâchée</string>
+        <string id="M07-name">                      M07 الارجوحه</string>
+        <string id="M07-desc">                      <![CDATA[تم تحرير االرجوحة]]></string>
+        <string id="M07-scoring1">                  تم تحرير االرجوحة</string>
 
-        <string id="M08-name">                      M08 L’ascenseur </string>
-        <string id="M08-desc">                      <![CDATA[Pointage: l’un ou l’autre]]></string>
-        <string id="M08-scoring1">                  La partie mobile de l'ascenseur est indépendante et supportée uniquement par ses charnières dans la position suivante</string>
-        <string id="M08-scoring2">                  Aucune </string>
-        <string id="M08-scoring3">                  Cabine bleue en bas </string>
-        <string id="M08-scoring4">                  En équilibre </string>
+        <string id="M08-name">                      M08 المصعد</string>
+        <string id="M08-desc">                      <![CDATA[تسجيل واحدة فقط وليس الاثنتين]]></string>
+        <string id="M08-scoring1">                  أجزاء المصعد المتحركة مستقلة ومدعومه فقط بواسطة مفصالته، في الوضع التالي:</string>
+        <string id="M08-scoring2">                  لا هذا ولا ذاك</string>
+        <string id="M08-scoring3">                   السيارة الزرقاء أسفل</string>
+        <string id="M08-scoring4">                  متوازن</string>
 
-        <string id="M09-name">                      M09 Sécurité </string>
-        <string id="M09-desc">                      <![CDATA[Le bâtiment de simulation peut-il rester debout lorsque certaines de ses poutres bleues sont déplacées?]]></string>
-        <string id="M09-scoring1">                  Le bâtiment de simulation est supporté uniquement par les poutres bleues</string>
-        <string id="M09-scoring2">                  Nombre de poutres bleues déplacées au moins à mi-chemin du tapis</string>
+        <string id="M09-name">                      M09 عامل السالمة</string>
+        <string id="M09-desc">                      <![CDATA[هل لا يزال المبنى مدعم بالاعمدة الزرقاء ?]]></string>
+        <string id="M09-scoring1">                  مبنى االختبار مستقل ومدعم فقط بواسطة القطع الزرقاء:</string>
+        <string id="M09-scoring2">                  عدد القطع الزرقاء التي تم اسقاطها على االقل لنصف المسافة:</string>
 
-        <string id="M10-name">                      M10 Structure en acier </string>
-        <string id="M10-desc">                      <![CDATA[Faites en sorte que la structure en acier tient debout.]]></string>
-        <string id="M10-scoring">                   La structure en acier est debout, indépendante et soutenue uniquement par ses charnières</string>
+        <string id="M10-name">                      M10 S -المبنى ال صلب </string>
+        <string id="M10-desc">                      <![CDATA[المبنى الصلب في وضع قائم ومستقل]]></string>
+        <string id="M10-scoring">                   المبنى الصلب في وضع قائم ومستقل ومدعم فقط بواسطة مفصالته:</string>
 
-        <string id="M11-name">                      M11 L’architecture innovante </string>
-        <string id="M11-desc">                      <![CDATA[Concevez et construisez votre propre structure et livrez-la à n'importe quel cercle.]]></string>
-        <string id="M11-scoring1">                  Une structure, constituée uniquement de pièces LEGO blanches, construite par l'équipe et visiblement plus grande qu’un module bleu</string>
-        <string id="M11-scoring2">                  La structure est dans n’importe quel cercle</string>
-        <string id="M11-scoring3">                  Non</string>
-        <string id="M11-scoring4">                  Partiellement</string>
-        <string id="M11-scoring5">                  Complètement</string>
+        <string id="M11-name">                      M11  -العمارة المبتكرة</string>
+        <string id="M11-desc">                      <![CDATA[بناء اي شكل ووضعها في اي دائرة]]></string>
+        <string id="M11-scoring1">                  المبنى اكبر من وحدة بناء زرقاء و تم بنا ؤه باستخدام قطع الليجو البيضاء الخاصة بالفريق:</string>
+        <string id="M11-scoring2">                  المبنى موجود في اي دائرة :</string>
+        <string id="M11-scoring3">                  لا</string>
+        <string id="M11-scoring4">                  جزئيا</string>
+        <string id="M11-scoring5">                  بالكامل</string>
 
-        <string id="M12-name">                      M12 Conception et construction </string>
-        <string id="M12-desc">                      <![CDATA[Le cercle bleu ne fait pas partie de la mission 12.]]></string>
-        <string id="M12-scoring1">                  Nombre de cercles avec au moins un module de couleur correspondante complètement à l’intérieur et à plat sur le tapis</string>
-        <string id="M12-scoring4">                  Somme des niveaux de tous les empilements indépendants se trouvant au moins partiellement dans un cercle</string>
+        <string id="M12-name">                      M12 التصميم والبناء</string>
+        <string id="M12-desc">                      <![CDATA[المبنى الزرق ليس من ضمن مهمه 12]]></string>
+        <string id="M12-scoring1">                  عدد الدوائرالتي بها وحدات بنفس لونها، ومسطحة على أرضية الملعب وداخل دائرة كليا:</string>
+        <string id="M12-scoring4">                  مجموع ارتفاع األكوام المستقلة الموجودة على االقل جزئيا في اي دائرة</string>
 
-        <string id="M13-name">                      M13 La rénovation durable </string>
-        <string id="M13-desc">                      <![CDATA[Une seule rénovation (panneaux solaires, toit vert ou isolation) compte par empilement.]]></string>
-        <string id="M13-scoring">                   Nombre de rénovations indépendantes et supportées uniquement par un empilement situé au moins partiellement dans un cercle</string>
+        <string id="M13-name">                      M13 تحسين االستدامة</string>
+        <string id="M13-desc">                      <![CDATA[فقط تحسين واحد على سطح كل عمارة]]></string>
+        <string id="M13-scoring">                   عدد القطع المستقلة والمدعمه فقط بواسطة كومة مكعبات تكون على  االقل موجوده جزئيا داخل دائرة </string>
 
-        <string id="precision-name">                M14 Précision </string>
-        <string id="precision-desc">                <![CDATA[Vous avez le droit d'interrompre votre robot et de le ramener à la zone de lancement, mais les interruptions vous font perdre des jetons de précision.]]></string>
-        <string id="precision-scoring">             Nombre de jetons de précision laissé sur le terrain</string>
+        <string id="precision-name">                M14 الدقة</string>
+        <string id="precision-desc">                <![CDATA[يمكنك اعدة الربوت في اي لحظه ولكن ستخسر نقاط دقه]]></string>
+        <string id="precision-scoring">             عدد "قطع الدقة" المتبقيه على ارضيه الملعب</string>
 
-        <string id="building-unit-error">           Trop de modules de construction sont utilisés </string>
-        <string id="crane-error">                   Conflit d'emplacement des unités bleues </string>
-        <string id="M12-error2">                    Hauteur trop petite pour le nombre de modules se trouvant dans des cercles de même couleur </string>
+        <string id="building-unit-error">           Too many Building Units in use</string>
+        <string id="crane-error">                   Conflict in position of Blue Units</string>
+        <string id="M12-error2">                    Height too small for number of color-matching Units</string>
 
     </strings>
 
