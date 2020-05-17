@@ -79,6 +79,7 @@ function parseScore(xml, resources) {
     var lines = resources.map(r => r.code)
       .concat(xml.cases[0].case.map(parseCondition).map(function(line) {
         var conditions = line.values.map(function(value,index) {
+            if( value === "*any*" ) return 'true';
             return deps[index] + ' === \'' + value + '\'';
         }).join(' && ');
 
